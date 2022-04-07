@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Погнали? - Попутчики</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
+<body class="page__body page__body--catalog">
 <header class="main-header">
-  <a class="main-header__logo" href="index.html">
-    <img class="main-header__logo-image" src="/images/logo-header.svg" width="96" height="15" alt="Логотип Погнали">
-  </a>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--form">
+    <a class="main-header__logo" href="index.html">
+      <img class="main-header__logo-image" src="img/logo-navigation.svg" width="96" height="15" alt="Логотип Погнали">
+    </a>
     <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+      <span class="visually-hidden">Закрыть меню</span>
     </button>
-    <h1 class="page__title">Попутчики</h1>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list page-list">
         <li class="page-list__item">
@@ -29,10 +29,10 @@
       <a class="main-nav__login button" href="#">Авторизация</a>
       <ul class="main-nav__list contacts-list">
         <li class="contacts-list__item">
-          <a class="contacts-list__phone" href="tel:+88005558628">88005558628</a>
+          <a class="contacts-list__link" href="tel:+88005558628">88005558628</a>
         </li>
         <li class="contacts-list__item">
-          <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
       <ul class="social-media">
@@ -74,6 +74,15 @@
       </ul>
     </div>
   </nav>
+  <div class="main-header__wrapper">
+    <a class="main-header__logo" href="index.html">
+      <img class="main-header__logo-image" src="img/logo-header.svg" width="96" height="15" alt="Логотип Погнали">
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <h1 class="page__title">Попутчики</h1>
+  </div>
 </header>
 <main class="main-container catalog">
   <section class="catalog__filter filter">
@@ -100,7 +109,7 @@
         </ul>
         <ul class="filter__alphabet-list">
           <li class="filter__alphabet-item">
-            <a class="filter__alphabet-link" href="#">a</a>
+            <a class="filter__alphabet-link filter__alphabet-link--current" href="#">a</a>
           </li>
           <li class="filter__alphabet-item">
             <a class="filter__alphabet-link" href="#">б</a>
@@ -211,7 +220,7 @@
           </li>
         </ul>
       </div>
-      <button class="filter__alphabet-button button" type="button">Свернуть</button>
+      <button class="button button--alphabet" type="button">Свернуть</button>
     </div>
     <div class="filter__companion filter-companion">
       <h3 class="filter-companion__title">Подберите идеального попутчика</h3>
@@ -289,7 +298,7 @@
             </div>
           </li>
         </ul>
-        <button class="filter-companion__confirm-button button" type="button">Показать</button>
+        <button class="filter-companion__confirm-button button button--companion" type="button">Показать</button>
       </form>
     </div>
   </section>
@@ -298,7 +307,7 @@
     <ul class="cards__list">
       <li class="cards__item card-user">
         <div class="cards__info">
-          <img class="cards__avatar" src="/images/photo-mini-user-1.jpg" alt="Аватар пользователя">
+          <img class="cards__avatar" src="img/photo-mini-user-1.jpg" alt="Аватар пользователя">
           <a class="card-user__like card-user__like--pressed" href="#">
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_20761_1579)">
@@ -332,16 +341,16 @@
           <h4 class="user-transport__title">транспорт:</h4>
           <ul class="user-transport__list transport-list">
             <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Самолет</span>
+              <span class="visually-hidden">Самолет</span>
             </li>
             <li class="transport-list__item">
-                <span class="visually-hidden">Автобус</span>
+              <span class="visually-hidden">Автобус</span>
             </li>
             <li class="transport-list__item">
-                <span class="visually-hidden">Велосипед</span>
+              <span class="visually-hidden">Велосипед</span>
             </li>
             <li class="transport-list__item">
-                <span class="visually-hidden">Пешком</span>
+              <span class="visually-hidden">Пешком</span>
             </li>
           </ul>
         </div>
@@ -353,12 +362,14 @@
       </li>
       <li class="cards__item card-user">
         <div class="cards__info">
-          <img class="cards__avatar" src="/images/photo-mini-user-2.jpg" alt="Аватар пользователя">
+          <img class="cards__avatar" src="img/photo-mini-user-2.jpg" alt="Аватар пользователя">
           <a class="card-user__like card-user__like--pressed" href="#">
             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_20761_1497)">
                 <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z" fill="#192144"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                        fill="#192144"/>
                 </g>
               </g>
               <defs>
@@ -407,12 +418,14 @@
       </li>
       <li class="cards__item card-user">
         <div class="cards__info">
-          <img class="cards__avatar" src="/images/photo-mini-user-3.jpg" alt="Аватар пользователя">
+          <img class="cards__avatar" src="img/photo-mini-user-3.jpg" alt="Аватар пользователя">
           <a class="card-user__like card-user__like--pressed" href="#">
             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_20761_1497)">
                 <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z" fill="#192144"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                        fill="#192144"/>
                 </g>
               </g>
               <defs>
@@ -462,12 +475,14 @@
       </li>
       <li class="cards__item card-user">
         <div class="cards__info">
-          <img class="cards__avatar" src="/images/photo-mini-user-4.jpg" alt="Аватар пользователя">
+          <img class="cards__avatar" src="img/photo-mini-user-4.jpg" alt="Аватар пользователя">
           <a class="card-user__like card-user__like--pressed" href="#">
             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_20761_1497)">
                 <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z" fill="#192144"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                        fill="#192144"/>
                 </g>
               </g>
               <defs>
@@ -478,7 +493,7 @@
             </svg>
           </a>
           <span class="card-user__likes">23</span>
-          <div class="card-user__status card-user__status--offline">
+          <div class="card-user__status card-user__status--online">
             <span class="visually-hidden">В сети</span>
           </div>
           <h3 class="card-user__title">Лариса Роговая</h3>
@@ -515,7 +530,7 @@
         <a class="card-user__button button" href="#">Позвать!</a>
       </li>
     </ul>
-    <a class="cards__button-more" href="#">Показать ещё</a>
+    <a class="cards__button-more button button--min-stylish" href="#">Показать ещё</a>
     <a class="cards__button-prev" href="#">
       <span class="visually-hidden">Назад</span>
     </a>
@@ -527,29 +542,29 @@
 <footer class="main-footer">
   <div class="main-footer__wrapper">
     <a class="main-footer__logo" href="#">
-      <img src="/images/logo-footer.svg" width="96" height="15" alt="Логотип Погнали">
+      <img src="img/logo-footer.svg" width="96" height="15" alt="Логотип Погнали">
     </a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
         <a class="social-media__link social-media__link--telegram" href="#">
-          <img src="/images/logo-telegram.svg" width="25" height="24" alt="Логотип Телеграмм">
+          <img src="img/logo-telegram.svg" width="25" height="24" alt="Логотип Телеграмм">
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link social-media__link--vkontakte" href="#">
-          <img src="/images/logo-vkontakte.svg" width="31" height="24" alt="Логотип Вконтакте">
+          <img src="img/logo-vkontakte.svg" width="31" height="24" alt="Логотип Вконтакте">
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link social-media__link--youtube" href="#">
-          <img src="/images/logo-youtube.svg" width="25" height="24" alt="Логотип Youtube">
+          <img src="img/logo-youtube.svg" width="25" height="24" alt="Логотип Youtube">
         </a>
       </li>
     </ul>
     <div class="main-footer__made-by copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__link" href="#">
-        <img src="/images/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
       </a>
     </div>
   </div>

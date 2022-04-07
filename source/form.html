@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Погнали? - Направления</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page__body">
+<body class="page__body page__body--form">
 <header class="main-header">
-  <a class="main-header__logo" href="index.html">
-    <img class="main-header__logo-image" src="/images/logo-header.svg" width="96" height="15" alt="Логотип Погнали">
-  </a>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--form">
+    <a class="main-header__logo" href="index.html">
+      <img class="main-header__logo-image" src="img/logo-navigation.svg" width="96" height="15" alt="Логотип Погнали">
+    </a>
     <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
+      <span class="visually-hidden">Закрыть меню</span>
     </button>
-    <h1 class="page__title">Направления</h1>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list page-list">
         <li class="page-list__item">
@@ -29,10 +29,10 @@
       <a class="main-nav__login button" href="#">Авторизация</a>
       <ul class="main-nav__list contacts-list">
         <li class="contacts-list__item">
-          <a class="contacts-list__phone" href="tel:+88005558628">88005558628</a>
+          <a class="contacts-list__link" href="tel:+88005558628">88005558628</a>
         </li>
         <li class="contacts-list__item">
-          <a class="contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </li>
       </ul>
       <ul class="social-media">
@@ -74,13 +74,22 @@
       </ul>
     </div>
   </nav>
+  <div class="main-header__wrapper">
+    <a class="main-header__logo" href="index.html">
+      <img class="main-header__logo-image" src="img/logo-header.svg" width="96" height="15" alt="Логотип Погнали">
+    </a>
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <h1 class="page__title">Направления</h1>
+  </div>
 </header>
 <main class="main-container">
   <section class="private-info">
     <h2 class="visually-hidden">Личная информация</h2>
     <div class="private-info__level">80<span>level</span></div>
     <div class="private-info__photo">
-      <img src="images/photo-user-2.jpg" width="270" height="270" alt="Фото пользователя">
+      <img src="img/photo-user-2.jpg" width="270" height="270" alt="Фото пользователя">
     </div>
     <a class="private-info__change-photo button" href="#">Сменить фото</a>
     <div class="private-info__unit hashtags">
@@ -131,7 +140,7 @@
     </ol>
     <section class="user-plans__addition plans-addition">
       <div class="plans-addition__wrapper slider">
-        <h2 class="plans-addition__title">Добавить план</h2>
+        <h2 class="slider__title">Добавить план</h2>
         <p class="plans-addition__toggles slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button">1</button>
           <button class="slider__toggle" type="button">2</button>
@@ -316,14 +325,14 @@
             <div class="step__selected-item selected-item">
               <span class="selected-item__name">Босния и Герцеговина</span>
               <div class="selected-item__image"></div>
-              <a class="selected-item__delete">
+              <a class="selected-item__delete" href="#">
                 <span class="visually-hidden">Удалить выбранную позицию</span>
               </a>
             </div>
             <div class="step__selected-item selected-item">
               <span class="selected-item__name">Чехия</span>
               <div class="selected-item__image"></div>
-              <a class="selected-item__delete">
+              <a class="selected-item__delete" href="#">
                 <span class="visually-hidden">Удалить выбранную позицию</span>
               </a>
             </div>
@@ -333,7 +342,7 @@
                 <button class="step__dropdown-button">Выберите страну</button>
                 <ul class="step__alphabet-list">
                   <li class="step__alphabet-item">
-                    <a class="step__alphabet-link" href="#">a</a>
+                    <a class="step__alphabet-link step__alphabet-link--current" href="#">a</a>
                   </li>
                   <li class="step__alphabet-item">
                     <a class="step__alphabet-link" href="#">б</a>
@@ -479,29 +488,29 @@
 <footer class="main-footer">
   <div class="main-footer__wrapper">
     <a class="main-footer__logo" href="#">
-      <img src="/images/logo-footer.svg" width="96" height="15" alt="Логотип Погнали">
+      <img src="img/logo-footer.svg" width="96" height="15" alt="Логотип Погнали">
     </a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
         <a class="social-media__link social-media__link--telegram" href="#">
-          <img src="/images/logo-telegram.svg" width="25" height="24" alt="Логотип Телеграмм">
+          <img src="img/logo-telegram.svg" width="25" height="24" alt="Логотип Телеграмм">
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link social-media__link--vkontakte" href="#">
-          <img src="/images/logo-vkontakte.svg" width="31" height="24" alt="Логотип Вконтакте">
+          <img src="img/logo-vkontakte.svg" width="31" height="24" alt="Логотип Вконтакте">
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link social-media__link--youtube" href="#">
-          <img src="/images/logo-youtube.svg" width="25" height="24" alt="Логотип Youtube">
+          <img src="img/logo-youtube.svg" width="25" height="24" alt="Логотип Youtube">
         </a>
       </li>
     </ul>
     <div class="main-footer__made-by copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__link" href="#">
-        <img src="/images/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
+        <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
       </a>
     </div>
   </div>
