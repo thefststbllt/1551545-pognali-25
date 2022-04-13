@@ -2,8 +2,24 @@
   background-color: #182044;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+  }
 }
 
 .main-header__wrapper {
   padding: 19px 25px 11px;
+}
+
+.main-header__logo {
+  background: url("../img/logo-dark.svg") no-repeat;
+  width: 96px;
+  height: 15px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/logo-full-dark.svg") no-repeat;
+    width: 166px;
+    height: 42px;
+  }
 }

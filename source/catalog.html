@@ -2,85 +2,94 @@
 <html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Погнали? - Попутчики</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--catalog">
 <header class="main-header">
   <nav class="main-nav main-nav--form">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/logo-navigation.svg" width="96" height="15" alt="Логотип Погнали">
-    </a>
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Закрыть меню</span>
-    </button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list page-list">
-        <li class="page-list__item">
-          <a class="page-list__link" href="index.html">О сервисе</a>
-        </li>
-        <li class="page-list__item">
-          <a class="page-list__link" href="form.html">Направления</a>
-        </li>
-        <li class="page-list__item">
-          <a class="page-list__link">Попутчики</a>
-        </li>
-      </ul>
-      <a class="main-nav__login button" href="#">Авторизация</a>
-      <ul class="main-nav__list contacts-list">
-        <li class="contacts-list__item">
-          <a class="contacts-list__link" href="tel:+88005558628">88005558628</a>
-        </li>
-        <li class="contacts-list__item">
-          <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
-      <ul class="social-media">
-        <li class="social-media__item">
-          <a class="social-media__link" href="#">
-            <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7.48786 20.8125H2.12929V11.1375H0V6.3525H2.06643C1.90929 4.185 2.30214 2.6025 3.26071 1.5225C3.71777 1.04316 4.27461 0.66015 4.89562 0.397985C5.51662 0.13582 6.18812 0.000268301 6.86714 0L10.6229 0V4.6125H7.66857C7.49452 5.1766 7.42799 5.76595 7.47214 6.3525H10.615V11.1375H7.47214L7.48786 20.8125ZM3.31571 19.6875H6.28571V10.0125H9.42857V7.5H6.28571V6.93C6.28571 5.43 6.28571 4.0875 7.07143 3.585L7.22071 3.4875H9.42857V1.125H6.89857C6.38444 1.11866 5.87465 1.21553 5.40225 1.40933C4.92986 1.60314 4.50541 1.88955 4.15643 2.25C3.37071 3.1725 3.04857 4.7175 3.29214 6.855L3.37071 7.4775H1.17857V10.0125H3.31571V19.6875Z"
-                fill="#192144"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-media__item">
-          <a class="social-media__link" href="#">
-            <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M17.7664 11.8331C17.219 11.8207 16.6854 11.6573 16.2232 11.3606C15.7407 11.031 15.2975 10.6459 14.9026 10.2132C14.5761 9.88315 14.0345 9.32815 13.8268 9.32815C13.619 9.32815 13.4706 10.0181 13.478 10.5056C13.4812 10.8422 13.3564 11.167 13.1293 11.4131C12.8712 11.6263 12.5561 11.7569 12.2242 11.7881H10.7997C8.75222 11.7426 6.79178 10.9425 5.28708 9.53815C2.55676 7.01065 0.21224 2.18065 0.115789 1.97065C0.0237889 1.79521 -0.0147389 1.59616 0.00506792 1.3986C0.0248747 1.20105 0.102128 1.01386 0.227079 0.860649C0.509857 0.622256 0.867951 0.494496 1.23611 0.500649H4.26321H4.35224C4.6027 0.537588 4.84277 0.626997 5.05708 0.763149C5.25875 0.899848 5.42022 1.08899 5.5245 1.31065C5.8444 2.00295 6.2113 2.67204 6.62256 3.31315C7.5945 4.81315 8.02482 5.15815 8.18063 5.23315C8.35396 4.52985 8.40169 3.80091 8.3216 3.08065C8.3476 2.7526 8.29412 2.4231 8.16579 2.12065C8.00289 1.98893 7.80288 1.91278 7.5945 1.90315L7.05289 1.38565C6.94901 0.890649 7.49063 0.463149 7.86902 0.298149C8.62414 0.0589723 9.41638 -0.0376377 10.2061 0.013149H10.7329C11.2686 -0.000953053 11.8041 0.0494006 12.328 0.163149C13.5893 0.433149 13.5448 1.46065 13.4929 2.64565C13.4929 2.99065 13.4558 3.39565 13.4558 3.86065C13.4558 3.97315 13.4558 4.09315 13.4558 4.22065C13.4266 4.54717 13.4492 4.87631 13.5226 5.19565C14.1402 4.67331 14.6604 4.04337 15.0584 3.33565C15.4879 2.66645 15.865 1.96431 16.1861 1.23565C16.2839 1.00519 16.4516 0.812043 16.6649 0.684009C16.8782 0.555974 17.1262 0.499653 17.3732 0.523149H20.5487C20.6425 0.514104 20.7369 0.514104 20.8306 0.523149C21.5726 0.523149 22.0103 0.740649 22.1884 1.16065C22.3664 1.58065 22.3145 2.40565 20.4374 4.61815L19.6955 5.46565C19.336 5.81847 19.0264 6.21976 18.7755 6.65815C19.0565 6.98108 19.3754 7.2682 19.7251 7.51315C20.5778 8.16264 21.3283 8.93894 21.951 9.81565C22.097 9.98613 22.1925 10.1948 22.2266 10.4176C22.2608 10.6405 22.2321 10.8685 22.1439 11.0756C21.9884 11.3051 21.7803 11.4931 21.5375 11.6237C21.2946 11.7542 21.0241 11.8235 20.749 11.8256L17.9371 11.8631L17.7664 11.8331ZM13.8268 8.20315C14.4945 8.20315 15.0732 8.79565 15.689 9.41815C16.0217 9.78534 16.3951 10.1125 16.8019 10.3931C17.1096 10.6 17.4711 10.7096 17.8406 10.7081H17.9148L20.7342 10.6706C20.8732 10.6626 21.0094 10.6269 21.1348 10.5656L21.0606 10.4456C20.499 9.67196 19.8292 8.98479 19.0722 8.40565C18.1893 7.65565 17.7368 7.30315 17.6848 6.72565C17.6329 6.14815 18.0484 5.64565 18.8793 4.69315L19.6213 3.86065C20.2477 3.21479 20.7619 2.46681 21.1422 1.64815C20.9767 1.63823 20.8107 1.63823 20.6451 1.64815H17.4029C17.3443 1.6349 17.2835 1.6349 17.2248 1.64815C16.8814 2.44423 16.4719 3.20947 16.0006 3.93565C14.5984 6.05065 13.938 6.33565 13.4706 6.33565C13.3257 6.33565 13.183 6.29959 13.0551 6.23065C12.3132 5.80315 12.3132 4.85065 12.3577 4.16065C12.3577 4.04815 12.3577 3.93565 12.3577 3.83815C12.3577 3.35065 12.3577 2.93065 12.3948 2.57065C12.4542 1.31065 12.3948 1.30315 12.1129 1.23565C11.6586 1.14491 11.1958 1.10467 10.7329 1.11565H10.221C9.74988 1.10581 9.27872 1.13088 8.81127 1.19065C8.88206 1.24338 8.94459 1.30659 8.99676 1.37815C9.30278 1.8659 9.4554 2.43595 9.4345 3.01315C9.53095 4.25065 9.47902 5.86315 8.69256 6.25315C8.5533 6.31903 8.40115 6.35235 8.2474 6.35065C7.5574 6.35065 6.87482 5.69065 5.70998 3.90565C5.26298 3.22218 4.86383 2.50794 4.51547 1.76815L4.45611 1.69315C4.38118 1.65454 4.30126 1.62677 4.21869 1.61065H1.25095H1.19901C1.63676 2.52565 3.71418 6.57565 6.03643 8.69815C7.34044 9.90918 9.02993 10.6088 10.7997 10.6706H12.1722C12.2422 10.6555 12.3097 10.6303 12.3726 10.5956C12.3726 10.5956 12.3726 10.5956 12.3726 10.5281C12.3726 10.3256 12.3726 8.57815 13.5448 8.27815C13.6356 8.24202 13.7302 8.21685 13.8268 8.20315Z"
-                fill="#192144"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-media__item">
-          <a class="social-media__link social-media__link--disabled" href="#">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g opacity="0.5">
-                <path
-                  d="M12.9602 1.80061C13.8189 1.80251 14.6419 2.14448 15.2491 2.75169C15.8563 3.35889 16.1982 4.18189 16.2002 5.04061V12.9606C16.1982 13.8193 15.8563 14.6423 15.2491 15.2495C14.6419 15.8567 13.8189 16.1987 12.9602 16.2006H5.04015C4.18269 16.1968 3.36153 15.854 2.75588 15.247C2.15022 14.64 1.80925 13.8181 1.80735 12.9606V5.04061C1.80925 4.18314 2.15022 3.36122 2.75588 2.75422C3.36153 2.14722 4.18269 1.80441 5.04015 1.80061H12.9602ZM12.9602 0.720612H5.04015C3.89442 0.720612 2.79561 1.17575 1.98545 1.98591C1.1753 2.79607 0.720154 3.89488 0.720154 5.04061L0.720154 12.9606C0.720154 14.1063 1.1753 15.2052 1.98545 16.0153C2.79561 16.8255 3.89442 17.2806 5.04015 17.2806H12.9602C14.1059 17.2806 15.2047 16.8255 16.0149 16.0153C16.825 15.2052 17.2802 14.1063 17.2802 12.9606V5.04061C17.2802 3.89488 16.825 2.79607 16.0149 1.98591C15.2047 1.17575 14.1059 0.720612 12.9602 0.720612V0.720612Z"
-                  fill="#192144"/>
-                <path
-                  d="M9.00697 5.81737C9.63781 5.81737 10.2545 6.00444 10.779 6.35492C11.3035 6.7054 11.7124 7.20354 11.9538 7.78637C12.1952 8.36919 12.2584 9.01051 12.1353 9.62923C12.0122 10.248 11.7084 10.8163 11.2624 11.2624C10.8163 11.7084 10.248 12.0122 9.62923 12.1353C9.01051 12.2584 8.36918 12.1952 7.78636 11.9538C7.20354 11.7124 6.70539 11.3035 6.35491 10.779C6.00443 10.2545 5.81737 9.63782 5.81737 9.00697C5.81642 8.58784 5.89827 8.17265 6.05823 7.78524C6.21818 7.39784 6.45309 7.04584 6.74946 6.74947C7.04583 6.4531 7.39783 6.21819 7.78524 6.05823C8.17265 5.89828 8.58784 5.81642 9.00697 5.81737ZM9.00697 4.73737C8.16222 4.73595 7.33602 4.98514 6.63295 5.45343C5.92987 5.92171 5.3815 6.58803 5.05724 7.36807C4.73298 8.14811 4.6474 9.00681 4.81133 9.83551C4.97526 10.6642 5.38133 11.4256 5.97816 12.0235C6.57498 12.6213 7.33574 13.0287 8.16416 13.194C8.99258 13.3593 9.85142 13.2752 10.632 12.9523C11.4126 12.6293 12.0798 12.0821 12.5493 11.3798C13.0188 10.6775 13.2694 9.85173 13.2694 9.00697C13.2703 8.44662 13.1608 7.89158 12.947 7.37361C12.7332 6.85564 12.4194 6.38491 12.0235 5.98835C11.6276 5.59178 11.1574 5.27717 10.6398 5.06252C10.1222 4.84786 9.56732 4.73737 9.00697 4.73737Z"
-                  fill="#192144"/>
-                <path
-                  d="M13.4282 5.55936C13.9611 5.55936 14.393 5.12741 14.393 4.59456C14.393 4.06172 13.9611 3.62976 13.4282 3.62976C12.8954 3.62976 12.4634 4.06172 12.4634 4.59456C12.4634 5.12741 12.8954 5.55936 13.4282 5.55936Z"
-                  fill="#192144"/>
-              </g>
-            </svg>
-          </a>
-        </li>
-      </ul>
+    <div class="page__menu-wrapper">
+      <a class="main-header__logo" href="index.html"></a>
+      <button class="main-nav__toggle burger-button burger-button--inner" type="button">
+        <span class="visually-hidden">Закрыть меню</span>
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.75 1.25L1.75 19.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <path d="M1.75 1.25L19.75 19.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
+    <ul class="main-nav__list page-list">
+      <li class="page-list__item">
+        <a class="page-list__link" href="index.html">О сервисе</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link" href="form.html">Направления</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link">Попутчики</a>
+      </li>
+    </ul>
+    <a class="main-nav__login button" href="#">Авторизация</a>
+    <ul class="main-nav__list contacts-list">
+      <li class="contacts-list__item">
+        <a class="contacts-list__link contacts-list__phone" href="tel:+88005558628">88005558628</a>
+      </li>
+      <li class="contacts-list__item">
+        <a class="contacts-list__link contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </li>
+    </ul>
+    <ul class="main-nav__contacts social-media">
+      <li class="social-media__item">
+        <a class="social-media__link" href="#">
+          <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.48786 20.8125H2.12929V11.1375H0V6.3525H2.06643C1.90929 4.185 2.30214 2.6025 3.26071 1.5225C3.71777 1.04316 4.27461 0.66015 4.89562 0.397985C5.51662 0.13582 6.18812 0.000268301 6.86714 0L10.6229 0V4.6125H7.66857C7.49452 5.1766 7.42799 5.76595 7.47214 6.3525H10.615V11.1375H7.47214L7.48786 20.8125ZM3.31571 19.6875H6.28571V10.0125H9.42857V7.5H6.28571V6.93C6.28571 5.43 6.28571 4.0875 7.07143 3.585L7.22071 3.4875H9.42857V1.125H6.89857C6.38444 1.11866 5.87465 1.21553 5.40225 1.40933C4.92986 1.60314 4.50541 1.88955 4.15643 2.25C3.37071 3.1725 3.04857 4.7175 3.29214 6.855L3.37071 7.4775H1.17857V10.0125H3.31571V19.6875Z"
+              fill="#192144"/>
+          </svg>
+        </a>
+      </li>
+      <li class="social-media__item">
+        <a class="social-media__link" href="#">
+          <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.7664 11.8331C17.219 11.8207 16.6854 11.6573 16.2232 11.3606C15.7407 11.031 15.2975 10.6459 14.9026 10.2132C14.5761 9.88315 14.0345 9.32815 13.8268 9.32815C13.619 9.32815 13.4706 10.0181 13.478 10.5056C13.4812 10.8422 13.3564 11.167 13.1293 11.4131C12.8712 11.6263 12.5561 11.7569 12.2242 11.7881H10.7997C8.75222 11.7426 6.79178 10.9425 5.28708 9.53815C2.55676 7.01065 0.21224 2.18065 0.115789 1.97065C0.0237889 1.79521 -0.0147389 1.59616 0.00506792 1.3986C0.0248747 1.20105 0.102128 1.01386 0.227079 0.860649C0.509857 0.622256 0.867951 0.494496 1.23611 0.500649H4.26321H4.35224C4.6027 0.537588 4.84277 0.626997 5.05708 0.763149C5.25875 0.899848 5.42022 1.08899 5.5245 1.31065C5.8444 2.00295 6.2113 2.67204 6.62256 3.31315C7.5945 4.81315 8.02482 5.15815 8.18063 5.23315C8.35396 4.52985 8.40169 3.80091 8.3216 3.08065C8.3476 2.7526 8.29412 2.4231 8.16579 2.12065C8.00289 1.98893 7.80288 1.91278 7.5945 1.90315L7.05289 1.38565C6.94901 0.890649 7.49063 0.463149 7.86902 0.298149C8.62414 0.0589723 9.41638 -0.0376377 10.2061 0.013149H10.7329C11.2686 -0.000953053 11.8041 0.0494006 12.328 0.163149C13.5893 0.433149 13.5448 1.46065 13.4929 2.64565C13.4929 2.99065 13.4558 3.39565 13.4558 3.86065C13.4558 3.97315 13.4558 4.09315 13.4558 4.22065C13.4266 4.54717 13.4492 4.87631 13.5226 5.19565C14.1402 4.67331 14.6604 4.04337 15.0584 3.33565C15.4879 2.66645 15.865 1.96431 16.1861 1.23565C16.2839 1.00519 16.4516 0.812043 16.6649 0.684009C16.8782 0.555974 17.1262 0.499653 17.3732 0.523149H20.5487C20.6425 0.514104 20.7369 0.514104 20.8306 0.523149C21.5726 0.523149 22.0103 0.740649 22.1884 1.16065C22.3664 1.58065 22.3145 2.40565 20.4374 4.61815L19.6955 5.46565C19.336 5.81847 19.0264 6.21976 18.7755 6.65815C19.0565 6.98108 19.3754 7.2682 19.7251 7.51315C20.5778 8.16264 21.3283 8.93894 21.951 9.81565C22.097 9.98613 22.1925 10.1948 22.2266 10.4176C22.2608 10.6405 22.2321 10.8685 22.1439 11.0756C21.9884 11.3051 21.7803 11.4931 21.5375 11.6237C21.2946 11.7542 21.0241 11.8235 20.749 11.8256L17.9371 11.8631L17.7664 11.8331ZM13.8268 8.20315C14.4945 8.20315 15.0732 8.79565 15.689 9.41815C16.0217 9.78534 16.3951 10.1125 16.8019 10.3931C17.1096 10.6 17.4711 10.7096 17.8406 10.7081H17.9148L20.7342 10.6706C20.8732 10.6626 21.0094 10.6269 21.1348 10.5656L21.0606 10.4456C20.499 9.67196 19.8292 8.98479 19.0722 8.40565C18.1893 7.65565 17.7368 7.30315 17.6848 6.72565C17.6329 6.14815 18.0484 5.64565 18.8793 4.69315L19.6213 3.86065C20.2477 3.21479 20.7619 2.46681 21.1422 1.64815C20.9767 1.63823 20.8107 1.63823 20.6451 1.64815H17.4029C17.3443 1.6349 17.2835 1.6349 17.2248 1.64815C16.8814 2.44423 16.4719 3.20947 16.0006 3.93565C14.5984 6.05065 13.938 6.33565 13.4706 6.33565C13.3257 6.33565 13.183 6.29959 13.0551 6.23065C12.3132 5.80315 12.3132 4.85065 12.3577 4.16065C12.3577 4.04815 12.3577 3.93565 12.3577 3.83815C12.3577 3.35065 12.3577 2.93065 12.3948 2.57065C12.4542 1.31065 12.3948 1.30315 12.1129 1.23565C11.6586 1.14491 11.1958 1.10467 10.7329 1.11565H10.221C9.74988 1.10581 9.27872 1.13088 8.81127 1.19065C8.88206 1.24338 8.94459 1.30659 8.99676 1.37815C9.30278 1.8659 9.4554 2.43595 9.4345 3.01315C9.53095 4.25065 9.47902 5.86315 8.69256 6.25315C8.5533 6.31903 8.40115 6.35235 8.2474 6.35065C7.5574 6.35065 6.87482 5.69065 5.70998 3.90565C5.26298 3.22218 4.86383 2.50794 4.51547 1.76815L4.45611 1.69315C4.38118 1.65454 4.30126 1.62677 4.21869 1.61065H1.25095H1.19901C1.63676 2.52565 3.71418 6.57565 6.03643 8.69815C7.34044 9.90918 9.02993 10.6088 10.7997 10.6706H12.1722C12.2422 10.6555 12.3097 10.6303 12.3726 10.5956C12.3726 10.5956 12.3726 10.5956 12.3726 10.5281C12.3726 10.3256 12.3726 8.57815 13.5448 8.27815C13.6356 8.24202 13.7302 8.21685 13.8268 8.20315Z"
+              fill="#192144"/>
+          </svg>
+        </a>
+      </li>
+      <li class="social-media__item">
+        <a class="social-media__link social-media__link--disabled" href="#">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+              <path
+                d="M12.9602 1.80061C13.8189 1.80251 14.6419 2.14448 15.2491 2.75169C15.8563 3.35889 16.1982 4.18189 16.2002 5.04061V12.9606C16.1982 13.8193 15.8563 14.6423 15.2491 15.2495C14.6419 15.8567 13.8189 16.1987 12.9602 16.2006H5.04015C4.18269 16.1968 3.36153 15.854 2.75588 15.247C2.15022 14.64 1.80925 13.8181 1.80735 12.9606V5.04061C1.80925 4.18314 2.15022 3.36122 2.75588 2.75422C3.36153 2.14722 4.18269 1.80441 5.04015 1.80061H12.9602ZM12.9602 0.720612H5.04015C3.89442 0.720612 2.79561 1.17575 1.98545 1.98591C1.1753 2.79607 0.720154 3.89488 0.720154 5.04061L0.720154 12.9606C0.720154 14.1063 1.1753 15.2052 1.98545 16.0153C2.79561 16.8255 3.89442 17.2806 5.04015 17.2806H12.9602C14.1059 17.2806 15.2047 16.8255 16.0149 16.0153C16.825 15.2052 17.2802 14.1063 17.2802 12.9606V5.04061C17.2802 3.89488 16.825 2.79607 16.0149 1.98591C15.2047 1.17575 14.1059 0.720612 12.9602 0.720612V0.720612Z"
+                fill="#192144"/>
+              <path
+                d="M9.00697 5.81737C9.63781 5.81737 10.2545 6.00444 10.779 6.35492C11.3035 6.7054 11.7124 7.20354 11.9538 7.78637C12.1952 8.36919 12.2584 9.01051 12.1353 9.62923C12.0122 10.248 11.7084 10.8163 11.2624 11.2624C10.8163 11.7084 10.248 12.0122 9.62923 12.1353C9.01051 12.2584 8.36918 12.1952 7.78636 11.9538C7.20354 11.7124 6.70539 11.3035 6.35491 10.779C6.00443 10.2545 5.81737 9.63782 5.81737 9.00697C5.81642 8.58784 5.89827 8.17265 6.05823 7.78524C6.21818 7.39784 6.45309 7.04584 6.74946 6.74947C7.04583 6.4531 7.39783 6.21819 7.78524 6.05823C8.17265 5.89828 8.58784 5.81642 9.00697 5.81737ZM9.00697 4.73737C8.16222 4.73595 7.33602 4.98514 6.63295 5.45343C5.92987 5.92171 5.3815 6.58803 5.05724 7.36807C4.73298 8.14811 4.6474 9.00681 4.81133 9.83551C4.97526 10.6642 5.38133 11.4256 5.97816 12.0235C6.57498 12.6213 7.33574 13.0287 8.16416 13.194C8.99258 13.3593 9.85142 13.2752 10.632 12.9523C11.4126 12.6293 12.0798 12.0821 12.5493 11.3798C13.0188 10.6775 13.2694 9.85173 13.2694 9.00697C13.2703 8.44662 13.1608 7.89158 12.947 7.37361C12.7332 6.85564 12.4194 6.38491 12.0235 5.98835C11.6276 5.59178 11.1574 5.27717 10.6398 5.06252C10.1222 4.84786 9.56732 4.73737 9.00697 4.73737Z"
+                fill="#192144"/>
+              <path
+                d="M13.4282 5.55936C13.9611 5.55936 14.393 5.12741 14.393 4.59456C14.393 4.06172 13.9611 3.62976 13.4282 3.62976C12.8954 3.62976 12.4634 4.06172 12.4634 4.59456C12.4634 5.12741 12.8954 5.55936 13.4282 5.55936Z"
+                fill="#192144"/>
+            </g>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </nav>
   <div class="main-header__wrapper">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/logo-header.svg" width="96" height="15" alt="Логотип Погнали">
-    </a>
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
+    <div class="page__menu-wrapper">
+      <a class="promo-header__logo"></a>
+      <button class="promo-header__toggle burger-button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="25" height="3" rx="1.5" fill="#fff"/>
+          <rect y="8" width="25" height="3" rx="1.5" fill="#fff"/>
+        </svg>
+      </button>
+    </div>
     <h1 class="page__title">Попутчики</h1>
   </div>
 </header>
@@ -88,10 +97,12 @@
   <section class="catalog__filter filter">
     <h2 class="visually-hidden">Фильтры</h2>
     <div class="filter__alphabet filter-alphabet">
-      <h3 class="filter-alphabet__title">Фильтрация по странам:</h3>
-      <button class="filter-alphabet__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <div class="filter-alphabet__head-wrapper">
+        <h3 class="filter-alphabet__title">Фильтрация по странам:</h3>
+        <button class="filter-alphabet__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <div class="filter__inner-wrapper">
         <ul class="filter__continent-list">
           <li class="filter__continent-item">
@@ -222,9 +233,11 @@
       </div>
       <button class="button button--alphabet" type="button">Свернуть</button>
     </div>
-    <div class="filter__companion filter-companion">
+  </section>
+  <div class="catalog__main-wrapper">
+    <section class="filter-companion">
       <h3 class="filter-companion__title">Подберите идеального попутчика</h3>
-      <form class="filter-companion-form" method="post" action="https://echo.htmlacademy.ru/">
+      <form class="filter-companion__form" method="post" action="https://echo.htmlacademy.ru/">
         <ul class="filter-companion__list">
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Хобби</button>
@@ -300,264 +313,264 @@
         </ul>
         <button class="filter-companion__confirm-button button button--companion" type="button">Показать</button>
       </form>
-    </div>
-  </section>
-  <section class="catalog__cards cards">
-    <h2 class="visually-hidden">Профили попутчиков</h2>
-    <ul class="cards__list">
-      <li class="cards__item card-user">
-        <div class="cards__info">
-          <img class="cards__avatar" src="img/photo-mini-user-1.jpg" alt="Аватар пользователя">
-          <a class="card-user__like card-user__like--pressed" href="#">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_20761_1579)">
-                <path
-                  d="M3.25532 1.47406C4.94809 1.47406 6.31915 2.82156 6.31915 4.48385C6.31915 2.82156 7.69022 1.47406 9.38298 1.47406C11.0757 1.47406 12.4468 2.82156 12.4468 4.48385C12.4468 6.98919 9.96971 7.87293 6.61941 11.8609C6.58252 11.9047 6.53654 11.9399 6.48468 11.9641C6.43283 11.9882 6.37633 12.0007 6.31915 12.0007C6.26197 12.0007 6.20548 11.9882 6.15362 11.9641C6.10176 11.9399 6.05578 11.9047 6.0189 11.8609C2.6686 7.87293 0.19149 6.98919 0.19149 4.48385C0.19149 2.82156 1.56255 1.47406 3.25532 1.47406Z"
-                  fill="#F02323"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_20761_1579">
-                  <rect width="12.2553" height="12.2849" fill="white" transform="translate(0.19149 0.706238)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <span class="card-user__likes">1,5 M</span>
-          <div class="card-user__status card-user__status--offline">
-            <span class="visually-hidden">Не в сети</span>
-          </div>
-          <h3 class="card-user__title">Таня Фирсова</h3>
-          <p class="card-user__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-        </div>
-        <div class="card-user__targets user-targets">
-          <h4 class="user-targets__title">хочет посетить:</h4>
-          <ul class="user-targets__list">
-            <li class="user-targets__item">Шри-Ланка</li>
-            <li class="user-targets__item">Тайланд</li>
-            <li class="user-targets__item">Сейшелы</li>
-          </ul>
-        </div>
-        <div class="card-user__transport user-transport">
-          <h4 class="user-transport__title">транспорт:</h4>
-          <ul class="user-transport__list transport-list">
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden">Самолет</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Автобус</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Велосипед</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Пешком</span>
-            </li>
-          </ul>
-        </div>
-        <div class="card-user__level user-level">
-          <h4 class="user-level__title">левел:</h4>
-          <p class="user-level__value">99</p>
-        </div>
-        <a class="card-user__button button" href="#">Позвать!</a>
-      </li>
-      <li class="cards__item card-user">
-        <div class="cards__info">
-          <img class="cards__avatar" src="img/photo-mini-user-2.jpg" alt="Аватар пользователя">
-          <a class="card-user__like card-user__like--pressed" href="#">
-            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_20761_1497)">
-                <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                        fill="#192144"/>
+    </section>
+    <section class="catalog__cards cards">
+      <h2 class="visually-hidden">Профили попутчиков</h2>
+      <ul class="cards__list">
+        <li class="cards__item card-user">
+          <div class="cards__info">
+            <img class="cards__avatar" src="img/photo-mini-user-1.jpg" alt="Аватар пользователя">
+            <a class="card-user__like card-user__like--pressed" href="#">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_20761_1579)">
+                  <path
+                    d="M3.25532 1.47406C4.94809 1.47406 6.31915 2.82156 6.31915 4.48385C6.31915 2.82156 7.69022 1.47406 9.38298 1.47406C11.0757 1.47406 12.4468 2.82156 12.4468 4.48385C12.4468 6.98919 9.96971 7.87293 6.61941 11.8609C6.58252 11.9047 6.53654 11.9399 6.48468 11.9641C6.43283 11.9882 6.37633 12.0007 6.31915 12.0007C6.26197 12.0007 6.20548 11.9882 6.15362 11.9641C6.10176 11.9399 6.05578 11.9047 6.0189 11.8609C2.6686 7.87293 0.19149 6.98919 0.19149 4.48385C0.19149 2.82156 1.56255 1.47406 3.25532 1.47406Z"
+                    fill="#F02323"/>
                 </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_20761_1495">
-                  <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <span class="card-user__likes">1500</span>
-          <div class="card-user__status card-user__status--offline">
-            <span class="visually-hidden">Не в сети</span>
+                <defs>
+                  <clipPath id="clip0_20761_1579">
+                    <rect width="12.2553" height="12.2849" fill="white" transform="translate(0.19149 0.706238)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <span class="card-user__likes">1,5 M</span>
+            <div class="card-user__status card-user__status--offline">
+              <span class="visually-hidden">Не в сети</span>
+            </div>
+            <h3 class="card-user__title">Таня Фирсова</h3>
+            <p class="card-user__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           </div>
-          <h3 class="card-user__title">Петя Демин</h3>
-          <p class="card-user__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-        </div>
-        <div class="card-user__targets user-targets">
-          <h4 class="user-targets__title">хочет посетить:</h4>
-          <ul class="user-targets__list">
-            <li class="user-targets__item">Бельгия</li>
-            <li class="user-targets__item">Чехия</li>
-          </ul>
-        </div>
-        <div class="card-user__transport user-transport">
-          <h4 class="user-transport__title">транспорт:</h4>
-          <ul class="user-transport__list transport-list">
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden ">Самолет</span>
-            </li>
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden">Автобус</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Велосипед</span>
-            </li>
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden">Пешком</span>
-            </li>
-          </ul>
-        </div>
-        <div class="card-user__level user-level">
-          <h4 class="user-level__title">левел:</h4>
-          <p class="user-level__value">80</p>
-        </div>
-        <a class="card-user__button button" href="#">Позвать!</a>
-      </li>
-      <li class="cards__item card-user">
-        <div class="cards__info">
-          <img class="cards__avatar" src="img/photo-mini-user-3.jpg" alt="Аватар пользователя">
-          <a class="card-user__like card-user__like--pressed" href="#">
-            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_20761_1497)">
-                <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                        fill="#192144"/>
+          <div class="card-user__targets user-targets">
+            <h4 class="user-targets__title">хочет посетить:</h4>
+            <ul class="user-targets__list">
+              <li class="user-targets__item">Шри-Ланка</li>
+              <li class="user-targets__item">Тайланд</li>
+              <li class="user-targets__item">Сейшелы</li>
+            </ul>
+          </div>
+          <div class="card-user__transport user-transport">
+            <h4 class="user-transport__title">транспорт:</h4>
+            <ul class="user-transport__list transport-list">
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden">Самолет</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-user__level user-level">
+            <h4 class="user-level__title">левел:</h4>
+            <p class="user-level__value">99</p>
+          </div>
+          <a class="card-user__button button" href="#">Позвать!</a>
+        </li>
+        <li class="cards__item card-user">
+          <div class="cards__info">
+            <img class="cards__avatar" src="img/photo-mini-user-2.jpg" alt="Аватар пользователя">
+            <a class="card-user__like card-user__like--pressed" href="#">
+              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_20761_1497)">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                          fill="#192144"/>
+                  </g>
                 </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_20761_1496">
-                  <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <span class="card-user__likes">170</span>
-          <div class="card-user__status card-user__status--offline">
-            <span class="visually-hidden">Не в сети</span>
+                <defs>
+                  <clipPath id="clip0_20761_1495">
+                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <span class="card-user__likes">1500</span>
+            <div class="card-user__status card-user__status--offline">
+              <span class="visually-hidden">Не в сети</span>
+            </div>
+            <h3 class="card-user__title">Петя Демин</h3>
+            <p class="card-user__hashtags">#бургер #бар #футбол #концерт #крафт</p>
           </div>
-          <h3 class="card-user__title">Марк Смолов</h3>
-          <p class="card-user__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-        </div>
-        <div class="card-user__targets user-targets">
-          <h4 class="user-targets__title">хочет посетить:</h4>
-          <ul class="user-targets__list">
-            <li class="user-targets__item">США</li>
-            <li class="user-targets__item">Австралия</li>
-            <li class="user-targets__item">Доминика</li>
-          </ul>
-        </div>
-        <div class="card-user__transport user-transport">
-          <h4 class="user-transport__title">транспорт:</h4>
-          <ul class="user-transport__list transport-list">
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden ">Самолет</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Автобус</span>
-            </li>
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden">Велосипед</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Пешком</span>
-            </li>
-          </ul>
-        </div>
-        <div class="card-user__level user-level">
-          <h4 class="user-level__title">левел:</h4>
-          <p class="user-level__value">25</p>
-        </div>
-        <a class="card-user__button button" href="#">Позвать!</a>
-      </li>
-      <li class="cards__item card-user">
-        <div class="cards__info">
-          <img class="cards__avatar" src="img/photo-mini-user-4.jpg" alt="Аватар пользователя">
-          <a class="card-user__like card-user__like--pressed" href="#">
-            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_20761_1497)">
-                <g opacity="0.5">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                        fill="#192144"/>
+          <div class="card-user__targets user-targets">
+            <h4 class="user-targets__title">хочет посетить:</h4>
+            <ul class="user-targets__list">
+              <li class="user-targets__item">Бельгия</li>
+              <li class="user-targets__item">Чехия</li>
+            </ul>
+          </div>
+          <div class="card-user__transport user-transport">
+            <h4 class="user-transport__title">транспорт:</h4>
+            <ul class="user-transport__list transport-list">
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden ">Самолет</span>
+              </li>
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-user__level user-level">
+            <h4 class="user-level__title">левел:</h4>
+            <p class="user-level__value">80</p>
+          </div>
+          <a class="card-user__button button" href="#">Позвать!</a>
+        </li>
+        <li class="cards__item card-user">
+          <div class="cards__info">
+            <img class="cards__avatar" src="img/photo-mini-user-3.jpg" alt="Аватар пользователя">
+            <a class="card-user__like card-user__like--pressed" href="#">
+              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_20761_1497)">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                          fill="#192144"/>
+                  </g>
                 </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_20761_1497">
-                  <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <span class="card-user__likes">23</span>
-          <div class="card-user__status card-user__status--online">
-            <span class="visually-hidden">В сети</span>
+                <defs>
+                  <clipPath id="clip0_20761_1496">
+                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <span class="card-user__likes">170</span>
+            <div class="card-user__status card-user__status--offline">
+              <span class="visually-hidden">Не в сети</span>
+            </div>
+            <h3 class="card-user__title">Марк Смолов</h3>
+            <p class="card-user__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
           </div>
-          <h3 class="card-user__title">Лариса Роговая</h3>
-          <p class="card-user__hashtags">#образование #карьера #учеба #линкедин</p>
-        </div>
-        <div class="card-user__targets user-targets">
-          <h4 class="user-targets__title">хочет посетить:</h4>
-          <ul class="user-targets__list">
-            <li class="user-targets__item">Великобритания</li>
-            <li class="user-targets__item">Германия</li>
-          </ul>
-        </div>
-        <div class="card-user__transport user-transport">
-          <h4 class="user-transport__title">транспорт:</h4>
-          <ul class="user-transport__list transport-list">
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden ">Самолет</span>
-            </li>
-            <li class="transport-list__item transport-list__item--available">
-              <span class="visually-hidden">Автобус</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Велосипед</span>
-            </li>
-            <li class="transport-list__item">
-              <span class="visually-hidden">Пешком</span>
-            </li>
-          </ul>
-        </div>
-        <div class="card-user__level user-level">
-          <h4 class="user-level__title">левел:</h4>
-          <p class="user-level__value">50</p>
-        </div>
-        <a class="card-user__button button" href="#">Позвать!</a>
-      </li>
-    </ul>
-    <a class="cards__button-more button button--min-stylish" href="#">Показать ещё</a>
-    <a class="cards__button-prev" href="#">
-      <span class="visually-hidden">Назад</span>
-    </a>
-    <a class="cards__button-next" href="#">
-      <span class="visually-hidden">Вперед</span>
-    </a>
-  </section>
+          <div class="card-user__targets user-targets">
+            <h4 class="user-targets__title">хочет посетить:</h4>
+            <ul class="user-targets__list">
+              <li class="user-targets__item">США</li>
+              <li class="user-targets__item">Австралия</li>
+              <li class="user-targets__item">Доминика</li>
+            </ul>
+          </div>
+          <div class="card-user__transport user-transport">
+            <h4 class="user-transport__title">транспорт:</h4>
+            <ul class="user-transport__list transport-list">
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden ">Самолет</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-user__level user-level">
+            <h4 class="user-level__title">левел:</h4>
+            <p class="user-level__value">25</p>
+          </div>
+          <a class="card-user__button button" href="#">Позвать!</a>
+        </li>
+        <li class="cards__item card-user">
+          <div class="cards__info">
+            <img class="cards__avatar" src="img/photo-mini-user-4.jpg" alt="Аватар пользователя">
+            <a class="card-user__like card-user__like--pressed" href="#">
+              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_20761_1497)">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
+                          fill="#192144"/>
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_20761_1497">
+                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <span class="card-user__likes">23</span>
+            <div class="card-user__status card-user__status--online">
+              <span class="visually-hidden">В сети</span>
+            </div>
+            <h3 class="card-user__title">Лариса Роговая</h3>
+            <p class="card-user__hashtags">#образование #карьера #учеба #линкедин</p>
+          </div>
+          <div class="card-user__targets user-targets">
+            <h4 class="user-targets__title">хочет посетить:</h4>
+            <ul class="user-targets__list">
+              <li class="user-targets__item">Великобритания</li>
+              <li class="user-targets__item">Германия</li>
+            </ul>
+          </div>
+          <div class="card-user__transport user-transport">
+            <h4 class="user-transport__title">транспорт:</h4>
+            <ul class="user-transport__list transport-list">
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden ">Самолет</span>
+              </li>
+              <li class="transport-list__item transport-list__item--available">
+                <span class="visually-hidden">Автобус</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport-list__item">
+                <span class="visually-hidden">Пешком</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-user__level user-level">
+            <h4 class="user-level__title">левел:</h4>
+            <p class="user-level__value">50</p>
+          </div>
+          <a class="card-user__button button" href="#">Позвать!</a>
+        </li>
+      </ul>
+      <a class="cards__button-more button button--min-stylish" href="#">Показать ещё</a>
+      <div class="cards__button-wrapper">
+        <a class="cards__button-prev" href="#">
+          <span class="visually-hidden">Назад</span>
+        </a>
+        <a class="cards__button-next" href="#">
+          <span class="visually-hidden">Вперед</span>
+        </a>
+      </div>
+    </section>
+  </div>
 </main>
 <footer class="main-footer">
   <div class="main-footer__wrapper">
-    <a class="main-footer__logo" href="#">
-      <img src="img/logo-footer.svg" width="96" height="15" alt="Логотип Погнали">
-    </a>
+    <a class="main-footer__logo" href="index.html"></a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
-        <a class="social-media__link social-media__link--telegram" href="#">
-          <img src="img/logo-telegram.svg" width="25" height="24" alt="Логотип Телеграмм">
+        <a class="social-media__link social-media__footer-link social-media__link--telegram" href="#">
+          <span class="visually-hidden">Telegram</span>
         </a>
       </li>
       <li class="social-media__item">
-        <a class="social-media__link social-media__link--vkontakte" href="#">
-          <img src="img/logo-vkontakte.svg" width="31" height="24" alt="Логотип Вконтакте">
+        <a class="social-media__link social-media__footer-link social-media__link--vkontakte" href="#">
+          <span class="visually-hidden">Vkontakte</span>
         </a>
       </li>
       <li class="social-media__item">
-        <a class="social-media__link social-media__link--youtube" href="#">
-          <img src="img/logo-youtube.svg" width="25" height="24" alt="Логотип Youtube">
+        <a class="social-media__link social-media__footer-link social-media__link--youtube" href="#">
+          <span class="visually-hidden">Youtube</span>
         </a>
       </li>
     </ul>

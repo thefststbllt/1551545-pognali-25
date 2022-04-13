@@ -1,24 +1,42 @@
 .trip-plan {
-  background-color: #ffffff;
+  background-color: @basic-white;
   padding: 25px;
   border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .trip-plan__title {
   color: #1d2e5b;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
   margin: 0;
 }
 
 .trip-plan__companions {
   color: #1d2e5b;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 .trip-plan__time {
   color: #1d2e5b;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 }
 
 .trip-plan__change {
-  color: #000000;
+  color: @basic-black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
   opacity: 0.3;
   text-decoration: none;
   text-transform: uppercase;

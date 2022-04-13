@@ -1,17 +1,57 @@
 .location__wrapper {
-  background-color: #ffd74b;
+  background-color: @special-yellow;
   padding: 25px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .location__address {
+  display: flex;
+  align-items: center;
   color: #1d2e5b;
   font-weight: 700;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: @menu-contact-color;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5 0a7.876 7.876 0 0 0-7.875 7.875c0 5.058 3.803 7.27 4.644 8.279C9.29 18.577 9.403 21 10.5 21s1.211-2.423 3.23-4.846c.841-1.01 4.645-3.22 4.645-8.279A7.876 7.876 0 0 0 10.5 0Zm0 13.125a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 0 1 0 10.5Zm0-7.875a2.626 2.626 0 0 0 0 5.25 2.626 2.626 0 0 0 0-5.25Z' fill='%23FFD74B'/%3E%3Ccircle cx='10.5' cy='7.875' fill='%23161C35' r='.875'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 16px;
+  }
 }
 
-.location__path-button {
+.location .location__path-button {
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px;
   color: #1d2e5b;
   border: 3px solid #192144;
   border-radius: 10px;
+  text-transform: none;
+  text-align: start;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-left: 11px solid #1d2e5b;
+    border-bottom: 7px solid transparent;
+  }
 }

@@ -1,17 +1,25 @@
 .step {
-  background-color: #ffffff;
+  background-color: @basic-white;
   padding: 25px;
   border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .step__title {
   color: #1d2e5b;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
   margin: 0;
 }
 
 .step__description {
   color: #444444;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .step__quantity {
@@ -21,6 +29,8 @@
 .step__alphabet-list {
   list-style-type: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .step__alphabet-link {

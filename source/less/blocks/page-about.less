@@ -1,0 +1,52 @@
+.page-about {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 50px;
+  background: url("../img/background-image-2.jpg") center bottom no-repeat;
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+
+.page-about__title {
+  color: #ff8d30;
+  margin: 0 0 19px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.page-about__description {
+  font-weight: 300;
+  line-height: 22px;
+  color: @basic-white;
+  margin: 0 0 20px;
+}
+
+.page-about__description--appeal {
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-about .page-about__button {
+  display: none;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    text-transform: none;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-left: 11px solid #1d2e5b;
+      border-bottom: 7px solid transparent;
+    }
+  }
+}

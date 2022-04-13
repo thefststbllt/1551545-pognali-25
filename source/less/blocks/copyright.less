@@ -1,3 +1,18 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  border-top: 1px solid @lightgray;
+
+  @media (min-width: @tablet-width) {
+    justify-content: end;
+    border: none;
+  }
+}
+
 .copyright__text {
   color: #444444;
+  margin: 0;
 }
+
