@@ -1,17 +1,36 @@
-.promo {
-  background-image: url("../img/background-image-1.jpg");
-  background-repeat: no-repeat;
-}
-
 .promo__list {
+  display: grid;
   padding: 0;
+  margin: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .promo__slogan {
-  color: #ffffff;
+  color: @basic-white;
   font-weight: 700;
   font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / -2;
+    text-align: start;
+  }
 }
 
 .promo__contacts {
@@ -20,21 +39,24 @@
 }
 
 .promo__comment {
-  color: #ffffff;
-  margin: 0;
+  color: @basic-white;
+  line-height: 22px;
 }
 
 .promo__wrapper {
   padding: 25px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  background: url("../img/background-image-1.jpg") no-repeat, url("../img/background-traveller-illustration.png") no-repeat @background-deep-blue;
 }
 
 .promo__item {
   padding: 22px 24px;
   font-size: 18px;
+  font-weight: 700;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+
   &:last-child {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -59,14 +81,19 @@
 
 .promo__author-text {
   font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .promo__author-name {
   font-weight: 700;
   font-style: normal;
-}
 
-.promo__about {
-  background-image: url("../img/background-image-2.jpg");
-  background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

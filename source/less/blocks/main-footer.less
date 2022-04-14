@@ -1,9 +1,29 @@
 .main-footer {
-  background: #ffffff;
+  background: @basic-white;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
 
+.main-footer__logo {
+  display: block;
+  background: url("../img/logo-dark.svg") no-repeat;
+  width: 96px;
+  height: 15px;
+  justify-self: center;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/logo-full-dark.svg") no-repeat;
+    width: 166px;
+    height: 42px;
+    justify-self: start;
+  }
+}
+
 .main-footer__wrapper {
-  padding: 25px;
+  display: grid;
+  padding: 37px 25px 19px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

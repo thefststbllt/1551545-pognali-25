@@ -1,11 +1,17 @@
+.filter__inner-wrapper {
+  padding: 25px;
+}
+
 .filter__continent-list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .filter__continent-link {
-  text-decoration: none;
   color: #192144;
+  text-decoration: none;
+  text-transform: uppercase;
   opacity: 0.3;
 }
 
@@ -15,17 +21,23 @@
 
 .filter__alphabet-list {
   padding: 0;
-  list-style-type: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .filter__alphabet-link {
-  text-decoration: none;
   color: #1d2e5b;
-  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @basic-white;
 }
 
 .filter__alphabet-link--current {
-  color: #ffffff;
+  color: @basic-white;
   background-color: #1d2e5b;
 }
 
@@ -37,4 +49,6 @@
 .filter__country-link {
   text-decoration: none;
   color: #444444;
+  font-weight: 400;
+  line-height: 22px;
 }

@@ -1,44 +1,49 @@
-@font-face {
-  font-family: "Blogger Sans";
-  font-weight: 300;
-  font-style: normal;
-  src: local("Blogger Sans"), url("/fonts/bloggersans-light.woff2") format("woff2");
-  src: local("Blogger Sans"), url("/fonts/bloggersans-light.woff") format("woff");
-  font-display: swap;
+.page .page__main-list {
+  display: none;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 
-@font-face {
-  font-family: "Blogger Sans";
-  font-weight: 500;
-  font-style: normal;
-  src: local("Blogger Sans"), url("/fonts/bloggersans-medium.woff2") format("woff2");
-  src: local("Blogger Sans"), url("/fonts/bloggersans-medium.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Blogger Sans";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Blogger Sans"), url("/fonts/bloggersans-bold.woff2") format("woff2");
-  src: local("Blogger Sans"), url("/fonts/bloggersans-bold.woff") format("woff");
-  font-display: swap;
+.page__main-list .page-list__link {
+  color: @basic-white;
 }
 
 .page__body {
-  background-color: #192144;
+  background-color: #e5e5e5;
   font-family: "Blogger Sans", sans-serif;
   font-size: 16px;
-}
-
-.page__body--form {
-  background-color: #edeff6;
+  line-height: 18px;
+  margin: 0 auto;
 }
 
 .page__body--catalog {
   background-color: #e5e5e5;
 }
 
+.page__menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: -3;
+  }
+}
+
 .page__title {
-  color: #ffffff;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: @basic-white;
+  margin: 0;
 }

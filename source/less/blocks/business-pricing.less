@@ -1,6 +1,20 @@
+.business-pricing {
+  margin: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .business-pricing__item,
 .business-pricing__price {
   color: #444444;
   font-weight: 300;
   margin: 0;
+}
+
+.business-pricing__price {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: end;
 }

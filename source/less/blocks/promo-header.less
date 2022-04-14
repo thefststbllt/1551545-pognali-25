@@ -1,0 +1,28 @@
+.promo-header {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.promo-header__logo {
+  background: url("../img/logo-light.svg") no-repeat;
+  width: 96px;
+  height: 15px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/logo-full-light.svg") no-repeat;
+    width: 166px;
+    height: 42px;
+  }
+}
+
+.promo-header__toggle {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

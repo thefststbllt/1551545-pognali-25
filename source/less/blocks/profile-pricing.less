@@ -1,6 +1,84 @@
+.profile-pricing {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .profile-pricing__item,
 .profile-pricing__price {
   color: #444444;
   font-weight: 300;
   margin: 0;
+  line-height: 16px;
+}
+
+.profile-pricing__price {
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    background-color: #e2e5f2;
+  }
+}
+
+.profile-pricing__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::before,
+  &::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: @basic-white;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+
+    &::before {
+      display: flex;
+      width: 68px;
+      height: 68px;
+      font-size: 28px;
+      line-height: 1em;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.profile-pricing__item--basic {
+  &::before,
+  &::after {
+    background-color: @special-orange;
+    content: "1";
+  }
+}
+
+.profile-pricing__item--premier {
+  &::before,
+  &::after {
+    background-color: @special-yellow-dark;
+    content: "2";
+  }
+}
+
+.profile-pricing__item--custom-color {
+  &::before,
+  &::after {
+    background-color: @special-yellow;
+    content: "3";
+  }
 }
