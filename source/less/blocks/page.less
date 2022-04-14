@@ -47,3 +47,21 @@
   color: @basic-white;
   margin: 0;
 }
+
+.page__main-logo {
+  background: url("../img/logo-light.svg") no-repeat;
+  width: 96px;
+  height: 15px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../img/logo-full-light.svg") no-repeat;
+    width: 166px;
+    height: 42px;
+  }
+}
+
+.page__main-toggle {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

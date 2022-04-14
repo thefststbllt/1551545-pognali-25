@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -81,8 +81,8 @@
   </nav>
   <div class="main-header__wrapper">
     <div class="page__menu-wrapper">
-      <a class="promo-header__logo"></a>
-      <button class="promo-header__toggle burger-button" type="button">
+      <a class="page__main-logo"></a>
+      <button class="page__main-toggle burger-button" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="25" height="3" rx="1.5" fill="#fff"/>
@@ -90,6 +90,32 @@
         </svg>
       </button>
     </div>
+    <ul class="main-header__list page-list">
+      <li class="page-list__item">
+        <a class="page-list__link" href="index.html">О сервисе</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link" href="form.html">Направления</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="main-header__contacts promo-contacts">
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__link promo-contacts__link--phone" href="#">
+          <span class="visually-hidden">Телефон</span>
+        </a>
+      </li>
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__link promo-contacts__link--email" href="#">
+          <span class="visually-hidden">e-mail</span>
+        </a>
+      </li>
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__authorisation button" href="#">Авторизация</a>
+      </li>
+    </ul>
     <h1 class="page__title">Попутчики</h1>
   </div>
 </header>
@@ -230,8 +256,8 @@
             <a class="filter__country-link" href="#">Афганистан</a>
           </li>
         </ul>
+        <button class="button button--alphabet" type="button">Свернуть</button>
       </div>
-      <button class="button button--alphabet" type="button">Свернуть</button>
     </div>
   </section>
   <div class="catalog__main-wrapper">
@@ -241,6 +267,26 @@
         <ul class="filter-companion__list">
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Хобби</button>
+            <ul class="filter-companion__preferences filter-preferences">
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="gym" checked>
+                  Спортзал
+                </label>
+              </li>
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="hookah">
+                  Кальян
+                </label>
+              </li>
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="sofa">
+                  Диван
+                </label>
+              </li>
+            </ul>
           </li>
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Музыка</button>
@@ -253,7 +299,7 @@
               </li>
               <li class="filter-preferences-item">
                 <label class="filter-preferences__checkbox">
-                  <input class="filter-preferences__control" type="checkbox" name="russian-rap" checked>
+                  <input class="filter-preferences__control" type="checkbox" name="russian-rap">
                   Русский рэп
                 </label>
               </li>
@@ -267,6 +313,26 @@
           </li>
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Еда</button>
+            <ul class="filter-companion__preferences filter-preferences">
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="meat-eater" checked>
+                  Мясоед
+                </label>
+              </li>
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="healthy-nutrition" checked>
+                  Сидит на ПП
+                </label>
+              </li>
+              <li class="filter-preferences-item">
+                <label class="filter-preferences__checkbox">
+                  <input class="filter-preferences__control" type="checkbox" name="raw-goods-vegan">
+                  Веган-сыроед
+                </label>
+              </li>
+            </ul>
           </li>
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Транспорт</button>
@@ -295,17 +361,21 @@
           </li>
           <li class="filter-companion__item">
             <button class="filter-companion__button" type="button">Левел</button>
-            <label class="filter-companion__level">
-              <input class="filter-companion__number" type="number" value="30" name="min-level">
-            </label>
-            <label class="filter-companion__level">
-              <input class="filter-companion__number" type="number" value="100" name="max-level">
-            </label>
-            <div class="filter-companion__range filter-range">
-              <div class="filter-range__scale">
-                <div class="filter-range__bar">
-                  <button class="filter-range__toggle toggle-min"></button>
-                  <button class="filter-range__toggle toggle-max"></button>
+            <div class="filter-companion__range-wrapper">
+              <fieldset class="filter-companion__range-field">
+                <label class="filter-companion__level">
+                  <input class="filter-companion__number" type="number" value="30" name="min-level">
+                </label>
+                <label class="filter-companion__level">
+                  <input class="filter-companion__number" type="number" value="100" name="max-level">
+                </label>
+              </fieldset>
+              <div class="filter-companion__range filter-range">
+                <div class="filter-range__scale">
+                  <div class="filter-range__bar">
+                    <button class="filter-range__toggle toggle-min"></button>
+                    <button class="filter-range__toggle toggle-max"></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -318,8 +388,9 @@
       <h2 class="visually-hidden">Профили попутчиков</h2>
       <ul class="cards__list">
         <li class="cards__item card-user">
-          <div class="cards__info">
-            <img class="cards__avatar" src="img/photo-mini-user-1.jpg" alt="Аватар пользователя">
+          <img class="card-user__avatar cards__avatar" src="img/photo-mini-user-1.jpg" alt="Аватар пользователя">
+          <h3 class="card-user__title">Таня Фирсова</h3>
+          <div class="card-user__likes-wrapper">
             <a class="card-user__like card-user__like--pressed" href="#">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_20761_1579)">
@@ -335,12 +406,15 @@
               </svg>
             </a>
             <span class="card-user__likes">1,5 M</span>
-            <div class="card-user__status card-user__status--offline">
-              <span class="visually-hidden">Не в сети</span>
-            </div>
-            <h3 class="card-user__title">Таня Фирсова</h3>
-            <p class="card-user__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           </div>
+          <ul class="card-user__hashtags card-hashtags">
+            <li class="card-hashtags__item">#ЗОЖ</li>
+            <li class="card-hashtags__item">#ПП</li>
+            <li class="card-hashtags__item">#Фитнес</li>
+            <li class="card-hashtags__item">#пляж</li>
+            <li class="card-hashtags__item">#авокадо</li>
+            <li class="card-hashtags__item">#смузи</li>
+          </ul>
           <div class="card-user__targets user-targets">
             <h4 class="user-targets__title">хочет посетить:</h4>
             <ul class="user-targets__list">
@@ -349,55 +423,58 @@
               <li class="user-targets__item">Сейшелы</li>
             </ul>
           </div>
-          <div class="card-user__transport user-transport">
-            <h4 class="user-transport__title">транспорт:</h4>
-            <ul class="user-transport__list transport-list">
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-          </div>
-          <div class="card-user__level user-level">
-            <h4 class="user-level__title">левел:</h4>
-            <p class="user-level__value">99</p>
+          <div class="card-user__important-data">
+            <div class="card-user__transport user-transport">
+              <h4 class="user-transport__title">транспорт:</h4>
+              <ul class="user-transport__list transport-list">
+                <li class="transport-list__item transport-list__item--available">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-user__level user-level">
+              <h4 class="user-level__title">левел:</h4>
+              <p class="user-level__value">99</p>
+            </div>
           </div>
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user">
-          <div class="cards__info">
-            <img class="cards__avatar" src="img/photo-mini-user-2.jpg" alt="Аватар пользователя">
-            <a class="card-user__like card-user__like--pressed" href="#">
+          <img class="card-user__avatar cards__avatar" src="img/photo-mini-user-2.jpg" alt="Аватар пользователя">
+          <h3 class="card-user__title">Петя Демин</h3>
+          <div class="card-user__likes-wrapper">
+            <a class="card-user__like" href="#">
               <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_20761_1497)">
-                  <g opacity="0.5">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                          fill="#192144"/>
-                  </g>
+                <g clip-path="url(#a)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="m6 5.665.67-1.41c.167-.349.456-.85.865-1.256.401-.4.883-.671 1.465-.671 1.257 0 2.25 1.044 2.25 2.3 0 .954-.415 1.627-1.401 2.655-.253.263-.54.547-.86.86-.83.82-1.864 1.84-2.989 3.202-1.125-1.363-2.159-2.382-2.99-3.201a44.458 44.458 0 0 1-.859-.861C1.166 6.255.75 5.582.75 4.628c0-1.256.993-2.3 2.25-2.3.582 0 1.064.272 1.465.67.41.407.698.908.865 1.257L6 5.665Zm.294 6.532A.387.387 0 0 1 6 12.34a.369.369 0 0 1-.294-.143c-1.2-1.499-2.288-2.57-3.182-3.451C.975 7.218 0 6.258 0 4.628 0 2.923 1.343 1.54 3 1.54c1.2 0 2.04.827 2.553 1.582.195.287.343.564.447.781.13-.272.28-.533.447-.781C6.961 2.366 7.8 1.54 9 1.54c1.658 0 3 1.383 3 3.088 0 1.63-.975 2.59-2.524 4.118-.895.882-1.981 1.953-3.182 3.45Z"
+                        fill="#192144" opacity=".5"/>
                 </g>
                 <defs>
-                  <clipPath id="clip0_20761_1495">
-                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .79)" d="M0 0h12v12H0z"/>
                   </clipPath>
                 </defs>
               </svg>
             </a>
             <span class="card-user__likes">1500</span>
-            <div class="card-user__status card-user__status--offline">
-              <span class="visually-hidden">Не в сети</span>
-            </div>
-            <h3 class="card-user__title">Петя Демин</h3>
-            <p class="card-user__hashtags">#бургер #бар #футбол #концерт #крафт</p>
           </div>
+          <ul class="card-user__hashtags card-hashtags">
+            <li class="card-hashtags__item">#бургер</li>
+            <li class="card-hashtags__item">#бар</li>
+            <li class="card-hashtags__item">#футбол</li>
+            <li class="card-hashtags__item">#концерт</li>
+            <li class="card-hashtags__item">#крафт</li>
+          </ul>
           <div class="card-user__targets user-targets">
             <h4 class="user-targets__title">хочет посетить:</h4>
             <ul class="user-targets__list">
@@ -405,55 +482,58 @@
               <li class="user-targets__item">Чехия</li>
             </ul>
           </div>
-          <div class="card-user__transport user-transport">
-            <h4 class="user-transport__title">транспорт:</h4>
-            <ul class="user-transport__list transport-list">
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden ">Самолет</span>
-              </li>
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-          </div>
-          <div class="card-user__level user-level">
-            <h4 class="user-level__title">левел:</h4>
-            <p class="user-level__value">80</p>
+          <div class="card-user__important-data">
+            <div class="card-user__transport user-transport">
+              <h4 class="user-transport__title">транспорт:</h4>
+              <ul class="user-transport__list transport-list">
+                <li class="transport-list__item transport-list__item--available">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-user__level user-level">
+              <h4 class="user-level__title">левел:</h4>
+              <p class="user-level__value">80</p>
+            </div>
           </div>
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user">
-          <div class="cards__info">
-            <img class="cards__avatar" src="img/photo-mini-user-3.jpg" alt="Аватар пользователя">
-            <a class="card-user__like card-user__like--pressed" href="#">
+          <img class="card-user__avatar cards__avatar" src="img/photo-mini-user-3.jpg" alt="Аватар пользователя">
+          <h3 class="card-user__title">Марк Смолов</h3>
+          <div class="card-user__likes-wrapper">
+            <a class="card-user__like" href="#">
               <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_20761_1497)">
-                  <g opacity="0.5">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                          fill="#192144"/>
-                  </g>
+                <g clip-path="url(#a)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="m6 5.665.67-1.41c.167-.349.456-.85.865-1.256.401-.4.883-.671 1.465-.671 1.257 0 2.25 1.044 2.25 2.3 0 .954-.415 1.627-1.401 2.655-.253.263-.54.547-.86.86-.83.82-1.864 1.84-2.989 3.202-1.125-1.363-2.159-2.382-2.99-3.201a44.458 44.458 0 0 1-.859-.861C1.166 6.255.75 5.582.75 4.628c0-1.256.993-2.3 2.25-2.3.582 0 1.064.272 1.465.67.41.407.698.908.865 1.257L6 5.665Zm.294 6.532A.387.387 0 0 1 6 12.34a.369.369 0 0 1-.294-.143c-1.2-1.499-2.288-2.57-3.182-3.451C.975 7.218 0 6.258 0 4.628 0 2.923 1.343 1.54 3 1.54c1.2 0 2.04.827 2.553 1.582.195.287.343.564.447.781.13-.272.28-.533.447-.781C6.961 2.366 7.8 1.54 9 1.54c1.658 0 3 1.383 3 3.088 0 1.63-.975 2.59-2.524 4.118-.895.882-1.981 1.953-3.182 3.45Z"
+                        fill="#192144" opacity=".5"/>
                 </g>
                 <defs>
-                  <clipPath id="clip0_20761_1496">
-                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .79)" d="M0 0h12v12H0z"/>
                   </clipPath>
                 </defs>
               </svg>
             </a>
             <span class="card-user__likes">170</span>
-            <div class="card-user__status card-user__status--offline">
-              <span class="visually-hidden">Не в сети</span>
-            </div>
-            <h3 class="card-user__title">Марк Смолов</h3>
-            <p class="card-user__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
           </div>
+          <ul class="card-user__hashtags card-hashtags">
+            <li class="card-hashtags__item">#рэп</li>
+            <li class="card-hashtags__item">#тату</li>
+            <li class="card-hashtags__item">#хайпбист</li>
+            <li class="card-hashtags__item">#кроссовки</li>
+            <li class="card-hashtags__item">#суприм</li>
+          </ul>
           <div class="card-user__targets user-targets">
             <h4 class="user-targets__title">хочет посетить:</h4>
             <ul class="user-targets__list">
@@ -462,55 +542,57 @@
               <li class="user-targets__item">Доминика</li>
             </ul>
           </div>
-          <div class="card-user__transport user-transport">
-            <h4 class="user-transport__title">транспорт:</h4>
-            <ul class="user-transport__list transport-list">
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden ">Самолет</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-          </div>
-          <div class="card-user__level user-level">
-            <h4 class="user-level__title">левел:</h4>
-            <p class="user-level__value">25</p>
+          <div class="card-user__important-data">
+            <div class="card-user__transport user-transport">
+              <h4 class="user-transport__title">транспорт:</h4>
+              <ul class="user-transport__list transport-list">
+                <li class="transport-list__item transport-list__item--available">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-user__level user-level">
+              <h4 class="user-level__title">левел:</h4>
+              <p class="user-level__value">25</p>
+            </div>
           </div>
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user">
-          <div class="cards__info">
-            <img class="cards__avatar" src="img/photo-mini-user-4.jpg" alt="Аватар пользователя">
-            <a class="card-user__like card-user__like--pressed" href="#">
+          <img class="card-user__avatar cards__avatar" src="img/photo-mini-user-4.jpg" alt="Аватар пользователя">
+          <h3 class="card-user__title">Лариса Роговая</h3>
+          <div class="card-user__likes-wrapper">
+            <a class="card-user__like" href="#">
               <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_20761_1497)">
-                  <g opacity="0.5">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M6 5.66465L6.6705 4.25538C6.837 3.90641 7.12575 3.40462 7.5345 2.99894C7.9365 2.59955 8.418 2.32778 9 2.32778C10.257 2.32778 11.25 3.37233 11.25 4.62799C11.25 5.58194 10.8345 6.25546 9.849 7.28267C9.59625 7.54578 9.30825 7.83015 8.9895 8.14367C8.1585 8.96293 7.125 9.98226 6 11.3451C4.875 9.98226 3.8415 8.96293 3.0105 8.14367C2.69175 7.83015 2.403 7.54499 2.151 7.28267C1.1655 6.25546 0.75 5.58194 0.75 4.62799C0.75 3.37233 1.743 2.32778 3 2.32778C3.582 2.32778 4.0635 2.59955 4.4655 2.99894C4.87425 3.40462 5.163 3.90641 5.3295 4.25538L6 5.66465ZM6.294 12.1966C6.25788 12.2415 6.21286 12.2777 6.16209 12.3024C6.11131 12.3272 6.05599 12.34 6 12.34C5.94401 12.34 5.8887 12.3272 5.83792 12.3024C5.78714 12.2777 5.74212 12.2415 5.706 12.1966C4.50525 10.6983 3.4185 9.62699 2.52375 8.74551C0.975 7.21808 0 6.25782 0 4.62799C0 2.92253 1.3425 1.54004 3 1.54004C4.2 1.54004 5.03925 2.36717 5.553 3.12182C5.748 3.40935 5.8965 3.68585 6 3.90326C6.12975 3.63116 6.27918 3.36991 6.447 3.12182C6.96075 2.36638 7.8 1.54004 9 1.54004C10.6575 1.54004 12 2.92253 12 4.62799C12 6.25782 11.025 7.21808 9.47625 8.74551C8.5815 9.62778 7.49475 10.6991 6.294 12.1958V12.1966Z"
-                          fill="#192144"/>
-                  </g>
+                <g clip-path="url(#a)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="m6 5.665.67-1.41c.167-.349.456-.85.865-1.256.401-.4.883-.671 1.465-.671 1.257 0 2.25 1.044 2.25 2.3 0 .954-.415 1.627-1.401 2.655-.253.263-.54.547-.86.86-.83.82-1.864 1.84-2.989 3.202-1.125-1.363-2.159-2.382-2.99-3.201a44.458 44.458 0 0 1-.859-.861C1.166 6.255.75 5.582.75 4.628c0-1.256.993-2.3 2.25-2.3.582 0 1.064.272 1.465.67.41.407.698.908.865 1.257L6 5.665Zm.294 6.532A.387.387 0 0 1 6 12.34a.369.369 0 0 1-.294-.143c-1.2-1.499-2.288-2.57-3.182-3.451C.975 7.218 0 6.258 0 4.628 0 2.923 1.343 1.54 3 1.54c1.2 0 2.04.827 2.553 1.582.195.287.343.564.447.781.13-.272.28-.533.447-.781C6.961 2.366 7.8 1.54 9 1.54c1.658 0 3 1.383 3 3.088 0 1.63-.975 2.59-2.524 4.118-.895.882-1.981 1.953-3.182 3.45Z"
+                        fill="#192144" opacity=".5"/>
                 </g>
                 <defs>
-                  <clipPath id="clip0_20761_1497">
-                    <rect width="12" height="12" fill="white" transform="translate(0 0.790039)"/>
+                  <clipPath id="a">
+                    <path fill="#fff" transform="translate(0 .79)" d="M0 0h12v12H0z"/>
                   </clipPath>
                 </defs>
               </svg>
             </a>
             <span class="card-user__likes">23</span>
-            <div class="card-user__status card-user__status--online">
-              <span class="visually-hidden">В сети</span>
-            </div>
-            <h3 class="card-user__title">Лариса Роговая</h3>
-            <p class="card-user__hashtags">#образование #карьера #учеба #линкедин</p>
           </div>
+          <ul class="card-user__hashtags card-hashtags">
+            <li class="card-hashtags__item">#образование</li>
+            <li class="card-hashtags__item">#карьера</li>
+            <li class="card-hashtags__item">#учеба</li>
+            <li class="card-hashtags__item">#линкедин</li>
+          </ul>
           <div class="card-user__targets user-targets">
             <h4 class="user-targets__title">хочет посетить:</h4>
             <ul class="user-targets__list">
@@ -518,38 +600,60 @@
               <li class="user-targets__item">Германия</li>
             </ul>
           </div>
-          <div class="card-user__transport user-transport">
-            <h4 class="user-transport__title">транспорт:</h4>
-            <ul class="user-transport__list transport-list">
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden ">Самолет</span>
-              </li>
-              <li class="transport-list__item transport-list__item--available">
-                <span class="visually-hidden">Автобус</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Велосипед</span>
-              </li>
-              <li class="transport-list__item">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-          </div>
-          <div class="card-user__level user-level">
-            <h4 class="user-level__title">левел:</h4>
-            <p class="user-level__value">50</p>
+          <div class="card-user__important-data">
+            <div class="card-user__transport user-transport">
+              <h4 class="user-transport__title">транспорт:</h4>
+              <ul class="user-transport__list transport-list">
+                <li class="transport-list__item transport-list__item--available">
+                  <span class="visually-hidden">Самолет</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Автобус</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport-list__item">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-user__level user-level">
+              <h4 class="user-level__title">левел:</h4>
+              <p class="user-level__value">50</p>
+            </div>
           </div>
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
       </ul>
       <a class="cards__button-more button button--min-stylish" href="#">Показать ещё</a>
       <div class="cards__button-wrapper">
-        <a class="cards__button-prev" href="#">
-          <span class="visually-hidden">Назад</span>
-        </a>
-        <a class="cards__button-next" href="#">
-          <span class="visually-hidden">Вперед</span>
-        </a>
+        <div class="cards__pagination">
+          <ul class="cards__pagination-list">
+            <li class="cards__pagination-item">
+              <a class="cards__button-page" href="#">1</a>
+            </li>
+            <li class="cards__pagination-item">
+              <a class="cards__button-page" href="#">2</a>
+            </li>
+            <li class="cards__pagination-item">
+              <a class="cards__button-page" href="#">3</a>
+            </li>
+            <li class="cards__pagination-item">
+              <a class="cards__button-page" href="#">4</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cards__direction-wrapper">
+          <a class="cards__button-prev" href="#">
+            Назад
+            <span class="visually-hidden">Назад</span>
+          </a>
+          <a class="cards__button-next" href="#">
+            Вперед
+            <span class="visually-hidden">Вперед</span>
+          </a>
+        </div>
       </div>
     </section>
   </div>

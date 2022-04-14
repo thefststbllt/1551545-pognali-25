@@ -4,4 +4,11 @@
 
 .catalog__main-wrapper {
   padding: 25px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    justify-content: space-between;
+  }
 }
