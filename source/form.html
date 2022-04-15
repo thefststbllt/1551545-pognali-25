@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -81,8 +81,8 @@
   </nav>
   <div class="main-header__wrapper">
     <div class="page__menu-wrapper">
-      <a class="promo-header__logo"></a>
-      <button class="promo-header__toggle burger-button" type="button">
+      <a class="page__main-logo"></a>
+      <button class="page__main-toggle burger-button" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="25" height="3" rx="1.5" fill="#fff"/>
@@ -90,6 +90,32 @@
         </svg>
       </button>
     </div>
+    <ul class="main-header__list page-list">
+      <li class="page-list__item">
+        <a class="page-list__link" href="index.html">О сервисе</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link">Направления</a>
+      </li>
+      <li class="page-list__item">
+        <a class="page-list__link" href="catalog.html">Попутчики</a>
+      </li>
+    </ul>
+    <ul class="main-header__contacts promo-contacts">
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__link promo-contacts__link--phone" href="#">
+          <span class="visually-hidden">Телефон</span>
+        </a>
+      </li>
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__link promo-contacts__link--email" href="#">
+          <span class="visually-hidden">e-mail</span>
+        </a>
+      </li>
+      <li class="promo-contacts__item">
+        <a class="promo-contacts__authorisation button" href="#">Авторизация</a>
+      </li>
+    </ul>
     <h1 class="page__title">Направления</h1>
   </div>
 </header>
@@ -114,7 +140,7 @@
         <li class="hashtags__item">#крафт
       </ul>
     </div>
-    <div class="private-info__unit user-transport">
+    <div class="private-info__unit private-info__unit--transport user-transport">
       <h3 class="private-info__title">Транспорт</h3>
       <ul class="private-info__content">
         <li class="user-transport__item user-transport__item--available">
@@ -167,181 +193,199 @@
           </button>
         </p>
         <ol class="slider__list">
-          <li class="slider__item step">
-            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
-            <p class="step__description">Укажите предпочтительное<br>количество попутчиков, которых<br>вы хотели бы
-              позвать в
-              поездку,<br>и ее предполагаемую длительность.</p>
-            <div class="step__quantity-wrapper quantity-field">
-              <label class="step__quantity" for="guys">Ищу попутчиков:</label>
-              <span class="quantity-field__unit">чел.</span>
-              <button class="minus" type="button">-</button>
-              <input class="step__input" type="number" placeholder="2" id="guys">
-              <button class="plus" type="button">+</button>
+          <li class="slider__item step step--arrival-date">
+            <div class="step__head-wrapper">
+              <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+              <p class="step__description">Укажите предпочтительное<br>количество попутчиков, которых<br>вы хотели бы
+                позвать в
+                поездку,<br>и ее предполагаемую длительность.</p>
+              <ol class="step__position-list step-position">
+                <li class="step-position__item step-position__item--current">Даты</li>
+                <li class="step-position__item">Маршрут</li>
+                <li class="step-position__item">Развлечения</li>
+              </ol>
             </div>
-            <div class="step__quantity-wrapper quantity-field">
-              <label class="step__quantity" for="days">Длительность:</label>
-              <span class="quantity-field__unit">дн.</span>
-              <button class="quantity-field__minus minus" type="button">-</button>
-              <input class="step__input" type="number" placeholder="3" id="days">
-              <button class="quantity-field__plus plus" type="button">+</button>
-            </div>
-            <div class="step__quantity-wrapper">
-              <label class="quantity-field">
-                <input class="step__checkbox checkbox" type="checkbox" checked>
-                Можно с детьми
-              </label>
-            </div>
-            <div class="step__calendar calendar">
-              <label class="calendar__month month" for="date"></label>
-              <button class="calendar__month-prev"></button>
-              <input class="calendar__month-title" placeholder="Март 2019" id="date">
-              <button class="calendar__month-next"></button>
-              <ul class="calendar__month-list">
-                <li class="calendar__month-item">п</li>
-                <li class="calendar__month-item">в</li>
-                <li class="calendar__month-item">с</li>
-                <li class="calendar__month-item">ч</li>
-                <li class="calendar__month-item">п</li>
-                <li class="calendar__month-item calendar__month-item--weekend">с</li>
-                <li class="calendar__month-item calendar__month-item--weekend">в</li>
-              </ul>
-              <ul class="calendar__day-list">
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">23</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">24</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">25</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">26</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">27</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">28</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">1</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">2</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">3</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">4</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">5</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">6</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">7</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">8</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">9</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">10</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">11</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">12</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">13</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">14</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">15</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">16</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">17</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">18</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">19</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">20</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">21</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">22</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">23</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">24</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link" href="#">25</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--chosen" href="#">26</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--chosen" href="#">27</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--chosen" href="#">28</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">29</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">30</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">31</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">1</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">2</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">3</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">4</a>
-                </li>
-                <li class="calendar__day-item">
-                  <a class="calendar__day-link calendar__day-link--available" href="#">5</a>
-                </li>
-              </ul>
-            </div>
-            <a class="step__button button" href="#">Следующий шаг</a>
+            <form class="step__form">
+              <div class="step__quantity-wrapper quantity-field quantity-field--companions">
+                <label class="step__quantity" for="guys">Ищу попутчиков:</label>
+                <span class="quantity-field__unit">чел.</span>
+                <button class="minus" type="button">-</button>
+                <input class="step__input" type="number" placeholder="2" id="guys">
+                <button class="plus" type="button">+</button>
+              </div>
+              <div class="step__quantity-wrapper quantity-field quantity-field--duration">
+                <label class="step__quantity" for="days">Длительность:</label>
+                <span class="quantity-field__unit">дн.</span>
+                <button class="quantity-field__minus minus" type="button">-</button>
+                <input class="step__input" type="number" placeholder="3" id="days">
+                <button class="quantity-field__plus plus" type="button">+</button>
+              </div>
+              <div class="step__quantity-wrapper step__quantity-wrapper--checkbox">
+                <label class="quantity-field">
+                  <input class="step__checkbox checkbox" type="checkbox" checked>
+                  Можно с детьми
+                </label>
+              </div>
+              <div class="step__calendar calendar">
+                <label class="calendar__month month" for="date"></label>
+                <button class="calendar__month-prev"></button>
+                <input class="calendar__month-title" placeholder="Март 2019" id="date">
+                <button class="calendar__month-next"></button>
+                <ul class="calendar__month-list">
+                  <li class="calendar__month-item">п</li>
+                  <li class="calendar__month-item">в</li>
+                  <li class="calendar__month-item">с</li>
+                  <li class="calendar__month-item">ч</li>
+                  <li class="calendar__month-item">п</li>
+                  <li class="calendar__month-item calendar__month-item--weekend">с</li>
+                  <li class="calendar__month-item calendar__month-item--weekend">в</li>
+                </ul>
+                <ul class="calendar__day-list">
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">23</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">24</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">25</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">26</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">27</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">28</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">1</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">2</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">3</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">4</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">5</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">6</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">7</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">8</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">9</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">10</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">11</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">12</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">13</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">14</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">15</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">16</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">17</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">18</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">19</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">20</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">21</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">22</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">23</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">24</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link" href="#">25</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--chosen" href="#">26</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--chosen" href="#">27</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--chosen" href="#">28</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">29</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">30</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">31</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">1</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">2</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">3</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">4</a>
+                  </li>
+                  <li class="calendar__day-item">
+                    <a class="calendar__day-link calendar__day-link--available" href="#">5</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="step__button-wrapper">
+                <button class="step__button button" type="button">Следующий шаг</button>
+              </div>
+            </form>
           </li>
           <li class="slider__item step">
-            <h3 class="step__title">Шаг 2. Маршрут</h3>
-            <p class="step__description">Укажите страны, которые вы<br>хотели бы посетить. Это может<br>быть одна или
-              сразу
-              несколько.</p>
+            <div class="step__head-wrapper">
+              <h3 class="step__title">Шаг 2. Маршрут</h3>
+              <p class="step__description">Укажите страны, которые вы<br>хотели бы посетить. Это может<br>быть одна или
+                сразу
+                несколько.</p>
+              <ol class="step__position-list step-position">
+                <li class="step-position__item">Даты</li>
+                <li class="step-position__item step-position__item--current">Маршрут</li>
+                <li class="step-position__item">Развлечения</li>
+              </ol>
+            </div>
             <div class="step__selected-item selected-item">
               <span class="selected-item__name">Босния и Герцеговина</span>
               <div class="selected-item__image"></div>
@@ -474,13 +518,25 @@
                 </ul>
               </div>
             </div>
-            <a class="step__button button" href="#">Следующий шаг</a>
-            <a class="step__button button button--min-stylish" href="#">На шаг назад</a>
+            <div class="step__item-adding">
+              <button class="step__select-button" type="button">Добавить страну</button>
+            </div>
+            <div class="step__button-wrapper">
+              <a class="step__button button" href="#">Следующий шаг</a>
+              <a class="step__button button button--min-stylish" href="#">На шаг назад</a>
+            </div>
           </li>
           <li class="slider__item step">
-            <h3 class="step__title">Шаг 3. Развлечения</h3>
-            <p class="step__description">Наконец, расскажите о своих<br>планах времяпровождения.<br>Можно писать в
-              свободной<br>форме и ставить тэги.</p>
+            <div class="step__head-wrapper">
+              <h3 class="step__title">Шаг 3. Развлечения</h3>
+              <p class="step__description">Наконец, расскажите о своих<br>планах времяпровождения.<br>Можно писать в
+                свободной<br>форме и ставить тэги.</p>
+              <ol class="step__position-list step-position">
+                <li class="step-position__item">Даты</li>
+                <li class="step-position__item">Маршрут</li>
+                <li class="step-position__item step-position__item--current">Развлечения</li>
+              </ol>
+            </div>
             <ul class="step__textfield-list">
               <li class="step__textfield-item">
                 <label class="step__textfield-title" for="plan1">
@@ -495,8 +551,10 @@
                 </label>
                 <div class="step__textfield-image"></div>
                 <textarea class="step__textfield" id="plan2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                <a class="step__button button" href="#">Следующий шаг</a>
-                <a class="step__button button button--min-stylish" href="#">На шаг назад</a>
+                <div class="step__button-wrapper">
+                  <a class="step__button button" href="#">Следующий шаг</a>
+                  <a class="step__button button button--min-stylish" href="#">На шаг назад</a>
+                </div>
               </li>
             </ul>
           </li>

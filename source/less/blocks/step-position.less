@@ -1,0 +1,24 @@
+.step-position {
+  padding: 0;
+  list-style-type: none;
+}
+
+.step-position__item {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.step-position__item::before {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #1d2e5b;
+}
+
+.step-position__item--current {
+  opacity: 1;
+}

@@ -1,10 +1,30 @@
 .step {
+  display: grid;
   background-color: @basic-white;
   padding: 25px;
   border-radius: 10px;
 
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+
+.step__head-wrapper {
+  display: grid;
+  border-bottom: 1px solid #e1e3e9;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.step__head-wrapper .step-position {
+  display: none;
+  grid-row: 1 / 3;
+  grid-column: -1 / -2;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -20,6 +40,26 @@
   color: #444444;
   font-weight: 400;
   line-height: 22px;
+
+  @media (min-width: @desktop-width) {
+
+  }
+}
+
+.step__form {
+  display: grid;
+}
+
+.step__form .quantity-field--companions {
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
+}
+
+.step__form .step__quantity-wrapper--checkbox {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .step__quantity {
@@ -35,6 +75,7 @@
 
 .step__alphabet-link {
   text-decoration: none;
+  text-transform: uppercase;
   color: #1d2e5b;
 }
 
@@ -55,4 +96,14 @@
 .step__textfield-list {
   list-style-type: none;
   padding: 0;
+}
+
+.step__button-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

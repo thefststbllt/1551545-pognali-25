@@ -10,6 +10,38 @@
 
 .main-header__wrapper {
   padding: 19px 25px 11px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.main-header__wrapper .main-header__contacts {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-header .main-header__list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-header__list .page-list__link {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .main-header__logo {

@@ -1,6 +1,45 @@
+.cards {
+  @media (min-width: @desktop-width) {
+    margin-right: 85px;
+  }
+}
+
 .cards__list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
+}
+
+.cards__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: @basic-white;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.cards__pagination {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.cards__pagination-list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.cards__button-page {
+  color: #1d2e5b;
+  text-decoration: none;
+}
+
+.cards__direction-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cards__button-prev,
