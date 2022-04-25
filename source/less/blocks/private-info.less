@@ -2,10 +2,16 @@
   padding: 20px 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
   background-color: #edeff6;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 66px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
   }
 }
 
@@ -20,6 +26,28 @@
   top: -7px;
   background-color: #edeff6;
   z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1em;
+  }
+}
+
+.private-info__title--transport {
+  @media (min-width: @tablet-width) {
+    top: 75px;
+  }
+}
+
+.private-info__title--tags {
+  @media (min-width: @tablet-width) {
+    top: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 42px;
+  }
 }
 
 .private-info__level {
@@ -28,28 +56,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: #444444;
+  border: 3px solid @special-orange;
+  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     order: -2;
-    align-items: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    position: absolute;
+    right: 299px;
+    top: -80px;
   }
 }
 
 .private-info__level-value {
   font-weight: 700;
   font-size: 38px;
-  line-height: 38px;
+  line-height: 1em;
   color: #161c35;
   border-bottom: 1px solid #444444;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .private-info__photo-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     align-items: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 155px;
+    top: -100px;
   }
 }
 
@@ -63,6 +111,11 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 50px;
+  }
 }
 
 .private-info__unit {
@@ -72,12 +125,21 @@
   align-items: center;
   position: relative;
   margin: 25px 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / -2;
+  }
 }
 
 .private-info__unit--transport {
   @media (min-width: @tablet-width) {
     order: -1;
     grid-column: 2 / -2;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    grid-column: -2 / -1;
   }
 }
 
@@ -91,4 +153,9 @@
   flex-wrap: wrap;
   border: 1px solid #cbced9;
   border-radius: 10px;
+  width: calc(100% - 50px);
+}
+
+.private-info__unit--transport .private-info__content {
+  justify-content: center;
 }

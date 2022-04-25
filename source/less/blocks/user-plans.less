@@ -14,9 +14,19 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 1em;
+  }
 }
 
 .user-plans__list {
   padding: 0;
   list-style-type: none;
+  counter-reset: plans;
+}
+
+.user-plans__item {
+  counter-increment: plans;
 }

@@ -13,15 +13,52 @@
 }
 
 .options-card__wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 2px;
   background-color: @basic-white;
   border-radius: 10px;
   padding: 26px 24px;
+  position: relative;
 }
 
 .options-card__title {
   font-weight: 700;
+  font-size: 21px;
+  line-height: 1em;
   color: @basic-black;
   margin: 0;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 24px;
+    position: absolute;
+    top: -12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+  }
+}
+
+.options-card--thailand .options-card__title {
+  &::before {
+    background: url("../img/icon-thailand-flag.png");
+  }
+}
+
+.options-card--france .options-card__title {
+  &::before {
+    background: url("../img/icon-france-flag.png");
+  }
+}
+
+.options-card--czech .options-card__title {
+  &::before {
+    background: url("../img/icon-czech-flag.png");
+  }
 }
 
 .options-card__slogan,
@@ -29,4 +66,22 @@
   color: #444444;
   opacity: 0.3;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 500;
+  }
+}
+
+.options-card__slogan {
+  order: 1;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
+}
+
+.options-card__clients {
+  text-align: end;
 }

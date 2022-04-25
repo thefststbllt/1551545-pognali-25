@@ -1,5 +1,6 @@
 .profile-pricing {
   margin: 0;
+  counter-reset: pricing;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -17,8 +18,12 @@
 
 .profile-pricing__price {
   @media (min-width: @tablet-width) {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #e2e5f2;
+    font-size: 28px;
+    line-height: 1em;
   }
 }
 
@@ -26,6 +31,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 1px solid #e1e3e9;
+  counter-increment: pricing;
 
   &::before,
   &::after {
@@ -38,19 +45,26 @@
     border-radius: 50%;
   }
 
+  &::after {
+    content: counter(pricing);
+  }
+
   &::before {
     display: none;
   }
 
   @media (min-width: @tablet-width) {
     justify-content: start;
+    font-size: 28px;
+    line-height: 1em;
 
     &::before {
       display: flex;
-      width: 68px;
+      min-width: 68px;
       height: 68px;
       font-size: 28px;
       line-height: 1em;
+      margin-right: 22px;
     }
 
     &::after {
@@ -63,7 +77,6 @@
   &::before,
   &::after {
     background-color: @special-orange;
-    content: "1";
   }
 }
 
@@ -71,7 +84,6 @@
   &::before,
   &::after {
     background-color: @special-yellow-dark;
-    content: "2";
   }
 }
 
@@ -79,6 +91,5 @@
   &::before,
   &::after {
     background-color: @special-yellow;
-    content: "3";
   }
 }

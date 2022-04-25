@@ -4,10 +4,17 @@
 }
 
 .step-position__item {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.2em;
   display: flex;
   align-items: center;
-  color: #000000;
+  color: @basic-black;
   opacity: 0.6;
+
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
 }
 
 .step-position__item::before {

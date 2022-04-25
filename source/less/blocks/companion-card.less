@@ -2,10 +2,14 @@
   background-color: #ffffff;
   border-radius: 10px;
   position: relative;
+  width: 270px;
 
   &:not(:last-child) {
+    margin-bottom: 9px;
+
     @media (min-width: @tablet-width) {
       margin-right: auto;
+      margin-bottom: 0;
     }
   }
 }
@@ -15,7 +19,7 @@
   font-size: 14px;
   line-height: 14px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: fade(@basic-black, 60%);
   width: 60px;
   height: 60px;
   border: 4px solid @special-orange;
@@ -42,6 +46,9 @@
 
 .companion-card__info {
   padding: 27px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .companion-card__link {
@@ -54,11 +61,22 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 0.9em;
+  }
 }
 
 .companion-card__hashtags {
   color: #444444;
   font-weight: 400;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .companion-card__transport {

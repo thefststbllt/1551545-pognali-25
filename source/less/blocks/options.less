@@ -1,6 +1,6 @@
 .options {
   background-color: #edeff6;
-  padding: 25px;
+  padding: 71px 25px 25px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
@@ -17,6 +17,11 @@
   line-height: 24px;
   color: @special-orange;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 1em;
+  }
 }
 
 .options__list {
@@ -44,7 +49,13 @@
   color: #444444;
   font-weight: 300;
   line-height: 22px;
-  margin: 0;
+  margin: 19px 0 60px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0;
+  }
 }
 
 .options .options__show-more {
@@ -55,7 +66,7 @@
   text-align: start;
   height: 50px;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1em;
   border-radius: 10px;
 
   &::after {
@@ -66,5 +77,10 @@
     border-top: 7px solid transparent;
     border-left: 11px solid #1d2e5b;
     border-bottom: 7px solid transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 1em;
   }
 }

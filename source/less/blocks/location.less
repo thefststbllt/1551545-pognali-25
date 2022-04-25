@@ -30,6 +30,11 @@
     background-position: center;
     margin-right: 16px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 1em;
+  }
 }
 
 .location .location__path-button {
@@ -54,4 +59,16 @@
     border-left: 11px solid #1d2e5b;
     border-bottom: 7px solid transparent;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+
+.location__map {
+  display: block;
+  border: none;
+  height: 500px;
+  width: 100%;
 }

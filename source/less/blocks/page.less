@@ -1,3 +1,11 @@
+//* {
+//  outline: 1px dashed #ff0000;
+//}
+
+.page {
+  height: 100%;
+}
+
 .page .page__main-list {
   display: none;
   margin: 0;
@@ -14,6 +22,8 @@
 }
 
 .page__body {
+  display: flex;
+  flex-direction: column;
   background-color: #e5e5e5;
   font-family: "Blogger Sans", sans-serif;
   font-size: 16px;
@@ -27,9 +37,6 @@
 
 .page__menu-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     order: -2;
@@ -46,6 +53,30 @@
   line-height: 36px;
   color: @basic-white;
   margin: 0;
+  width: max-content;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -13px;
+    left: 0;
+    height: 5px;
+    border-radius: 4px;
+    background: @special-orange;
+    z-index: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 20px;
+
+    &::after {
+      bottom: -72px;
+      height: 8px;
+    }
+  }
 }
 
 .page__main-logo {
