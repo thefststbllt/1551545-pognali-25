@@ -1,3 +1,70 @@
+.selected-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
 .selected-item__name {
+  font-size: 14px;
   color: #1d2e5b;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
+}
+
+.selected-item__image {
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  padding: 8px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.selected-item__image--bosnia-herzegovina {
+  background-image: url("../img/icon-bosnia-and-herzegovina-flag.png");
+}
+
+.selected-item__image--czech {
+  background-image: url("../img/icon-czech-flag.png");
+}
+
+.selected-item__delete {
+  display: block;
+  background-color: #edeff6;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: #afb0b5;
+    border-radius: 1px;
+    position: absolute;
+    top: 47%;
+    left: 25%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }

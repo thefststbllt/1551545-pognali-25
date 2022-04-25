@@ -4,24 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Погнали? - О сервисе</title>
+  <link rel="icon" href="favicon-32x32.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 <header class="main-header">
-  <nav class="main-nav">
-    <div class="page__menu-wrapper">
-      <a class="main-header__logo"></a>
-      <button class="main-nav__toggle burger-button burger-button--inner" type="button">
-        <span class="visually-hidden">Закрыть меню</span>
-        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.75 1.25L1.75 19.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-                stroke-linejoin="round"/>
-          <path d="M1.75 1.25L19.75 19.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-                stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-    <ul class="main-nav__list page-list">
+  <nav class="main-nav main-nav--nojs">
+    <a class="main-header__logo main-header__logo--active"></a>
+    <ul class="main-nav__list page-list js-closed">
       <li class="page-list__item">
         <a class="page-list__link">О сервисе</a>
       </li>
@@ -32,16 +22,19 @@
         <a class="page-list__link" href="catalog.html">Попутчики</a>
       </li>
     </ul>
-    <a class="main-nav__login button" href="#">Авторизация</a>
-    <ul class="main-nav__list contacts-list">
+    <a class="main-nav__login button js-closed--button" href="#">Авторизация</a>
+    <ul class="main-nav__contacts contacts-list js-closed">
       <li class="contacts-list__item">
-        <a class="contacts-list__link contacts-list__phone" href="tel:+88005558628">8 800 555-86-28</a>
+        <a class="contacts-list__link contacts-list__phone contacts-list__phone--simple" href="tel:+88005558628"></a>
+        <p class="contacts-list__text contacts-list__text--dark">8 800 555-86-28</p>
       </li>
       <li class="contacts-list__item">
-        <a class="contacts-list__link contacts-list__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a class="contacts-list__link contacts-list__email contacts-list__email--simple"
+           href="mailto:mail@htmlacademy.ru"></a>
+        <p class="contacts-list__text contacts-list__text--dark">mail@htmlacademy.ru</p>
       </li>
     </ul>
-    <ul class="main-nav__contacts social-media">
+    <ul class="main-nav__socials social-media js-closed js-closed--socials">
       <li class="social-media__item">
         <a class="social-media__link" href="#">
           <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,32 +71,14 @@
         </a>
       </li>
     </ul>
+    <button class="main-nav__toggle burger-button burger-button--inner" type="button">
+      <span class="visually-hidden">Кнопка меню</span>
+    </button>
   </nav>
   <section class="promo">
     <h2 class="visually-hidden">Промо сервиса</h2>
     <div class="promo__wrapper">
       <div class="promo__header promo-header">
-        <div class="page__menu-wrapper">
-          <a class="page__main-logo"></a>
-          <button class="page__main-toggle burger-button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="25" height="3" rx="1.5" fill="#fff"/>
-              <rect y="8" width="25" height="3" rx="1.5" fill="#fff"/>
-            </svg>
-          </button>
-        </div>
-        <ul class="page__main-list page-list">
-          <li class="page-list__item">
-            <a class="page-list__link">О сервисе</a>
-          </li>
-          <li class="page-list__item">
-            <a class="page-list__link" href="form.html">Направления</a>
-          </li>
-          <li class="page-list__item">
-            <a class="page-list__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
         <p class="promo__slogan">В путешествие<br>с крутыми<br>попутчиками!</p>
         <ul class="promo__contacts promo-contacts">
           <li class="promo-contacts__item">
@@ -116,7 +91,7 @@
               <span class="visually-hidden">e-mail</span>
             </a>
           </li>
-          <li class="promo-contacts__item">
+          <li class="promo-contacts__item promo-contacts__item--authorisation">
             <a class="promo-contacts__authorisation button" href="#">Авторизация</a>
           </li>
         </ul>
@@ -154,9 +129,9 @@
       хотели
       бы отправиться<br>и чем можно там заняться.</p>
     <ul class="options__list">
-      <li class="options__item options-card">
+      <li class="options__item options-card options-card--thailand">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-thailand.jpg" alt="Тайланд" width="270" height="110">
+          <img class="options-card__picture" src="img/picture-thailand.jpg" width="270" height="110" alt="Тайланд">
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Тайланд</h3>
             <p class="options-card__slogan">Джунгли зовут!</p>
@@ -164,9 +139,9 @@
           </div>
         </a>
       </li>
-      <li class="options__item options-card">
+      <li class="options__item options-card options-card--france">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-france.jpg" alt="Франция" width="270" height="110">
+          <img class="options-card__picture" src="img/picture-france.jpg" width="270" height="110" alt="Франция">
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Франция</h3>
             <p class="options-card__slogan">Трэ бьен, манифик!</p>
@@ -174,9 +149,9 @@
           </div>
         </a>
       </li>
-      <li class="options__item options-card">
+      <li class="options__item options-card options-card--czech">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-czech.jpg" alt="Чехия" width="270" height="110">
+          <img class="options-card__picture" src="img/picture-czech.jpg" width="270" height="110" alt="Чехия">
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Чехия</h3>
             <p class="options-card__slogan">Закоулки старой Европы</p>
@@ -299,6 +274,7 @@
     <a class="companions__show-more button" href="#">Показать всех</a>
   </section>
   <section class="profile-addition">
+    <div class="profile-addition__decoration"></div>
     <h2 class="profile-addition__title profile-addition__title--main">Добавьте свой профиль</h2>
     <dl class="profile-addition__pricing profile-pricing">
       <dt class="profile-pricing__item profile-pricing__item--basic">Базовое размещение</dt>
@@ -309,9 +285,8 @@
       <dd class="profile-pricing__price">59 руб./мес</dd>
     </dl>
     <div class="profile-addition__business">
-      <a class="profile-addition__business-button" href="#">Показать тарифы для бизнеса</a>
       <div class="profile-addition__business-wrapper">
-        <h2 class="profile-addition__title">Бизнес-тарифы</h2>
+        <h2 class="profile-addition__title profile-addition__title--inner">Бизнес-тарифы</h2>
         <dl class="profile-addition__pricing business-pricing">
           <dt class="business-pricing__item">Реклама у блоггера</dt>
           <dd class="business-pricing__price">300 000 руб./пост</dd>
@@ -325,6 +300,7 @@
         <button class="profile-addition__button">Закрыть окно</button>
       </div>
     </div>
+    <button class="profile-addition__business-button">Показать тарифы для бизнеса</button>
   </section>
   <section class="registration">
     <h2 class="registration__title">Заинтересовались?</h2>
@@ -341,11 +317,14 @@
     <p class="registration__questions">Остались вопросы? Мы с радостью на них ответим!</p>
     <ul class="registration__contacts contacts-list">
       <li class="contacts-list__item">
-        <a class="contacts-list__link contacts-list__phone contacts-list__link--registration" href="tel:+88005558628">8 800 555-86-28</a>
+        <a class="contacts-list__link contacts-list__phone contacts-list__link--registration"
+           href="tel:+88005558628"></a>
+        <p class="contacts-list__text">8 800 555-86-28</p>
       </li>
       <li class="contacts-list__item">
         <a class="contacts-list__link contacts-list__email contacts-list__link--registration"
-           href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+           href="mailto:mail@htmlacademy.ru"></a>
+        <p class="contacts-list__text">mail@htmlacademy.ru</p>
       </li>
     </ul>
   </section>
@@ -355,9 +334,10 @@
       <p class="location__address">ул. Большая Конюшенная, 19/8</p>
       <a class="location__path-button button" href="#">Проложить маршрут</a>
     </div>
-    <div class="location__map">
-      <img class="location__map-background" src="img/background-map.png" width="320" height="424" alt="Карта">
-    </div>
+    <iframe class="location__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+            allowfullscreen title="Офис компании по адресу Большая Конюшенная, 19/8, Санкт-Петербург">
+    </iframe>
   </section>
 </main>
 <footer class="main-footer">
@@ -388,5 +368,7 @@
     </div>
   </div>
 </footer>
+<script src="js/header-toggle.js"></script>
+<script src="js/business-button.js"></script>
 </body>
 </html>

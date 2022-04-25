@@ -1,4 +1,7 @@
 .cards {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @desktop-width) {
     margin-right: 85px;
   }
@@ -13,6 +16,7 @@
 .cards__button-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: @basic-white;
   border-radius: 20px;
   padding: 25px;
@@ -34,15 +38,80 @@
 
 .cards__button-page {
   color: #1d2e5b;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1em;
+  padding: 17px 19px 16px 20px;
   text-decoration: none;
+  border-radius: 50%;
+}
+
+.cards__button-page--current {
+  background-color: @special-yellow;
 }
 
 .cards__direction-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .cards__button-prev,
 .cards__button-next {
-  background-color: #ffffff;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin: auto;
+}
+
+.cards__button-prev {
+  border-top: 7px solid transparent;
+  border-right: 11px solid #1d2e5b;
+  border-bottom: 7px solid transparent;
+
+  &::before {
+    display: block;
+    content: "";
+    right: 0;
+    left: 0;
+    bottom: 54px;
+    width: 1px;
+    position: absolute;
+    border-bottom: 1px solid #edeff6;
+  }
+}
+
+.cards__button-next {
+  border-top: 7px solid transparent;
+  border-left: 11px solid #1d2e5b;
+  border-bottom: 7px solid transparent;
+}
+
+.cards__button-more {
+  line-height: 30px;
+  position: relative;
+  align-self: center;
+  display: flex;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 26px;
+    height: 2px;
+    background-color: #1d2e5b;
+    position: absolute;
+    top: 15px;
+    left: -27px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }

@@ -2,9 +2,21 @@
   background-color: @basic-white;
   padding: 25px;
   border-radius: 10px;
+  position: relative;
+  display: grid;
 
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    row-gap: 54px;
+    padding: 40px 32px 14px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -14,6 +26,54 @@
   font-size: 16px;
   line-height: 16px;
   margin: 0;
+
+  &::before {
+    content: counter(plans) ".";
+    font-weight: 500;
+    margin-right: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 1em;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+
+    &::before {
+      margin-right: 36px;
+    }
+  }
+}
+
+.trip-plan__details {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before {
+      display: block;
+      content: "";
+      right: 0;
+      left: 0;
+      bottom: 54px;
+      height: 1px;
+      position: absolute;
+      border-bottom: 1px solid rgba(203, 206, 217, 0.3);
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+  }
 }
 
 .trip-plan__companions {
@@ -22,6 +82,12 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }
 
 .trip-plan__time {
@@ -30,6 +96,11 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }
 
 .trip-plan__change {
@@ -40,4 +111,9 @@
   opacity: 0.3;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }

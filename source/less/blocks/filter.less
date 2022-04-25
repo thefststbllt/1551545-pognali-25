@@ -1,18 +1,39 @@
 .filter__inner-wrapper {
   padding: 25px;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 2fr 1fr;
+    row-gap: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .filter__continent-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    order: -1;
+  }
 }
 
 .filter__continent-link {
   color: #192144;
+  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }
 
 .filter__continent-link--current {
@@ -21,29 +42,67 @@
 
 .filter__alphabet-list {
   padding: 0;
+  margin: 0;
+  text-align: center;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    row-gap: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__alphabet-link {
   color: #1d2e5b;
-  font-weight: 500;
+  border: 1px solid #cbced9;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-decoration: none;
   text-transform: uppercase;
+  width: 100%;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    background-color: inherit;
+    opacity: 0.3;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    text-align: start;
+  }
 }
 
 .filter__alphabet-link--current {
   color: @basic-white;
   background-color: #1d2e5b;
+
+  @media (min-width: @tablet-width) {
+    background-color: inherit;
+    color: #1d2e5b;
+    opacity: 1;
+  }
 }
 
 .filter__country-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .filter__country-link {
@@ -51,4 +110,9 @@
   color: #444444;
   font-weight: 400;
   line-height: 22px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
 }

@@ -1,5 +1,5 @@
 .business-pricing {
-  margin: 25px;
+  margin: 28px 25px 34px;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -12,9 +12,14 @@
   color: #444444;
   font-weight: 300;
   margin: 0;
+  text-align: start;
+}
+
+.business-pricing__item {
+  border-top: 1px solid fade(@basic-black, 5%);
+  padding-top: 11px;
 }
 
 .business-pricing__price {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  text-align: end;
+  padding-bottom: 11px;
 }

@@ -1,3 +1,67 @@
+.calendar__month-wrapper {
+  border-top: 1px solid #d6d9e6;
+  border-bottom: 1px solid #d6d9e6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar__month-title {
+  border: none;
+  padding: 11px;
+  text-align: center;
+
+  &::placeholder {
+    font-family: "Blogger Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1em;
+    color: #1d2e5b;
+  }
+}
+
+.calendar__month-button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 2px;
+    background-color: #b3b3b3;
+    border-radius: 1px;
+    position: absolute;
+  }
+}
+
+.calendar__month-button--prev {
+  &::before {
+    transform: rotate(-50deg);
+    top: 14px;
+  }
+
+  &::after {
+    transform: rotate(50deg);
+    bottom: 14px;
+  }
+}
+
+.calendar__month-button--next {
+  &::before {
+    transform: rotate(50deg);
+    top: 14px;
+  }
+
+  &::after {
+    transform: rotate(-50deg);
+    bottom: 14px;
+  }
+}
+
 .calendar__month-list {
   list-style-type: none;
   padding: 0;
@@ -8,6 +72,12 @@
 .calendar__month-item {
   color: #444444;
   text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .calendar__month-item--weekend {
@@ -21,10 +91,25 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+.calendar__day-item {
+  display: flex;
+  border: 1px solid #d6d9e6;
+}
+
 .calendar__day-link {
+  font-size: 14px;
   text-decoration: none;
   color: #444444;
   opacity: 0.3;
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .calendar__day-link--chosen {
