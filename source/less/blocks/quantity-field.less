@@ -31,6 +31,8 @@
   background-color: inherit;
   cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .quantity-field__button--minus {
@@ -55,5 +57,7 @@
 
   &::after {
     transform: rotate(90deg);
+    position: absolute;
+    left: 6px;
   }
 }
