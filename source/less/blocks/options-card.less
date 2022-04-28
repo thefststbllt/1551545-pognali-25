@@ -20,6 +20,10 @@
   border-radius: 10px;
   padding: 26px 24px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }
 
 .options-card__title {
@@ -28,6 +32,7 @@
   line-height: 1em;
   color: @basic-black;
   margin: 0;
+  width: min-content;
 
   &::before {
     display: block;
@@ -75,6 +80,7 @@
 .options-card__slogan {
   order: 1;
   line-height: 20px;
+  grid-column: 1 / -1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

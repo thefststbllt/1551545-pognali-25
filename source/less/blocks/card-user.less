@@ -1,6 +1,6 @@
 .card-user {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: max-content 2fr;
   background-color: #ffffff;
   padding: 18px;
   border-radius: 20px;
@@ -15,7 +15,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: max-content 1fr 1fr 1fr 1fr;
+    padding: 0;
   }
 }
 
@@ -47,7 +48,6 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #f97676;
     position: absolute;
     top: 22px;
     right: 23px;
@@ -72,6 +72,18 @@
     grid-column: 2 / 4;
     position: relative;
     justify-self: start;
+  }
+}
+
+.card-user--offline .card-user__title {
+  &::after {
+    background-color: #f97676;
+  }
+}
+
+.card-user--online .card-user__title {
+  &::after {
+    background-color: #81e31e;
   }
 }
 

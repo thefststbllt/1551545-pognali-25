@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -90,9 +90,15 @@
       level
     </div>
     <div class="private-info__photo-wrapper">
-      <img class="private-info__photo" src="img/photo-private.jpg" width="100" height="100" alt="Фото пользователя">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/photo-private(desktop).jpg, img/photo-private(desktop)@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/photo-private(tablet).jpg, img/photo-private(tablet)@2x.jpg 2x">
+        <img class="private-info__photo" src="img/photo-private.jpg" srcset="img/photo-private@2x.jpg 2x" alt="Фото пользователя">
+      </picture>
     </div>
-    <a class="private-info__change-photo button" href="#">Сменить фото</a>
+    <a class="private-info__change-photo button" href="#">
+      <span class="private-info__desktop-extra">Сменить</span> фото
+    </a>
     <div class="private-info__unit hashtags">
       <h3 class="private-info__title private-info__title--tags">Тэги</h3>
       <ul class="private-info__content">
