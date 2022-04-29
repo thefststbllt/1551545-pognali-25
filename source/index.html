@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Погнали? - О сервисе</title>
   <link rel="icon" href="favicon-32x32.ico">
+  <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
@@ -112,12 +115,10 @@
   </section>
   <section class="page__about page-about">
     <h2 class="page-about__title">О сервисе</h2>
-    <p class="page-about__description">Любое путешествие веселее<br>с попутчиками, которые на<br>одной волне с
-      тобой! Делитесь<br>своими
-      идеями
-      путешествий и<br>черпайте вдохновение в чужих.</p>
-    <p class="page-about__description page-about__description--appeal">А если найдете кого-то<br>близкого по духу
-      — скорее<br>зовите в совместный трип!</p>
+    <p class="page-about__description">Любое путешествие веселее с попутчиками, которые на одной волне с
+      тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+    <p class="page-about__description page-about__description--appeal">А если найдете кого-то близкого по духу
+      — скорее зовите в совместный трип!</p>
     <a class="page-about__button button">Подробнее</a>
   </section>
 </header>
@@ -125,13 +126,17 @@
   <h1 class="visually-hidden">Сервис для путешественников "Погнали?"</h1>
   <section class="options">
     <h2 class="options__title">Направления</h2>
-    <p class="options__description">Мы не продаем туры<br>и ничего не рекламируем.<br>Люди сами пишут о странах,<br>куда
-      хотели
-      бы отправиться<br>и чем можно там заняться.</p>
+    <p class="options__description">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда
+      хотели бы отправиться и чем можно там заняться.</p>
     <ul class="options__list">
       <li class="options__item options-card options-card--thailand">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-thailand.jpg" width="270" height="110" alt="Тайланд">
+          <picture>
+            <source media="(min-width: 768px)"
+                    srcset="img/picture-thailand(tablet).jpg, img/picture-thailand(tablet)@2x.jpg 2x">
+            <img class="options-card__picture" src="img/picture-thailand.jpg" srcset="img/picture-thailand@2x.jpg 2x"
+                 width="270" height="110" alt="Тайланд">
+          </picture>
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Тайланд</h3>
             <p class="options-card__slogan">Джунгли зовут!</p>
@@ -141,7 +146,12 @@
       </li>
       <li class="options__item options-card options-card--france">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-france.jpg" width="270" height="110" alt="Франция">
+          <picture>
+            <source media="(min-width: 768px)"
+                    srcset="img/picture-france(tablet).jpg, img/picture-france(tablet)@2x.jpg 2x">
+            <img class="options-card__picture" src="img/picture-france.jpg" srcset="img/picture-france@2x.jpg 2x"
+                 width="270" height="110" alt="Франция">
+          </picture>
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Франция</h3>
             <p class="options-card__slogan">Трэ бьен, манифик!</p>
@@ -151,7 +161,12 @@
       </li>
       <li class="options__item options-card options-card--czech">
         <a class="options__link" href="#">
-          <img class="options-card__picture" src="img/picture-czech.jpg" width="270" height="110" alt="Чехия">
+          <picture>
+            <source media="(min-width: 768px)"
+                    srcset="img/picture-czech(tablet).jpg, img/picture-czech(tablet)@2x.jpg 2x">
+            <img class="options-card__picture" src="img/picture-czech.jpg" srcset="img/picture-czech@2x.jpg 2x"
+                 width="270" height="110" alt="Чехия">
+          </picture>
           <div class="options-card__wrapper">
             <h3 class="options-card__title">Чехия</h3>
             <p class="options-card__slogan">Закоулки старой Европы</p>
@@ -168,13 +183,13 @@
       пляж и коктейль, а<br>другому маршрут для хайкинга.</p>
     <p class="companions__about companions__about--appeal">Теперь можно легко найти<br>единомышленников!</p>
     <ul class="companions__list companions-list">
-      <li class="companions-list__user companion-card">
+      <li class="companions-list__user companion-card companion-card--offline">
         <div class="companion-card__level">
           <span class="companion-card__level-value">99</span>
           level
         </div>
-        <img class="companion-card__photo" src="img/photo-user-1.jpg" width="270" height="270"
-             alt="Фото пользователя">
+        <img class="companion-card__photo" src="img/photo-user-1.jpg" srcset="img/photo-user-1@2x.jpg 2x" width="270"
+             height="270" alt="Фото пользователя">
         <div class="companion-card__info">
           <a class="companion-card__link" href="#">
             <h3 class="companion-card__name">Таня Фирсова</h3>
@@ -219,13 +234,13 @@
           </ul>
         </div>
       </li>
-      <li class="companions-list__user companion-card">
+      <li class="companions-list__user companion-card companion-card--online">
         <div class="companion-card__level">
           <span class="companion-card__level-value">80</span>
           level
         </div>
-        <img class="companion-card__photo" src="img/photo-user-2.jpg" width="270" height="270"
-             alt="Фото пользователя">
+          <img class="companion-card__photo" src="img/photo-user-2.jpg" srcset="img/photo-user-2@2x.jpg 2x" width="270"
+               height="270" alt="Фото пользователя">
         <div class="companion-card__info">
           <a class="companion-card__link" href="#">
             <h3 class="companion-card__name">Петя Демин</h3>

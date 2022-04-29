@@ -5,6 +5,11 @@
   border-bottom-left-radius: 30px;
   display: grid;
 
+  @media (min-width: @tablet-width) {
+    padding: 64px 76px;
+    row-gap: 59px;
+  }
+
   @media (min-width: @desktop-width) {
     background-color: #edeff6;
   }
@@ -46,6 +51,8 @@
   @media (min-width: @desktop-width) {
     display: flex;
     order: -2;
+    font-size: 20px;
+    line-height: 1em;
   }
 }
 

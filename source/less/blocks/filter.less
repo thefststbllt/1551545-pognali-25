@@ -5,6 +5,7 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 2fr 1fr;
     row-gap: 76px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,6 +21,14 @@
   @media (min-width: @tablet-width) {
     display: flex;
     order: -1;
+  }
+}
+
+.filter__continent-item {
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
   }
 }
 

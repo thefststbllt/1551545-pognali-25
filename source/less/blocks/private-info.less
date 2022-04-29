@@ -2,12 +2,12 @@
   padding: 20px 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 35px;
+  column-gap: 11%;
   background-color: #edeff6;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 66px 75px;
+    padding: 66px 75px 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,19 +57,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-self: end;
   color: #444444;
   border: 3px solid @special-orange;
   border-radius: 50%;
+  width: 94px;
+  height: 94px;
 
   @media (min-width: @tablet-width) {
     order: -2;
+    width: 88px;
+    height: 88px;
   }
 
   @media (min-width: @desktop-width) {
     color: @basic-white;
     position: absolute;
-    right: 299px;
-    top: -80px;
+    right: 389px;
+    top: -140px;
   }
 }
 
@@ -88,7 +93,7 @@
 .private-info__photo-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 
   @media (min-width: @tablet-width) {
     align-items: end;
@@ -97,12 +102,20 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     right: 155px;
-    top: -100px;
+    top: -190px;
   }
 }
 
 .private-info__photo {
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 15px 15px 0 0;
+  }
 }
 
 .private-info__change-photo {
@@ -112,9 +125,22 @@
   font-size: 20px;
   line-height: 18px;
 
+  @media (min-width: @tablet-width) {
+    padding: 22px 20px 20px;
+    border-radius: 10px;
+  }
+
   @media (min-width: @desktop-width) {
     position: absolute;
-    right: 50px;
+    right: 80px;
+    padding: 17px 70px 12px 71px;
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+.private-info__desktop-extra {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -135,6 +161,7 @@
   @media (min-width: @tablet-width) {
     order: -1;
     grid-column: 2 / -2;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {

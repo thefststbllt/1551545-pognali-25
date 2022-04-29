@@ -4,9 +4,14 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
+  @media (min-width: @tablet-width) {
+    padding: 48px 75px 84px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-around;
+    padding: 60px 135px 56px;
   }
 }
 
@@ -17,11 +22,12 @@
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;
+  max-width: 90%;
 
   &::before {
     display: block;
     content: "";
-    width: 45px;
+    min-width: 45px;
     height: 45px;
     border-radius: 50%;
     background-color: @menu-contact-color;
@@ -63,6 +69,15 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 1em;
+  }
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
+    padding: 26px 32px 24px 34px;
+
+    &::after {
+      margin-left: 15px;
+    }
   }
 }
 

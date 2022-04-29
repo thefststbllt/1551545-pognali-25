@@ -1,14 +1,33 @@
 .companions {
-  background: url("../img/background-image-1(1).png") no-repeat, url("../img/background-image-1(2).png") no-repeat;
+  background: url("../img/background-square-dark.svg") no-repeat top 34px left -19px, url("../img/background-image-1(1).png") no-repeat top 35px right 25px, url("../img/background-image-1(2).png") no-repeat top 307px left @background-deep-blue;
+  background-size: 132px 132px, 143px 143px, 62px 71px;
   padding: 68px 25px 31px;
-  background-color: @background-deep-blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 141px 74px 87px;
+    background: url("../img/background-square-dark.svg") no-repeat top 71px left 40px, url("../img/background-image-1(2)(tablet).png") no-repeat top 80px right 74px, url("../img/background-image-1(1).png") no-repeat top 426px left 40px @background-deep-blue;
+    background-size: 212px 212px, 285px 285px, 143px 143px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background-square-dark.svg") no-repeat top 71px left 40px, url("../img/background-image-1(2)(tablet)@2x.png") no-repeat top 80px right 74px, url("../img/background-image-1(1)@2x.png") no-repeat top 426px left 40px @background-deep-blue;
+      background-size: 212px 212px, 285px 285px, 143px 143px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content max-content max-content;
+    column-gap: 193px;
+    background: url("../img/background-square-dark.svg") no-repeat top 70px left 60px, url("../img/background-image-1(2)(tablet).png") no-repeat bottom 80px left 190px, url("../img/background-image-1(1).png") no-repeat top 134px left 40% @background-deep-blue;
+    background-size: 212px 212px, 285px 285px, 143px 143px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background-square-dark.svg") no-repeat top 70px left 60px, url("../img/background-image-1(2)(tablet)@2x.png") no-repeat bottom 80px left 190px, url("../img/background-image-1(1)@2x.png") no-repeat top 134px left 40% @background-deep-blue;
+      background-size: 212px 212px, 285px 285px, 143px 143px;
+    }
   }
 }
 
@@ -40,6 +59,7 @@
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 34px;
+    margin: 55px 0 39px;
   }
 }
 
@@ -59,10 +79,10 @@
   align-items: center;
   text-transform: none;
   text-align: start;
-  height: 50px;
   font-size: 18px;
   line-height: 1em;
   border-radius: 10px;
+  padding: 22px 23px 21px;
 
   &::after {
     display: block;
@@ -77,5 +97,11 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 1em;
+    padding: 28px 33px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 214px;
   }
 }

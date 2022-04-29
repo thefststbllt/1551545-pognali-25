@@ -8,8 +8,12 @@
     margin-bottom: 9px;
 
     @media (min-width: @tablet-width) {
-      margin-right: auto;
+      margin-right: 50px;
       margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 60px;
     }
   }
 }
@@ -61,10 +65,35 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: block;
+    content: "";
+    min-width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 0.9em;
+  }
+}
+
+//offline/online user modes
+
+.companion-card--offline .companion-card__name {
+  &::before {
+    background-color: #f97676;
+  }
+}
+
+.companion-card--online .companion-card__name {
+  &::before {
+    background-color: #81e31e;
   }
 }
 
