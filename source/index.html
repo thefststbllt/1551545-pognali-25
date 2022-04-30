@@ -13,7 +13,14 @@
 <body class="page__body">
 <header class="main-header">
   <nav class="main-nav main-nav--nojs">
-    <a class="main-header__logo main-header__logo--active"></a>
+    <a class="main-header__logo main-header__logo--active">
+      <picture>
+        <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-full-light.svg">
+        <source id="logo-mobile2" srcset="img/logo-light.svg" src="img/logo-light.svg">
+        <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img id="logo-mobile" src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-nav__list page-list js-closed">
       <li class="page-list__item">
         <a class="page-list__link">О сервисе</a>
@@ -133,7 +140,7 @@
         <a class="options__link" href="#">
           <picture>
             <source media="(min-width: 768px)"
-                    srcset="img/picture-thailand(tablet).jpg, img/picture-thailand(tablet)@2x.jpg 2x">
+                    srcset="img/picture-thailand--tablet.jpg, img/picture-thailand--tablet@2x.jpg 2x">
             <img class="options-card__picture" src="img/picture-thailand.jpg" srcset="img/picture-thailand@2x.jpg 2x"
                  width="270" height="110" alt="Тайланд">
           </picture>
@@ -148,7 +155,7 @@
         <a class="options__link" href="#">
           <picture>
             <source media="(min-width: 768px)"
-                    srcset="img/picture-france(tablet).jpg, img/picture-france(tablet)@2x.jpg 2x">
+                    srcset="img/picture-france--tablet.jpg, img/picture-france--tablet@2x.jpg 2x">
             <img class="options-card__picture" src="img/picture-france.jpg" srcset="img/picture-france@2x.jpg 2x"
                  width="270" height="110" alt="Франция">
           </picture>
@@ -163,7 +170,7 @@
         <a class="options__link" href="#">
           <picture>
             <source media="(min-width: 768px)"
-                    srcset="img/picture-czech(tablet).jpg, img/picture-czech(tablet)@2x.jpg 2x">
+                    srcset="img/picture-czech--tablet.jpg, img/picture-czech--tablet@2x.jpg 2x">
             <img class="options-card__picture" src="img/picture-czech.jpg" srcset="img/picture-czech@2x.jpg 2x"
                  width="270" height="110" alt="Чехия">
           </picture>
@@ -188,7 +195,7 @@
           <span class="companion-card__level-value">99</span>
           level
         </div>
-        <img class="companion-card__photo" src="img/photo-user-1.jpg" srcset="img/photo-user-1@2x.jpg 2x" width="270"
+        <img class="companion-card__photo" src="img/photo-user-firsova.jpg" srcset="img/photo-user-firsova@2x.jpg 2x" width="270"
              height="270" alt="Фото пользователя">
         <div class="companion-card__info">
           <a class="companion-card__link" href="#">
@@ -239,7 +246,7 @@
           <span class="companion-card__level-value">80</span>
           level
         </div>
-          <img class="companion-card__photo" src="img/photo-user-2.jpg" srcset="img/photo-user-2@2x.jpg 2x" width="270"
+          <img class="companion-card__photo" src="img/photo-user-demin.jpg" srcset="img/photo-user-demin@2x.jpg 2x" width="270"
                height="270" alt="Фото пользователя">
         <div class="companion-card__info">
           <a class="companion-card__link" href="#">
@@ -357,7 +364,12 @@
 </main>
 <footer class="main-footer">
   <div class="main-footer__wrapper">
-    <a class="main-footer__logo"></a>
+    <a class="main-footer__logo">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
         <a class="social-media__link social-media__footer-link social-media__link--telegram" href="#">

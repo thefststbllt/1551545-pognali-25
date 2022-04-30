@@ -13,7 +13,14 @@
 <body class="page__body page__body--catalog">
 <header class="main-header">
   <nav class="main-nav main-nav--nojs">
-    <a class="main-header__logo" href="index.html"></a>
+    <a class="main-header__logo" href="index.html">
+      <picture>
+        <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-full-light.svg">
+        <source id="logo-mobile2" srcset="img/logo-light.svg" src="img/logo-light.svg">
+        <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img id="logo-mobile" src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-nav__list page-list js-closed">
       <li class="page-list__item">
         <a class="page-list__link" href="index.html">О сервисе</a>
@@ -912,11 +919,11 @@
         <li class="cards__item card-user card-user--offline">
           <picture class="card-user__avatar">
             <source media="(min-width: 1200px)"
-                    srcset="img/photo-mini-user-1(desktop).jpg, img/photo-mini-user-1(desktop)@2x.jpg 2x">
+                    srcset="img/photo-mini-user-firsova--desktop.jpg, img/photo-mini-user-firsova--desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
-                    srcset="img/photo-mini-user-1(tablet).jpg, img/photo-mini-user-1(tablet)@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-1.jpg"
-                 srcset="img/photo-mini-user-1@2x.jpg 2x" alt="Аватар пользователя">
+                    srcset="img/photo-mini-user-firsova--tablet.jpg, img/photo-mini-user-firsova--tablet@2x.jpg 2x">
+            <img class="cards__avatar" src="img/photo-mini-user-firsova.jpg"
+                 srcset="img/photo-mini-user-firsova@2x.jpg 2x" alt="Аватар пользователя">
           </picture>
           <h3 class="card-user__title">Таня Фирсова</h3>
           <div class="card-user__likes-wrapper">
@@ -980,11 +987,11 @@
         <li class="cards__item card-user card-user--offline">
           <picture class="card-user__avatar">
             <source media="(min-width: 1200px)"
-                    srcset="img/photo-mini-user-2(desktop).jpg, img/photo-mini-user-2(desktop)@2x.jpg 2x">
+                    srcset="img/photo-mini-user-demin--desktop.jpg, img/photo-mini-user-demin--desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
-                    srcset="img/photo-mini-user-2(tablet).jpg, img/photo-mini-user-2(tablet)@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-2.jpg"
-                 srcset="img/photo-mini-user-2@2x.jpg 2x" alt="Аватар пользователя">
+                    srcset="img/photo-mini-user-demin--tablet.jpg, img/photo-mini-user-demin--tablet@2x.jpg 2x">
+            <img class="cards__avatar" src="img/photo-mini-user-demin.jpg"
+                 srcset="img/photo-mini-user-demin@2x.jpg 2x" alt="Аватар пользователя">
           </picture>
           <h3 class="card-user__title">Петя Демин</h3>
           <div class="card-user__likes-wrapper">
@@ -1046,11 +1053,11 @@
         <li class="cards__item card-user card-user--offline">
           <picture class="card-user__avatar">
             <source media="(min-width: 1200px)"
-                    srcset="img/photo-mini-user-3(desktop).jpg, img/photo-mini-user-3(desktop)@2x.jpg 2x">
+                    srcset="img/photo-mini-user-smolov--desktop.jpg, img/photo-mini-user-smolov--desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
-                    srcset="img/photo-mini-user-3(tablet).jpg, img/photo-mini-user-3(tablet)@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-3.jpg"
-                 srcset="img/photo-mini-user-3@2x.jpg 2x" alt="Аватар пользователя">
+                    srcset="img/photo-mini-user-smolov--tablet.jpg, img/photo-mini-user-smolov--tablet@2x.jpg 2x">
+            <img class="cards__avatar" src="img/photo-mini-user-smolov.jpg"
+                 srcset="img/photo-mini-user-smolov@2x.jpg 2x" alt="Аватар пользователя">
           </picture>
           <h3 class="card-user__title">Марк Смолов</h3>
           <div class="card-user__likes-wrapper">
@@ -1113,10 +1120,11 @@
         <li class="cards__item card-user card-user--online">
           <picture class="card-user__avatar">
             <source media="(min-width: 1200px)"
-                    srcset="img/photo-mini-user-4(desktop).jpg, img/photo-mini-user-4(desktop)@2x.jpg 2x">
+                    srcset="img/photo-mini-user-rogovaya--desktop.jpg, img/photo-mini-user-rogovaya--desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
-                    srcset="img/photo-mini-user-4(tablet).jpg, img/photo-mini-user-4(tablet)@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-4.jpg" srcset="img/photo-mini-user-4@2x.jpg 2x"
+                    srcset="img/photo-mini-user-rogovaya--tablet.jpg, img/photo-mini-user-rogovaya--tablet@2x.jpg 2x">
+            <img class="cards__avatar" src="img/photo-mini-user-rogovaya.jpg"
+                 srcset="img/photo-mini-user-rogovaya@2x.jpg 2x"
                  alt="Аватар пользователя">
           </picture>
           <h3 class="card-user__title">Лариса Роговая</h3>
@@ -1208,7 +1216,12 @@
 </main>
 <footer class="main-footer">
   <div class="main-footer__wrapper">
-    <a class="main-footer__logo" href="index.html"></a>
+    <a class="main-footer__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
         <a class="social-media__link social-media__footer-link social-media__link--telegram" href="#">

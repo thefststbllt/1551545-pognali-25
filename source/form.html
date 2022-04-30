@@ -13,7 +13,14 @@
 <body class="page__body page__body--form">
 <header class="main-header">
   <nav class="main-nav main-nav--nojs">
-    <a class="main-header__logo" href="index.html"></a>
+    <a class="main-header__logo" href="index.html">
+      <picture>
+        <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-full-light.svg">
+        <source id="logo-mobile2" srcset="img/logo-light.svg" src="img/logo-light.svg">
+        <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img id="logo-mobile" src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-nav__list page-list js-closed">
       <li class="page-list__item">
         <a class="page-list__link" href="index.html">О сервисе</a>
@@ -91,8 +98,8 @@
     </div>
     <div class="private-info__photo-wrapper">
       <picture>
-        <source media="(min-width: 1200px)" srcset="img/photo-private(desktop).jpg, img/photo-private(desktop)@2x.jpg 2x">
-        <source media="(min-width: 768px)" srcset="img/photo-private(tablet).jpg, img/photo-private(tablet)@2x.jpg 2x">
+        <source media="(min-width: 1200px)" srcset="img/photo-private--desktop.jpg, img/photo-private--desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/photo-private--tablet.jpg, img/photo-private--tablet@2x.jpg 2x">
         <img class="private-info__photo" src="img/photo-private.jpg" srcset="img/photo-private@2x.jpg 2x" alt="Фото пользователя">
       </picture>
     </div>
@@ -575,7 +582,12 @@
 </main>
 <footer class="main-footer">
   <div class="main-footer__wrapper">
-    <a class="main-footer__logo" href="index.html"></a>
+    <a class="main-footer__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <img src="img/logo-dark.svg" alt="Logo">
+      </picture>
+    </a>
     <ul class="main-footer__social social-media">
       <li class="social-media__item">
         <a class="social-media__link social-media__footer-link social-media__link--telegram" href="#">
