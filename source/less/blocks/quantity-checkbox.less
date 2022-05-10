@@ -12,6 +12,11 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 2px;
   }
 }
 
@@ -23,10 +28,20 @@
   border: 1px solid #cbced9;
   border-radius: 4px;
   margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    width: 35px;
+    height: 35px;
+    margin-right: 23px;
+  }
 }
 
 .quantity-checkbox__input:checked + .quantity-checkbox__touch-sign {
   background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.835 8.464.389 5.805V4.722c0 .03 0-.03 0 0V3.64l2.44 2.351c.083.088.219.087.302 0L8.333.388v2.527L3.862 7.699V7.7l-.724.764a.209.209 0 0 1-.303 0Z' fill='%23161C35'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-size: 14px 13px;
+  }
 }

@@ -1,0 +1,54 @@
+.filter-range {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10px;
+  position: relative;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 281px;
+    margin-top: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-top: 31px;
+  }
+}
+
+.filter-range__toggle {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1d2e5b;
+  cursor: pointer;
+  position: absolute;
+  top: -4px;
+  right: 143px;
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+    top: -5px;
+  }
+}
+
+.filter-range .toggle-max {
+  right: 0;
+}
+
+.filter-range__scale {
+  background-color: rgba(29, 46, 91, 0.3);
+  height: 2px;
+}
+
+.filter-range__bar {
+  width: 144px;
+  height: 2px;
+  background-color: rgba(29, 46, 91, 1);
+  position: absolute;
+  right: 0;
+}

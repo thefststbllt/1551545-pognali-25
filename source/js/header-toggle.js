@@ -4,13 +4,9 @@ let navList = document.querySelector('.main-nav__list');
 let loginButton = document.querySelector('.main-nav__login')
 let navContacts = document.querySelector('.main-nav__contacts');
 let navSocials = document.querySelector('.main-nav__socials');
-let mobileLogo = document.getElementById('logo-mobile');
-let tabletLogo = document.getElementById('logo-tablet');
 let mobileLogoDark = document.getElementById('logo-mobile2');
-let tabletLogoDark = document.getElementById('logo-tablet2');
 
 mainNav.classList.remove('main-nav--nojs');
-mobileLogoDark.classList.add('visually-hidden');
 
 mainToggle.addEventListener('click', function () {
   navList.classList.toggle('js-closed');
@@ -25,3 +21,16 @@ mainToggle.addEventListener('click', function () {
   navSocials.classList.toggle('js-closed');
   mainNav.classList.toggle('main-nav--active');
 })
+
+
+
+const logoImage = document.querySelector('.main-header__logo picture').children;
+
+console.log(logoImage);
+
+
+// for (let i = 0; i < logoImage.length; i++) {
+//   if (i.id.contains('logo-mobile2')) {
+//
+//   }
+// }

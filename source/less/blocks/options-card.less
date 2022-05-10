@@ -1,14 +1,46 @@
+.options-card {
+  padding-top: 100px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
 .options-card:not(:last-child) {
   margin-bottom: 10px;
 }
 
 .options-card:last-child {
-  margin-bottom: 27px;
+  margin: 0 0 27px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .options-card__picture {
+  position: absolute;
+  top: -98px;
+
   @media (min-width: @tablet-width) {
-    order: 1;
+    right: -186px;
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -128px;
+  }
+}
+
+.options-card__image {
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px;
   }
 }
 
@@ -18,11 +50,21 @@
   row-gap: 2px;
   background-color: @basic-white;
   border-radius: 10px;
-  padding: 26px 24px;
+  width: 222px;
+  padding: 26px 24px 21px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     order: -1;
+    border-radius: 20px 0 0 20px;
+    grid-template-columns: 380px;
+    padding: 30px 22px 20px 30px;
+    width: min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 74%;
+    padding: 24px 23px 25px 30px;
   }
 }
 
@@ -41,28 +83,39 @@
     height: 24px;
     position: absolute;
     top: -12px;
+
+    @media (min-width: @tablet-width) {
+      top: 29px;
+      right: -17px;
+      transform: scale(2);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 34px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
+    margin-bottom: 5px;
   }
 }
 
 .options-card--thailand .options-card__title {
   &::before {
-    background: url("../img/icon-thailand-flag.png");
+    background: url("../img/flags/icon-thailand-flag--tablet.png");
   }
 }
 
 .options-card--france .options-card__title {
   &::before {
-    background: url("../img/icon-france-flag.png");
+    background: url("../img/flags/icon-france-flag--tablet.png");
   }
 }
 
 .options-card--czech .options-card__title {
   &::before {
-    background: url("../img/icon-czech-flag.png");
+    background: url("../img/flags/icon-czech-flag--tablet.png");
   }
 }
 
@@ -85,9 +138,32 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    order: 0;
+    margin-bottom: 17px;
   }
 }
 
 .options-card__clients {
-  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 18px;
+    height: 20px;
+    margin-right: 6px;
+    transform: scale(0.7);
+    background: url("../img/icons-mini/user-icon.svg") no-repeat center;
+
+    @media (min-width: @tablet-width) {
+      transform: scale(1);
+      margin-right: 11px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+  }
 }

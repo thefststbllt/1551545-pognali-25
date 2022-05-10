@@ -20,7 +20,15 @@
       width: 60px;
       height: 2px;
       background-color: @basic-white;
+      margin-right: 45px;
+    }
+  }
+}
 
+.page-list__item {
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 33px;
     }
   }
 }

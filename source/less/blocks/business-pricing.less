@@ -1,9 +1,15 @@
 .business-pricing {
-  margin: 28px 25px 34px;
+  margin: 15px 25px 34px;
+  border-bottom: 1px solid fade(@basic-black, 5%);
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 47px 92px 37px 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 46px 60px 53px;
   }
 }
 
@@ -16,10 +22,25 @@
 }
 
 .business-pricing__item {
+  line-height: 22px;
   border-top: 1px solid fade(@basic-black, 5%);
   padding-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+    padding: 14px 0;
+  }
 }
 
 .business-pricing__price {
-  padding-bottom: 11px;
+  padding: 1px 0 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: end;
+    border-top: 1px solid fade(@basic-black, 5%);
+    padding: 14px 0;
+  }
 }

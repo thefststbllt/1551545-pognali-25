@@ -6,8 +6,34 @@
   height: 32px;
   background-color: @basic-white;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
 }
 
-.user-transport__item--available path {
+.user-transport__title {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.user-transport__item--available .user-transport__icon {
   fill: #1d2e5b;
+}
+
+.user-transport__item--not-available .user-transport__icon {
+  opacity: 0.15;
+}
+
+.user-transport__list {
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin-top: 10px;
+  }
 }

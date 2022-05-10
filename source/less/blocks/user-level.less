@@ -1,11 +1,86 @@
+.user-level {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 35px;
+    right: 43px;
+  }
+}
+
+.user-level__value {
+  color: #1d2e5b;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1em;
+  position: absolute;
+  margin: 0;
+  top: 43%;
+  left: 23%;
+
+  @media (min-width: @tablet-width) {
+    left: 30%;
+    width: min-content;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    line-height: 0.8em;
+
+    &::after {
+      display: block;
+      content: "level";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1em;
+      color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 22px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 32px;
+  }
+}
+
 .user-level__title {
   color: #444444;
   font-weight: 400;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
-.user-level__value {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1em;
+.user-level__meter {
+  fill: none;
+  stroke: @special-orange;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.user-level__meter--user-1 {
+  stroke-dashoffset: 193;
+}
+
+.user-level__meter--user-2 {
+  stroke-dashoffset: 214;
+}
+
+.user-level__meter--user-3 {
+  stroke-dashoffset: 283;
+}
+
+.user-level__meter--user-4 {
+  stroke-dashoffset: 252;
+}
+
+.user-level__meter-icon {
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }

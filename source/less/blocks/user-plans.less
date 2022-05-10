@@ -6,6 +6,10 @@
   @media (min-width: @tablet-width) {
     border-radius: 30px 30px 0 0;
   }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .user-plans__head-wrapper {
@@ -13,6 +17,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 57px 75px 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 58px 60px 124px;
   }
 }
 
@@ -27,12 +35,25 @@
     font-size: 36px;
     line-height: 1em;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 7px;
+  }
 }
 
 .user-plans__list {
   padding: 0;
+  margin: 29px 0 0;
   list-style-type: none;
   counter-reset: plans;
+
+  @media (min-width: @tablet-width) {
+    margin: 48px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 48px 0 0;
+  }
 }
 
 .user-plans__item {

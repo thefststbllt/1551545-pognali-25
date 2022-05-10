@@ -1,29 +1,30 @@
 .main-header {
-  background-color: #161d36;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  background-color: #182044;
+  border-radius: 0 0 30px 30px;
+  z-index: 6;
 
   @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
     background-color: #182044;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
-    background-color: #161d36;
   }
 }
 
 .main-header__wrapper {
-  padding: 120px 25px 11px;
+  padding: 96px 25px 11px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 242px 40px 68px;
+    padding: 225px 75px 65px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: min-content;
+    padding: 225px 124px 65px;
   }
 }
 
@@ -51,12 +52,16 @@
 }
 
 .main-header__logo {
+  width: min-content;
+
   @media (min-width: @desktop-width) {
     order: -2;
+    height: 50px;
   }
 }
 
 .main-header__logo--active {
+  width: min-content;
   background: url("../img/logo-dark.svg") no-repeat;
 
   @media (min-width: @tablet-width) {

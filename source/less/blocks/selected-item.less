@@ -1,7 +1,14 @@
 .selected-item {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 85px;
+  }
 }
 
 .selected-item__name {
@@ -9,32 +16,73 @@
   color: #1d2e5b;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 11px 5px 11px 10px;
   border: 1px solid #cbced9;
   border-radius: 4px;
   flex-grow: 1;
+  position: relative;
+
+  &::after,
+  &::before {
+    display: block;
+    content: "";
+    width: 9px;
+    height: 1px;
+    background-color: #b3b3b3;
+    border-radius: 1px;
+    position: absolute;
+    top: calc(50% - 1px);
+
+    @media (min-width: @tablet-width) {
+      width: 12px;
+    }
+  }
+
+  &::after {
+    transform: rotate(50deg);
+    right: 17px;
+
+    @media (min-width: @tablet-width) {
+      transform: rotate(45deg);
+      right: 31px;
+    }
+  }
+
+  &::before {
+    transform: rotate(-50deg);
+    right: 12px;
+
+    @media (min-width: @tablet-width) {
+      transform: rotate(-45deg);
+      right: 23px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    padding: 27px 27px 22px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 27px 21px 26px;
   }
 }
 
 .selected-item__image {
   border: 1px solid #cbced9;
   border-radius: 4px;
-  padding: 8px;
+  padding: 8px 8px 3px;
   display: block;
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.selected-item__image--bosnia-herzegovina {
-  background-image: url("../img/icon-bosnia-and-herzegovina-flag.png");
-}
-
-.selected-item__image--czech {
-  background-image: url("../img/icon-czech-flag.png");
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .selected-item__delete {
@@ -66,5 +114,44 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    top: unset;
+    background-color: inherit;
+    right: unset;
+    position: relative;
+    margin-left: 22px;
+    width: 24px;
+
+    &::before,
+    &::after {
+      width: 26px;
+      height: 2px;
+      background-color: #e6e6e6;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 88px;
+  }
+}
+
+.selected-item__delete--choosing {
+  @media (min-width: @tablet-width) {
+    margin-left: 144px;
+    top: calc(50% - 11px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 243px;
+  }
+}
+
+.selected-item--chosen-one {
+  &::after {
+    background-color: #1d2e5b;
+    border-color: #1d2e5b;
   }
 }

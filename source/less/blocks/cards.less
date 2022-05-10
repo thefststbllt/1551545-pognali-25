@@ -54,6 +54,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 15%;
+  }
 }
 
 .cards__button-prev,
@@ -93,17 +97,26 @@
   position: relative;
   align-self: center;
   display: flex;
+  padding: 0;
+  margin: 20px 0 18px;
 
   &::before,
   &::after {
     display: block;
     content: "";
-    width: 26px;
+    width: 18px;
     height: 2px;
+    border-radius: 1px;
     background-color: #1d2e5b;
     position: absolute;
     top: 15px;
     left: -27px;
+
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      left: -43px;
+      width: 26px;
+    }
   }
 
   &::after {
@@ -113,5 +126,10 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    margin: 51px 0 52px;
   }
+}
+
+.cards__avatar {
+  border-radius: 20px 0 0 20px;
 }
