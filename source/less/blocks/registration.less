@@ -3,12 +3,30 @@
   flex-direction: column;
   align-items: center;
   padding: 72px 25px 29px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 0 0 30px 30px;
   background-color: @background-deep-blue;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    background-color: @background-deep-blue;
+    top: -60px;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 76px 75px 60px;
+    padding: 76px 76px 60px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 109px 133px 104px;
   }
 }
 
@@ -30,10 +48,17 @@
   line-height: 22px;
   color: @basic-white;
   text-align: center;
+  margin: 0;
+  padding: 19px 35px 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 32px;
+    padding: 59px 0 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 57px 190px 60px;
   }
 }
 
@@ -44,8 +69,16 @@
 .registration__form {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 84vw;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 80vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 82vw;
+  }
 }
 
 .registration__email {
@@ -55,7 +88,7 @@
 }
 
 .registration__field {
-  padding: 22px 25px;
+  padding: 23px 25px;
   border: none;
   border-radius: 10px;
   display: block;
@@ -65,13 +98,17 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 1em;
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
-    padding: 28px 36px;
+    padding: 32px 36px;
   }
 }
 
@@ -124,10 +161,17 @@
   font-weight: 300;
   line-height: 22px;
   text-align: center;
+  margin: 0;
+  padding: 29px 27px 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 30px;
+    padding: 60px 0 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 0 43px;
   }
 }
 
@@ -137,6 +181,15 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    align-self: center;
+    align-self: start;
+    margin-left: 153px;
+  }
+}
+
+.registration__contacts .contacts-list__item {
+  @media (min-width: @desktop-width) {
+    &:nth-child(2n) {
+      margin-left: 110px;
+    }
   }
 }

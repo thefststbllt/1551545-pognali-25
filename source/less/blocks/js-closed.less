@@ -31,3 +31,15 @@
 .js-closed--filter {
   display: none;
 }
+
+.js-closed--filter-companion {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

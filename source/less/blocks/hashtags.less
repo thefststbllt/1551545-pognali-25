@@ -1,4 +1,12 @@
 .hashtags__item {
+  &:not(:last-child) {
+    margin-right: 4px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 6px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 20px;

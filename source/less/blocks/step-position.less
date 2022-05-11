@@ -14,16 +14,21 @@
 
   &:not(:last-child) {
     margin-bottom: 27px;
-  }
-}
 
-.step-position__item::before {
-  display: block;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #1d2e5b;
+    @media (min-width: @desktop-width) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-right: 36px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+  }
 }
 
 .step-position__item--current {

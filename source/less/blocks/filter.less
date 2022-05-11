@@ -1,10 +1,15 @@
+.filter {
+  position: relative;
+}
+
 .filter__inner-wrapper {
-  padding: 25px;
+  padding: 21px 25px 25px 25px;
   display: grid;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 2fr 1fr;
     row-gap: 76px;
+    column-gap: 44px;
     padding: 0;
   }
 
@@ -15,12 +20,15 @@
 
 .filter__continent-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 25px;
   list-style-type: none;
+  display: grid;
+  row-gap: 9px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     order: -1;
+    margin: 0;
   }
 }
 
@@ -50,15 +58,19 @@
 }
 
 .filter__alphabet-list {
+  min-height: 205px;
   padding: 0;
   margin: 0;
   text-align: center;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border-top: 1px solid #cbced9;
+  border-left: 1px solid #cbced9;
 
   @media (min-width: @tablet-width) {
     row-gap: 34px;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,14 +80,17 @@
 }
 
 .filter__alphabet-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #1d2e5b;
-  border: 1px solid #cbced9;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
+  height: 100%;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
@@ -85,9 +100,11 @@
     background-color: inherit;
     opacity: 0.3;
     border: none;
+    justify-content: start;
   }
 
   @media (min-width: @desktop-width) {
+    height: auto;
     margin-bottom: 30px;
     text-align: start;
   }
@@ -107,7 +124,7 @@
 .filter__country-list {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 14px 0 0 0;
 
   @media (min-width: @desktop-width) {
     display: none;

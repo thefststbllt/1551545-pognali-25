@@ -1,21 +1,23 @@
 .page-about {
   display: flex;
   flex-direction: column;
-  padding: 72px 50px;
-  background: url("../img/background-image-2.png") center bottom no-repeat, url("../img/background-rectangle-dark.svg") left -315px bottom 221px no-repeat #192144;
+  padding: 72px 60px 61px 49px;
+  background: url("../img/background-image-service.png") center bottom no-repeat, url("../img/background-rectangle-dark.svg") left -315px bottom 221px no-repeat #192144;
   background-size: 292px 353px, 428px 132px;
+  border-radius: 0 0 30px 30px;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/background-image-2@2x.png") center bottom no-repeat #192144;
+    background: url("../img/background-image-service@2x.png") center bottom no-repeat #192144;
     background-size: 292px 353px;
   }
 
   @media (min-width: @tablet-width) {
     padding: 137px 74px 89px;
-    background: url("../img/background-image-2(tablet).png") right 8px bottom 88px no-repeat, url("../img/background-rectangle-dark.svg") center top 96px no-repeat #192144;
+    border-radius: 0 0 60px 60px;
+    background: url("../img/background-image-service--tablet.png") right 8px bottom 88px no-repeat, url("../img/background-rectangle-dark.svg") center top 96px no-repeat #192144;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background-image-2(tablet)@2x.png") right 8px bottom 88px no-repeat, url("../img/background-rectangle-dark.svg") center top 96px no-repeat #192144;
+      background: url("../img/background-image-service--tablet@2x.png") right 8px bottom 88px no-repeat, url("../img/background-rectangle-dark.svg") center top 96px no-repeat #192144;
       background-size: 376px 548px, 688px 212px;
     }
   }
@@ -23,11 +25,11 @@
   @media (min-width: @desktop-width) {
     order: 2;
     padding: 42px 130px 163px;
-    background: url("../img/background-image-2(desktop).png") right 60px bottom no-repeat, url("../img/background-square-dark.svg") left 60px top -10px no-repeat #192144;
+    background: url("../img/background-image-service--desktop.png") right 60px bottom no-repeat, url("../img/background-square-dark.svg") left 60px top -10px no-repeat #192144;
     background-size: 630px 665px, 212px 212px;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background-image-2(desktop)@2x.png") right 60px bottom no-repeat, url("../img/background-square-dark.svg") left 60px top -10px no-repeat #192144;
+      background: url("../img/background-image-service--desktop@2x.png") right 60px bottom no-repeat, url("../img/background-square-dark.svg") left 60px top -10px no-repeat #192144;
       background-size: 630px 665px, 212px 212px;
     }
   }
@@ -43,6 +45,11 @@
   @media (min-width: @tablet-width) {
     font-size: 45px;
     line-height: 1em;
+    margin: 0 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 57px;
   }
 }
 
@@ -55,15 +62,31 @@
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    width: 50%;
+    width: 48%;
+    margin: 0 0 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 53%;
+    margin: 0 0 40px;
   }
 }
 
 .page-about__description--appeal {
   font-weight: 700;
-  font-size: 21px;
-  line-height: 25px;
-  margin: 0;
+  line-height: 1.38em;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    margin: 0 0 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+    margin: 0 0 85px;
+  }
 }
 
 .page-about .page-about__button {

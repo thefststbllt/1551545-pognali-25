@@ -24,12 +24,53 @@
   border: none;
   background-color: #d6daed;
   color: #192144;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 83px 10px 84px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    grid-area: 2 / 1 / 3 / -1;
     font-size: 20px;
     line-height: 1em;
     padding: 37px;
+    margin: 0;
+  }
+}
+
+.button__inner-wrapper {
+  position: relative;
+  padding-left: 20px;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 1px;
+    background-color: #192144;
+    border-radius: 1px;
+    top: 50%;
+    left: -7px;
+    position: absolute;
+
+    @media (min-width: @tablet-width) {
+      height: 3px;
+      width: 27px;
+      border-radius: 2px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
   }
 }
 
@@ -37,9 +78,19 @@
   background-color: #ffffff;
   color: #161c35;
   border: none;
+  padding: 0;
+  height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 49px;
   }
 }

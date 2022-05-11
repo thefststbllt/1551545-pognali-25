@@ -1,27 +1,43 @@
 .options {
   background-color: #edeff6;
-  padding: 71px 25px 25px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  padding: 71px 25px 34px;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: #edeff6;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 73px 75px 80px;
-    background: url("../img/background-square(tablet).svg") no-repeat top 406px left 40px, url("../img/background-flags(tablet).png") no-repeat top 80px right 40px #edeff6;
+    border-radius: 0 0 60px 60px;
+    background: url("../img/background-square--tablet.svg") no-repeat top 406px left 40px, url("../img/background-flags--tablet.png") no-repeat top 80px right 40px #edeff6;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background-square(tablet).svg") no-repeat top 406px left 40px, url("../img/background-flags(tablet)@2x.png") no-repeat top 80px right 40px #edeff6;
+      background: url("../img/background-square--tablet.svg") no-repeat top 406px left 40px, url("../img/background-flags--tablet@2x.png") no-repeat top 80px right 40px #edeff6;
       background-size: 141px 141px, 288px 574px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding: 161px 200px 138px 130px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background: url("../img/background-square(tablet).svg") no-repeat top 90px left 40px, url("../img/background-flags(desktop).png") no-repeat top 88px right 40px #edeff6;
+    column-gap: 171px;
+    grid-template-columns: 560px 1fr;
+    grid-template-rows: min-content min-content min-content;
+    background: url("../img/background-square--tablet.svg") no-repeat top 90px left 60px, url("../img/background-flags--desktop.png") no-repeat top 88px right 60px #edeff6;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/background-square(tablet).svg") no-repeat top 90px left 40px, url("../img/background-flags(tablet)@2x.png") no-repeat top 88px right 40px #edeff6;
+      background: url("../img/background-square--tablet.svg") no-repeat top 90px left 60px, url("../img/background-flags--tablet@2x.png") no-repeat top 88px right 60px #edeff6;
       background-size: 140px 140px, 288px 574px;
     }
   }
@@ -32,11 +48,16 @@
   font-size: 24px;
   line-height: 24px;
   color: @special-orange;
-  margin: 0;
+  margin: 0 0 0 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
     line-height: 1em;
+    margin: 0 0 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
   }
 }
 
@@ -46,6 +67,11 @@
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    align-items: start;
+  }
 
   @media (min-width: @desktop-width) {
     grid-row: 1 / -1;
@@ -56,9 +82,10 @@
   display: grid;
   text-decoration: none;
   width: max-content;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr;
+
   }
 }
 
@@ -66,12 +93,20 @@
   color: #444444;
   font-weight: 300;
   line-height: 22px;
-  margin: 19px 0 60px;
+  padding: 19px 30px 58px 24px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    margin: 0;
+    margin: 0 0 104px 0;
+    width: 55%;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 96px 0;
+    width: auto;
   }
 }
 
@@ -85,6 +120,7 @@
   font-size: 18px;
   line-height: 1em;
   border-radius: 10px;
+  padding: 6px 22px;
 
   &::after {
     display: block;
@@ -99,7 +135,7 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 1em;
-    padding: 31px 32px 27px;
+    padding: 19px 32px 13px;
     border-radius: 20px;
   }
 }

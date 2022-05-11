@@ -1,6 +1,15 @@
 .user-targets__list {
   padding: 0;
   list-style-type: none;
+  margin: 16px 0 15px;
+
+  @media (min-width: @tablet-width) {
+    margin: 19px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .user-targets__item {
@@ -9,9 +18,78 @@
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 25px 0 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 0 14px 0;
+    }
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 26px;
+    height: 18px;
+    border-radius: 2px;
+    margin-right: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.user-targets__item--shri-lanka::before {
+  background: url("../img/flags/icon-shri-lanka-flag.png");
+}
+
+.user-targets__item--thailand::before {
+  background: url("../img/flags/icon-thailand-flag.png");
+}
+
+.user-targets__item--seychelles::before {
+  background: url("../img/flags/icon-seychelles-flag.png");
+}
+
+.user-targets__item--belgium::before {
+  background: url("../img/flags/icon-belgium-flag.png");
+}
+
+.user-targets__item--czech::before {
+  background: url("../img/flags/icon-czech-flag.png");
+}
+
+.user-targets__item--usa::before {
+  background: url("../img/flags/icon-usa-flag.png");
+}
+
+.user-targets__item--australia::before {
+  background: url("../img/flags/icon-australia-flag.png");
+}
+
+.user-targets__item--dominica::before {
+  background: url("../img/flags/icon-dominica-flag.png");
+}
+
+.user-targets__item--great-britain::before {
+  background: url("../img/flags/icon-great-britain-flag.png");
+}
+
+.user-targets__item--germany::before {
+  background: url("../img/flags/icon-germany-flag.png");
 }
