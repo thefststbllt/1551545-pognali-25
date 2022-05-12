@@ -4,7 +4,7 @@
   grid-template-columns: 1fr;
   background-color: #182044;
   padding: 19px 25px 27px;
-  position: absolute;
+  position: fixed;
   z-index: 4;
 
   @media (min-width: @tablet-width) {
@@ -17,6 +17,15 @@
     width: calc(100vw - 120px);
     grid-template-columns: min-content 1fr 1fr 1fr min-content;
     padding: 47px 60px 0;
+    position: absolute;
+  }
+}
+
+.main-nav--sticky {
+  position: fixed;
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 60px;
   }
 }
 
@@ -34,6 +43,10 @@
 
 .main-nav--active {
   background-color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    background-color: #161d36;
+  }
 }
 
 .main-nav__wrapper {
@@ -57,12 +70,27 @@
   }
 }
 
+.main-nav__list--active {
+  @media (min-width: @desktop-width) {
+    &::before {
+      background-color: #192144;
+    }
+  }
+}
+
+.main-nav__list--active .page-list__link {
+  @media (min-width: @desktop-width) {
+    color: #192144;
+  }
+}
+
 .main-nav .contacts-list {
   @media (min-width: @desktop-width) {
     order: -1;
     grid-column: -2 / -3;
     justify-content: end;
     margin: 0;
+    display: flex;
   }
 }
 
@@ -70,6 +98,14 @@
   padding: 12px 0 8px;
   margin: 52px 0;
   line-height: 30px;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3)
+  }
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -163,8 +199,17 @@
     justify-content: start;
     margin: 0 0 0 65px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav--nojs {
   background: @basic-white;
+  position: static;
+
+  @media (min-width: @desktop-width) {
+    background-color: #182044;
+  }
 }

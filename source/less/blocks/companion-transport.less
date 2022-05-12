@@ -5,9 +5,66 @@
 
 .companion-transport__item {
   display: block;
-  width: 25px;
+  width: 34px;
   height: 25px;
   text-align: center;
+  position: relative;
+
+  &:hover {
+    &::before {
+      color: @basic-white;
+      display: block;
+      padding: 18px 25px;
+      background-color: #101d41;
+      border-radius: 4px;
+      position: absolute;
+      bottom: -60px;
+      left: -200%;
+      z-index: 1;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      border: 7px solid transparent;
+      border-bottom: 7px solid #101d41;
+      position: absolute;
+      top: 17px;
+      left: 25%;
+    }
+  }
+}
+
+.companion-transport__plane {
+  &:hover {
+    &::before {
+      content: "Авиаперелет";
+    }
+  }
+}
+
+.companion-transport__bus {
+  &:hover {
+    &::before {
+      content: "Автотранспорт";
+    }
+  }
+}
+
+.companion-transport__bike {
+  &:hover {
+    &::before {
+      content: "Велосипед";
+    }
+  }
+}
+
+.companion-transport__afoot {
+  &:hover {
+    &::before {
+      content: "Пешком";
+    }
+  }
 }
 
 .companion-transport__item--available .companion-transport__icon {
