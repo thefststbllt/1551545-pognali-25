@@ -8,21 +8,24 @@
   <link rel="icon" href="img/favicons/favicon-vector.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
 <header class="main-header">
   <nav class="main-nav main-nav--main-page main-nav--nojs">
-    <a class="main-header__logo main-header__logo--active">
+    <a class="main-header__logo">
+      <picture>
+        <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-light.svg">
+        <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-tablet-dark.svg">
+        <img id="logo-mobile2" src="img/logo-dark.svg" alt="Logo">
+      </picture>
       <picture>
         <source id="logo-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-light.svg">
-        <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-full-light.svg">
-        <source id="logo-mobile2" srcset="img/logo-light.svg" src="img/logo-light.svg">
-        <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
-        <img id="logo-mobile" src="img/logo-dark.svg" alt="Logo">
+        <source id="logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-light.svg">
+        <img id="logo-mobile" src="img/logo-light.svg" alt="Logo">
       </picture>
     </a>
-    <ul class="main-nav__list page-list js-closed">
+    <ul class="main-nav__list page-list">
       <li class="page-list__item">
         <a class="page-list__link">О сервисе</a>
       </li>
@@ -33,8 +36,8 @@
         <a class="page-list__link" href="catalog.html">Попутчики</a>
       </li>
     </ul>
-    <a class="main-nav__login button js-closed--button" href="#">Авторизация</a>
-    <ul class="main-nav__contacts contacts-list js-closed">
+    <a class="main-nav__login button" href="#">Авторизация</a>
+    <ul class="main-nav__contacts contacts-list">
       <li class="contacts-list__item">
         <a class="contacts-list__link contacts-list__phone contacts-list__phone--simple" href="tel:+88005558628"></a>
         <p class="contacts-list__text contacts-list__text--dark">8 800 555-86-28</p>
@@ -45,36 +48,36 @@
         <p class="contacts-list__text contacts-list__text--dark">mail@htmlacademy.ru</p>
       </li>
     </ul>
-    <ul class="main-nav__socials social-media js-closed js-closed--socials">
+    <ul class="main-nav__socials social-media">
       <li class="social-media__item">
         <a class="social-media__link" href="#">
           <svg width="21" height="19" viewBox="0 0 21 19">
-            <use xlink:href="img/socials-sprite.svg#telegram-icon"></use>
+            <use xlink:href="img/sprite.svg#icon-telegram"></use>
           </svg>
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link" href="#">
           <svg width="31" height="17" viewBox="0 0 31 17">
-            <use xlink:href="img/socials-sprite.svg#vk-icon"></use>
+            <use xlink:href="img/sprite.svg#icon-vk"></use>
           </svg>
         </a>
       </li>
       <li class="social-media__item">
         <a class="social-media__link social-media__link--disabled" href="#">
           <svg width="21" height="17" viewBox="0 0 21 17">
-            <use xlink:href="img/socials-sprite.svg#youtube-icon"></use>
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
           </svg>
         </a>
       </li>
     </ul>
-    <button class="main-nav__toggle burger-button burger-button--inner" type="button">
+    <button class="main-nav__toggle burger-button burger-button--inner js-closed--filter" type="button">
       <span class="visually-hidden">Кнопка меню</span>
     </button>
   </nav>
   <section class="promo">
     <h2 class="visually-hidden">Промо сервиса</h2>
-    <div class="promo__wrapper">
+    <div class="promo__wrapper promo__wrapper--nojs">
       <div class="promo__header promo-header">
         <p class="promo__slogan">В путешествие<br>с крутыми<br>попутчиками!</p>
         <ul class="promo__contacts promo-contacts">
@@ -210,36 +213,36 @@
             <li class="companion-transport__item companion-transport__plane companion-transport__item--available">
               <span class="visually-hidden">Самолет</span>
               <svg class="companion-transport__icon" width="18" height="20" viewBox="0 0 18 20">
-                <use xlink:href="img/transport-sprite.svg#plane-icon"></use>
+                <use xlink:href="img/sprite.svg#icon-plane"></use>
               </svg>
             </li>
             <li class="companion-transport__item companion-transport__bus companion-transport__item--not-available">
               <span class="visually-hidden">Автобус</span>
               <svg class="companion-transport__icon" width="18" height="21" viewBox="0 0 18 21">
-                <use xlink:href="img/transport-sprite.svg#bus-icon"></use>
+                <use xlink:href="img/sprite.svg#icon-bus"></use>
               </svg>
             </li>
             <li class="companion-transport__item companion-transport__bike companion-transport__item--not-available">
               <span class="visually-hidden">Велосипед</span>
               <svg class="companion-transport__icon" width="22" height="18" viewBox="0 0 22 18">
-                <use xlink:href="img/transport-sprite.svg#bicycle-icon"></use>
+                <use xlink:href="img/sprite.svg#icon-bicycle"></use>
               </svg>
             </li>
             <li class="companion-transport__item companion-transport__afoot companion-transport__item--not-available">
               <span class="visually-hidden">Пешком</span>
               <svg class="companion-transport__icon" width="17" height="20" viewBox="0 0 17 20">
-                <use xlink:href="img/transport-sprite.svg#on-foot-icon"></use>
+                <use xlink:href="img/sprite.svg#iconrun"></use>
               </svg>
             </li>
           </ul>
           <ul class="companion-card__flags companion-flags">
-            <li class="companion-flags__item">
+            <li class="companion-flags__item companion-flags__item--shri-lanka">
               <img src="img/flags/icon-shri-lanka-flag--tablet.png" alt="Шри-Ланка">
             </li>
-            <li class="companion-flags__item">
+            <li class="companion-flags__item companion-flags__item--thailand">
               <img src="img/flags/icon-thailand-flag--tablet.png" alt="Тайланд">
             </li>
-            <li class="companion-flags__item">
+            <li class="companion-flags__item companion-flags__item--seychelles">
               <img src="img/flags/icon-seychelles-flag--tablet.png" alt="Сейшелы">
             </li>
           </ul>
@@ -293,10 +296,10 @@
             </li>
           </ul>
           <ul class="companion-card__flags companion-flags">
-            <li class="companion-flags__item">
+            <li class="companion-flags__item companion-flags__item--belgium">
               <img src="img/flags/icon-belgium-flag--tablet.png" alt="Бельгия">
             </li>
-            <li class="companion-flags__item">
+            <li class="companion-flags__item companion-flags__item--czech">
               <img src="img/flags/icon-czech-flag--tablet.png" alt="Чехия">
             </li>
           </ul>
@@ -377,7 +380,7 @@
     <a class="main-footer__logo">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop-dark.svg">
-        <source media="(min-width: 768px)" srcset="img/logo-full-dark.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.svg">
         <img src="img/logo-dark.svg" alt="Logo">
       </picture>
     </a>
@@ -407,6 +410,8 @@
   </div>
 </footer>
 <script src="js/header-toggle.js"></script>
+<script src="js/promo-changer.js"></script>
+<script src="js/scrolling-menu.js"></script>
 <script src="js/business-button.js"></script>
 </body>
 </html>

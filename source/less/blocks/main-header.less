@@ -60,12 +60,23 @@
   }
 }
 
-.main-header__logo--active {
-  width: min-content;
-  background: url("../img/logo-dark.svg") no-repeat;
+.main-header__logo picture {
+  &:nth-child(1) {
+    display: block;
+  }
 
-  @media (min-width: @tablet-width) {
-    background: url("../img/logo-full-dark.svg") no-repeat;
+  &:nth-child(2) {
+    display: none;
+  }
+}
+
+.main-header__logo--active picture {
+  &:nth-child(1) {
+    display: none;
+  }
+
+  &:nth-child(2) {
+    display: block;
   }
 }
 
@@ -96,6 +107,14 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 4 / 5;
+  }
+}
+
+.main-header .main-nav--scrolled {
+  background-color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 60px;
   }
 }
 

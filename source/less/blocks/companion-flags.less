@@ -8,7 +8,65 @@
 }
 
 .companion-flags__item {
+  .companion-transport__item;
+  width: 35px;
+  position: relative;
+
+  &:hover {
+    &::before {
+      display: block;
+      padding: 18px 25px;
+      width: max-content;
+      border-radius: 4px;
+      background-color: #101d41;
+      position: absolute;
+      top: 30px;
+      bottom: unset;
+      left: -100%;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 20px;
+  }
+}
+
+.companion-flags__item--shri-lanka {
+  &:hover {
+    &::before {
+      content: "Шри-Ланка";
+    }
+  }
+}
+
+.companion-flags__item--thailand {
+  &:hover {
+    &::before {
+      content: "Тайланд";
+    }
+  }
+}
+
+.companion-flags__item--seychelles {
+  &:hover {
+    &::before {
+      content: "Сейшеллы";
+    }
+  }
+}
+
+.companion-flags__item--belgium {
+  &:hover {
+    &::before {
+      content: "Бельгия";
+    }
+  }
+}
+
+.companion-flags__item--czech {
+  &:hover {
+    &::before {
+      content: "Чехия";
+    }
   }
 }

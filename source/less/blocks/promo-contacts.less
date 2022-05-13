@@ -38,7 +38,16 @@
 }
 
 .promo-contacts__link--email {
-  background: url("../img/icon-dark-envelope.svg") no-repeat center @special-yellow-dark;
+  background: url("../img/icons-mini/icon-dark-envelope.svg") no-repeat center @special-yellow-dark;
+
+  &:hover {
+    background-color: #ff8d30;
+  }
+
+  &:active {
+    background: url("../img/icons-mini/icon-dark-envelope--active.svg") no-repeat center #ff8d30;
+    background-size: 17px 14px;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -52,4 +61,12 @@
 .promo-contacts .promo-contacts__authorisation {
   line-height: 20px;
   padding: 12px 40px 8px;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }

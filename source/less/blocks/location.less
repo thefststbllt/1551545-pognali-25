@@ -101,6 +101,23 @@
   text-transform: none;
   text-align: start;
 
+  &:hover {
+    background-color: #192144;
+    color: @basic-white;
+
+    &::after {
+      border-left-color: @basic-white;
+    }
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+
+    &::after {
+      border-left-color: fade(@basic-white, 30%);
+    }
+  }
+
   &::after {
     display: block;
     content: "";
