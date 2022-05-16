@@ -1,15 +1,23 @@
-.hashtags__item {
-  &:not(:last-child) {
-    margin-right: 4px;
+.hashtags {
+  width: 100%;
+}
 
-    @media (min-width: @tablet-width) {
-      margin-right: 6px;
-    }
+.hashtags__inner-wrapper {
+  border-radius: 10px;
+  border: 1px solid #cbced9;
+  background-color: inherit;
+  font-family: "Blogger Sans", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  resize: none;
+
+  &:hover {
+    border-color: #aeb4cb;
   }
 
   @media (min-width: @tablet-width) {
-    font-weight: 400;
     font-size: 20px;
-    line-height: 1.1em;
+    line-height: 22px;
+    padding: 35px 40px 14px;
   }
 }

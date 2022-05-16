@@ -109,6 +109,18 @@
   border-radius: 10px;
   padding: 22px 23px 21px;
 
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      border-left-color: rgba(29, 46, 91, 0.3);
+    }
+  }
+
   &::after {
     display: block;
     content: "";

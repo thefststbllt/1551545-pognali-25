@@ -116,13 +116,20 @@
 }
 
 .trip-plan__change {
-  color: @basic-black;
+  color: fade(@basic-black, 30%);
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  opacity: 0.3;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    color: fade(@basic-black, 60%);
+  }
+
+  &:active {
+    color: fade(@basic-black, 10%);
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

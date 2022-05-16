@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: max-content 2fr;
   background-color: #ffffff;
-  padding: 15px 20px 23px 18px;
+  padding: 14px 0 23px;
   column-gap: 16px;
   border-radius: 20px;
   position: relative;
@@ -39,11 +39,20 @@
   justify-content: center;
   width: 31px;
   height: 31px;
-  background-color: #e2e5f2;
   border-radius: 50%;
   position: absolute;
   left: 68px;
   top: 54px;
+
+  &:hover {
+    background-color: #e2e5f2;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.1;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -52,8 +61,24 @@
   }
 }
 
+.card-user__like svg {
+  @media (min-width: @tablet-width) {
+    width: 21px;
+    height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .card-user__like--pressed {
   background-color: #f9eaea;
+
+  &:hover {
+    background-color: #f9d8d8;
+  }
 }
 
 .card-user__like-icon {
@@ -99,6 +124,8 @@
     @media (min-width: @tablet-width) {
       position: static;
       margin-left: 22px;
+      width: 8px;
+      height: 8px;
     }
 
     @media (min-width: @desktop-width) {
@@ -111,7 +138,30 @@
   @media (min-width: @tablet-width) {
     width: max-content;
     font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: 2 / 3 / 3 / 5;
+    position: relative;
+    justify-self: start;
+  }
+}
+
+.card-user__title-link {
+  margin: 0;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
     grid-column: 2 / -2;
+    margin-left: 4px;
   }
 
   @media (min-width: @desktop-width) {
@@ -139,15 +189,11 @@
   font-size: 15px;
   line-height: 16px;
   margin: 0;
-
-  &::before {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: #edeff6;
-    position: absolute;
-    left: 0;
-  }
+  padding: 0 10px;
+  position: relative;
+  width: max-content;
+  background-color: @basic-white;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 0 49px;
@@ -197,30 +243,62 @@
   flex-wrap: wrap;
   grid-column: 1 / -1;
   width: 75%;
-  margin: 13px 8px 18px;
+  margin: 14px 26px 19px;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #edeff6;
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 160px;
+  }
+
+  &::after {
+    top: unset;
+    bottom: 139px;
+  }
 
   @media (min-width: @tablet-width) {
     grid-area: 2 / 2 / 3 / -2;
-    margin: 19px 0 0;
+    margin: 19px 0 0 7px;
     height: min-content;
     width: 70%;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      bottom: 78px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-area: 3 / 3 / 4 / -4;
     width: auto;
     margin: 20px 0 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .card-user__targets {
   grid-column: 1 / -1;
-  margin-left: 8px;
+  margin-left: 15px;
 
   @media (min-width: @tablet-width) {
     order: 1;
     margin: 0;
-    padding-top: 22px;
+    padding-top: 20px;
     grid-column: 1 / -2;
   }
 
@@ -246,7 +324,7 @@
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
-  margin-left: 8px;
+  margin-left: 15px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -262,8 +340,18 @@
 }
 
 .card-user__button {
-  padding: 14px 78px 13px;
+  padding: 14px 78px 10px;
+  margin: 0 20px;
   grid-column: 1 / -1;
+  color: #161c35;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: fade(#161c35, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 2 / 3;
@@ -272,6 +360,7 @@
     display: flex;
     align-self: end;
     padding: 16px 32px 15px 33px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {

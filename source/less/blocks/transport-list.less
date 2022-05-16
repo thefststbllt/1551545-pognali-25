@@ -2,6 +2,11 @@
   display: flex;
   padding: 0;
   list-style-type: none;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+  }
 }
 
 .transport-list__checkbox {
@@ -51,6 +56,75 @@
   @media (min-width: @desktop-width) {
     min-width: 30px;
     height: 30px;
+
+    &:hover {
+      position: relative;
+
+      &::before {
+        color: @basic-white;
+        display: block;
+        padding: 18px 25px;
+        background-color: #101d41;
+        border-radius: 4px;
+        position: absolute;
+        bottom: -70px;
+        left: 0;
+        z-index: 3;
+        font-family: "Blogger Sans", sans-serif;
+        font-size: 20px;
+        line-height: 1em;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        border: 7px solid transparent;
+        border-bottom: 7px solid #101d41;
+        position: absolute;
+        bottom: -15px;
+        left: calc(50% - 7px);
+      }
+    }
+  }
+}
+
+.transport-list__item--plane {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Авиаперелет";
+      }
+    }
+  }
+}
+
+.transport-list__item--bus {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Автотранспорт";
+      }
+    }
+  }
+}
+
+.transport-list__item--bike {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Велосипед";
+      }
+    }
+  }
+}
+
+.transport-list__item--run {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Пешком";
+      }
+    }
   }
 }
 

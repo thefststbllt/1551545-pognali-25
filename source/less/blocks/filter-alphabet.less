@@ -92,6 +92,14 @@
   right: 22px;
   top: 21px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     transform: rotate(45deg);
   }
@@ -136,11 +144,6 @@
   right: 36px;
   top: 28px;
 
-  @media (min-width: @tablet-width) {
-    right: 85px;
-    top: 68px;
-  }
-
   &::before {
     max-width: 3px;
     height: 3px;
@@ -155,6 +158,19 @@
     border-radius: 50%;
     transform: rotate(0deg);
     right: 7px;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 85px;
+    top: 68px;
+    width: 6px;
+    height: 6px;
+
+    &::before,
+    &::after {
+      max-width: 6px;
+      height: 6px;
+    }
   }
 
   @media (min-width: @desktop-width) {

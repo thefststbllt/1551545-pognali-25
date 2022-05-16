@@ -43,9 +43,15 @@
 
 .main-nav--active {
   background-color: @basic-white;
+  padding: 27px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 40px;
+  }
 
   @media (min-width: @desktop-width) {
     background-color: #161d36;
+    padding: 47px 60px 0;
   }
 }
 
@@ -55,7 +61,7 @@
 }
 
 .main-nav__list {
-  margin: 78px 0 0 0;
+  margin: 71px 0 0 0;
 
   @media (min-width: @tablet-width) {
     grid-column: -1 / 1;
@@ -179,6 +185,8 @@
 }
 
 .main-nav__toggle--active {
+  top: 33px;
+
   &::before,
   &::after {
     background-color: #cccccc;
@@ -191,6 +199,10 @@
   &::after {
     margin-top: -3px;
     transform: rotate(-45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 65px;
   }
 }
 

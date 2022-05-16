@@ -3,17 +3,20 @@
   flex-direction: column;
   justify-content: center;
   height: 10px;
-  position: relative;
-  margin-top: 20px;
+  margin: 18px 0 14px;
 
   @media (min-width: @tablet-width) {
     width: 281px;
-    margin-top: 16px;
+    margin: 0;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: auto;
     margin-top: 31px;
+    position: static;
   }
 }
 
@@ -26,29 +29,57 @@
   background-color: #1d2e5b;
   cursor: pointer;
   position: absolute;
-  top: -4px;
+  top: calc(50% - 5px);
   right: 143px;
 
   @media (min-width: @tablet-width) {
     width: 13px;
     height: 13px;
-    top: -5px;
+    top: calc(50% - 6px);
+    right: 162px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 120px;
+
+    &:hover {
+      width: 19px;
+      height: 19px;
+      top: calc(50% - 9px);
+    }
+
+    &:active {
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+    }
   }
 }
 
 .filter-range .toggle-max {
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    right: -6px;
+  }
 }
 
 .filter-range__scale {
   background-color: rgba(29, 46, 91, 0.3);
   height: 2px;
+  position: relative;
 }
 
 .filter-range__bar {
-  width: 144px;
+  width: 150px;
   height: 2px;
   background-color: rgba(29, 46, 91, 1);
   position: absolute;
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 170px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 127px;
+  }
 }
