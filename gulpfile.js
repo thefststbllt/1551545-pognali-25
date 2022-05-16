@@ -16,7 +16,7 @@ import svgstore from 'gulp-svgstore';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/style.less', {sourcemaps: true})
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -24,7 +24,7 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', {sourcemaps: '.'}))
     .pipe(browser.stream());
 }
 
@@ -32,7 +32,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'))
 }
 
@@ -70,12 +70,12 @@ const createWebP = () => {
 // SVG
 
 const svg = () =>
-  gulp.src('source/img/*.svg')
+  gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src(['source/img/icons-mini/socials/*.svg', 'source/img/icons-mini/transport/*.svg'])
+  return gulp.src(['source/img/icons-mini/socials/*.svg', 'source/img/icons-mini/transport/*.svg', 'source/img/icons-mini/icons-dark/*.svg', 'source/img/icons-mini/icons-yellow/*.svg'])
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -90,7 +90,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'manifest.webmanifest',
+    'source/manifest.webmanifest',
   ], {
     base: 'source'
   })

@@ -1,6 +1,6 @@
 .main-header {
   background-color: #182044;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 20px 20px;
   z-index: 6;
 
   @media (min-width: @tablet-width) {
@@ -91,6 +91,14 @@
   justify-self: end;
   align-self: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     display: block;
     content: "";
@@ -117,4 +125,3 @@
     padding: 20px 60px;
   }
 }
-

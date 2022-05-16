@@ -46,6 +46,20 @@
   cursor: pointer;
   width: 10%;
 
+  &:hover {
+    &::before,
+    &::after {
+      background-color: #808080;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #e6e6e6;
+    }
+  }
+
   &::before,
   &::after {
     display: block;
@@ -75,13 +89,12 @@
 
     @media (min-width: @tablet-width) {
       top: 33px;
-      left: 14px;
+      left: 7px;
       transform: rotate(-45deg);
     }
 
-    @media (min-width: @tablet-width) {
-      top: 33px;
-      left: 7px;
+    @media (min-width: @desktop-width) {
+      top: 36px;
     }
   }
 
@@ -206,6 +219,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  &:hover {
+    flex-direction: column;
+    opacity: 1;
+    background-color: #1d2e5b;
+    color: @basic-white;
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        display: block;
+        content: "";
+        border: 4px solid #ff5c23;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+      }
+
+      &::after {
+        content: "Заезд";
+        margin-top: auto;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -255,6 +295,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 
     @media (min-width: @desktop-width) {
       top: -4px;

@@ -47,6 +47,14 @@
   text-transform: uppercase;
   opacity: 0.3;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
@@ -55,6 +63,12 @@
 
 .filter__continent-link--current {
   opacity: 1;
+  cursor: default;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
 }
 
 .filter__alphabet-list {

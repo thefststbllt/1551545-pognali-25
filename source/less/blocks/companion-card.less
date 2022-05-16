@@ -5,9 +5,10 @@
   width: min-content;
 
   &:hover {
-    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
-    transform: scaleY(1.01);
-    transition-duration: 0.5s;
+    @media (min-width: @desktop-width) {
+      filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+      transition-duration: 0.5s;
+    }
   }
 
   &:not(:last-child) {
@@ -103,7 +104,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 26px 20px 25px;
+    padding: 31px 20px 25px;
   }
 }
 
@@ -176,7 +177,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 23px;
-    margin: 23px 0 25px;
+    margin: 24px 0 26px;
   }
 }
 

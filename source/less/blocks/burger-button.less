@@ -6,8 +6,14 @@
 }
 
 .burger-button--scrolled {
+  top: 29px;
+
   &::before,
   &::after {
     background-color: #cccccc;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 60px;
   }
 }

@@ -2,10 +2,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.user-transport__item-button {
+  border: none;
   width: 32px;
   height: 32px;
-  background-color: @basic-white;
   border-radius: 50%;
+  background-color: @basic-white;
+
+  &:hover {
+    filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+    position: relative;
+
+    .user-transport__icon {
+      opacity: 0.7;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        color: @basic-white;
+        display: block;
+        padding: 18px 25px;
+        background-color: #101d41;
+        border-radius: 4px;
+        position: absolute;
+        bottom: -68px;
+        left: 0;
+        z-index: 3;
+        font-family: "Blogger Sans", sans-serif;
+        font-size: 20px;
+        line-height: 1em;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        border: 7px solid transparent;
+        border-bottom: 7px solid #101d41;
+        position: absolute;
+        bottom: -13px;
+        left: calc(50% - 7px);
+      }
+    }
+  }
+
+  &:active {
+    background-color: #e2e5f1;
+
+    .user-transport__icon {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 43px;
@@ -13,27 +61,89 @@
   }
 }
 
+.user-transport__item-button--plane {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Авиаперелет";
+      }
+    }
+  }
+}
+
+.user-transport__item-button--bus {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Автотранспорт";
+      }
+    }
+  }
+}
+
+.user-transport__item-button--bike {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Велосипед";
+      }
+    }
+  }
+}
+
+.user-transport__item-button--run {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &:before {
+        content: "Пешком";
+      }
+    }
+  }
+}
+
 .user-transport__title {
+  &::before {
+    bottom: 124px;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-.user-transport__item--available .user-transport__icon {
+.user-transport__item-button--available .user-transport__icon {
   fill: #1d2e5b;
 }
 
-.user-transport__item--not-available .user-transport__icon {
-  opacity: 0.15;
+.user-transport__item-button--not-available {
+  &:hover {
+    .user-transport__icon {
+      fill: #b2b2b2;
+    }
+  }
+}
+
+.user-transport__item-button--not-available .user-transport__icon {
+  fill: #d9d9d9;
 }
 
 .user-transport__list {
+  margin: 16px 0 21px 7px;
+
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     margin-top: 10px;
+  }
+}
+
+.user-transport__list .transport-list__icon {
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 25px;
   }
 }

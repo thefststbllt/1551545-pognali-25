@@ -23,28 +23,24 @@
 }
 
 .social-media__link {
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.social-media__link--telegram {
-  background-image: url("../img/logo-telegram.svg");
-}
-
-.social-media__link--vkontakte {
-  background-image: url("../img/logo-vkontakte.svg");
-}
-
-.social-media__link--youtube {
-  background-image: url("../img/logo-youtube.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-media__footer-link {
   background-color: @special-yellow;
-  display: block;
   width: 45px;
   height: 45px;
   border-radius: 50%;
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     min-width: 62px;

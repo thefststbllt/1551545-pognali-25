@@ -59,21 +59,31 @@
 
   @media (min-width: @desktop-width) {
     padding: 57px 190px 60px;
+    line-height: 31px;
   }
 }
 
 .registration__autorization {
   color: #ffd74b;
+
+  &:hover {
+    color: #ff8d30;
+  }
+
+  &:active {
+    color: fade(#ff8d30, 30%);
+  }
 }
 
 .registration__form {
   display: flex;
   justify-content: space-between;
-  width: 84vw;
   position: relative;
+  min-width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr min-content;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,16 +92,33 @@
 }
 
 .registration__email {
-  width: inherit;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .registration__field {
-  padding: 23px 25px;
-  border: none;
+  padding: 18px 65px 17px 21px;
+  border: 4px solid @basic-white;
   border-radius: 10px;
   display: block;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1em;
+
+  &:hover {
+    background-color: #edeff6;
+  }
+
+  &:valid {
+    background-color: #1d2e5b;
+    color: @basic-white;
+  }
+
+  &:invalid {
+    color: #ff0000;
+  }
 
   &::placeholder {
     font-family: "Blogger Sans", sans-serif;
@@ -107,8 +134,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    border-radius: 20px;
-    padding: 32px 36px;
+    font-size: 24px;
+    border-radius: 20px 0 0 20px;
+    padding: 24px 32px 23px 32px;
   }
 }
 
@@ -127,32 +155,43 @@
     content: "";
     width: 0;
     height: 0;
-    margin: auto;
+    position: absolute;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px);
     border-top: 7px solid transparent;
-    border-left: 11px solid #1d2e5b;
+    border-left: 14px solid #1d2e5b;
     border-bottom: 7px solid transparent;
+
+    @media (min-width: @desktop-width) {
+      position: static;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    width: 13%;
     border-radius: 0 20px 20px 0;
+    padding: 34px 39px 32px 41px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    width: 28%;
+    justify-content: space-between;
+    width: 23vw;
+    padding: 30px 34px 27px 36px;
+  }
+}
 
-    &::before {
-      display: block;
-      margin: auto;
-      color: #1d2e5b;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 1em;
-      content: "Регистрация";
-      font-family: "Blogger Sans", sans-serif;
-    }
+.registration__confirm-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-family: "Blogger Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1em;
+    color: #1d2e5b;
   }
 }
 
@@ -180,8 +219,9 @@
   margin: 0;
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    align-self: start;
+    width: calc(100% - 297px);
+    display: grid;
+    grid-template-columns: 50% 50%;
     margin-left: 153px;
   }
 }

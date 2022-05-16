@@ -19,7 +19,27 @@
   align-items: center;
   background-color: @basic-white;
   border-radius: 20px;
-  padding: 25px;
+  padding: 18px 64px 16px;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #edeff6;
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 35px 25px 28px;
+  }
 }
 
 .cards__pagination {
@@ -41,13 +61,27 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1em;
-  padding: 17px 19px 16px 20px;
+  padding: 17px 21px 16px 20px;
   text-decoration: none;
   border-radius: 50%;
+
+  &:hover {
+    color: fade(#1d2e5b, 60%);
+  }
+
+  &:active {
+    background-color: @special-yellow;
+    color: fade(#1d2e5b, 100%);
+  }
 }
 
 .cards__button-page--current {
   background-color: @special-yellow;
+  cursor: default;
+
+  &:hover {
+    color: fade(#1d2e5b, 100%);
+  }
 }
 
 .cards__direction-wrapper {
@@ -56,7 +90,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 15%;
+    width: 8%;
   }
 }
 
@@ -66,13 +100,20 @@
   content: "";
   width: 0;
   height: 0;
-  margin: auto;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
 }
 
 .cards__button-prev {
-  border-top: 7px solid transparent;
-  border-right: 11px solid #1d2e5b;
-  border-bottom: 7px solid transparent;
+  border-right: 9px solid #1d2e5b;
+
+  &:hover {
+    border-right-color: fade(#1d2e5b, 60%);
+  }
+
+  &:active {
+    border-right-color: fade(#1d2e5b, 30%);
+  }
 
   &::before {
     display: block;
@@ -87,9 +128,15 @@
 }
 
 .cards__button-next {
-  border-top: 7px solid transparent;
-  border-left: 11px solid #1d2e5b;
-  border-bottom: 7px solid transparent;
+  border-left: 9px solid #1d2e5b;
+
+  &:hover {
+    border-left-color: fade(#1d2e5b, 60%);
+  }
+
+  &:active {
+    border-left-color: fade(#1d2e5b, 30%);
+  }
 }
 
 .cards__button-more {
@@ -98,7 +145,21 @@
   align-self: center;
   display: flex;
   padding: 0;
-  margin: 20px 0 18px;
+  margin: 20px 0 18px 30px;
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: #707b99;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #afb5c7;
+    }
+  }
 
   &::before,
   &::after {
@@ -109,12 +170,12 @@
     border-radius: 1px;
     background-color: #1d2e5b;
     position: absolute;
-    top: 15px;
-    left: -27px;
+    top: 12px;
+    left: -33px;
 
     @media (min-width: @tablet-width) {
       top: 7px;
-      left: -43px;
+      left: -51px;
       width: 26px;
     }
   }
@@ -126,10 +187,15 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
-    margin: 51px 0 52px;
+    margin: 51px 0 52px 44px;
   }
 }
 
 .cards__avatar {
   border-radius: 20px 0 0 20px;
+  margin-left: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

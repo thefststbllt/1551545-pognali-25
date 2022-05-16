@@ -32,4 +32,3 @@ mainToggle.addEventListener('click', function () {
   navSocials.classList.toggle('js-closed--socials');
   mainNav.classList.toggle('main-nav--active');
 })
-

@@ -3,6 +3,7 @@ let pageAbout = document.querySelector('.page-about');
 let sticky = pageAbout.offsetTop;
 let burgerButton = document.querySelector('.burger-button');
 let mainNavList = document.querySelector('.main-nav__list');
+let mainLogo = document.querySelector('.main-header__logo')
 
 
 window.onscroll = function () {
@@ -31,5 +32,3 @@ function headerColorChanger() {
     mainNav.classList.remove('main-nav--active');
   }
 }
-
-

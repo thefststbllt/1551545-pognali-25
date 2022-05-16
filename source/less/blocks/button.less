@@ -30,6 +30,19 @@
   padding: 12px 83px 10px 84px;
   margin-bottom: 13px;
 
+  &:hover {
+    background-color: #c8cee8;
+  }
+
+  &:active .button__inner-wrapper {
+    color: fade(#192144, 30%);
+
+    &::before,
+    &::after {
+      background-color: #949bb7;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
@@ -84,10 +97,21 @@
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+  }
+
+  &:active {
+    background-color: #f3c72b;
+    color: fade(#161c35, 30%);
+    filter: none;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
     height: 50px;
+    margin-right: 12px;
   }
 
   @media (min-width: @desktop-width) {

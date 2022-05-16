@@ -134,7 +134,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1.2em;
-    margin: 34px 0 38px;
+    margin: 34px 0 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -202,6 +202,7 @@
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1em;
+  letter-spacing: 0.09em;
 
   @media (min-width: @tablet-width) {
     font-weight: 500;
@@ -218,6 +219,10 @@
   width: 100%;
   border: none;
   padding: 0;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
 
   &::placeholder {
     font-family: "Blogger Sans", sans-serif;
@@ -235,6 +240,11 @@
 
   @media (min-width: @tablet-width) {
     height: 68px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 18px;
   }
 }
 
@@ -269,6 +279,21 @@
   justify-content: center;
   width: 100%;
   min-height: 40px;
+
+  @media (min-width: @desktop-width) {
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      background-color: #1d2e5b;
+      border-color: #1d2e5b;
+      color: @basic-white;
+    }
+  }
 }
 
 .step__alphabet-link--current {
@@ -277,6 +302,13 @@
   @media (min-width: @tablet-width) {
     background-color: #1d2e5b;
     color: @basic-white;
+    border-color: #1d2e5b;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:hover {
+      border-color: #1d2e5b;
+    }
   }
 }
 
@@ -311,6 +343,14 @@
 .step__country-link {
   text-decoration: none;
   color: #444444;
+
+  &:hover {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -351,9 +391,9 @@
     display: block;
     content: "";
     width: 2px;
-    height: 216px;
+    height: 281px;
     background-color: #1d2e5b;
-    bottom: -203px;
+    bottom: -268px;
     left: -15px;
     position: absolute;
 
@@ -377,13 +417,30 @@
   line-height: 22px;
   border: 1px solid #cbced9;
   border-radius: 4px;
-  padding: 11px 19px 11px 14px;
+  padding: 11px 19px 76px 14px;
   resize: none;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #161c35;
+
+    &::placeholder {
+      color: #444444;
+    }
+  }
+
+  &:invalid {
+    border-color: #f47e7e;
+  }
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 20px;
     line-height: 1em;
+    padding: 11px 19px 11px 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -550,8 +607,19 @@
 }
 
 .step__button--next {
-  @media (min-width: @tablet-width) {
+  &:hover {
+    background-color: #ffbd30;
+  }
 
+  &:active {
+    color: fade(#1d2e5b, 30%);
+
+    &:after {
+      border-left-color: fade(#1d2e5b, 30%);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
     min-width: 213px;
     justify-content: space-between;
 
@@ -576,9 +644,17 @@
   padding: 0;
   margin-top: 12px;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding-right: 0;
-    margin: 0 11px 0 0;
+    margin: 0 2px 0 0;
 
     &::before {
       display: block;
@@ -589,6 +665,14 @@
       border-top: 7px solid transparent;
       border-right: 11px solid #1d2e5b;
       border-bottom: 7px solid transparent;
+    }
+  }
+}
+
+.step__button--confirm {
+  &::after {
+    @media (min-width: @tablet-width) {
+      margin-left: 94px;
     }
   }
 }
@@ -620,6 +704,10 @@
 }
 
 .step__select-button--choosing {
+  &:hover{
+    border-color: #959bb2;
+  }
+
   &::after,
   &::before {
     display: block;
@@ -709,13 +797,16 @@
   border-bottom: 1px solid #cbced9;
 
   @media (min-width: @desktop-width) {
-    border: 1px solid #cbced9;
-    border-radius: 4px;
+    border: none;
   }
 }
 
 .step__alphabet-item--current {
   border-bottom: 1px solid #edeff6;
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .step__dropdown-button {
@@ -772,6 +863,25 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 1 / -1;
+
+    &::before,
+    &::after {
+      background-color: #616d8c;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: @basic-white;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: #34436b;
+      }
+    }
   }
 }
 
@@ -825,6 +935,7 @@
     position: absolute;
     top: calc(50% - 5px);
     right: 49px;
+    z-index: 1;
 
     @media (min-width: @tablet-width) {
       right: 133px;
