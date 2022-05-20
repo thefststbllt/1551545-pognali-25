@@ -16,7 +16,7 @@
   <nav class="main-nav main-nav--nojs">
     <a class="main-header__logo" href="index.html">
       <picture>
-        <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-light.svg">
+        <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.svg">
         <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-tablet-dark.svg">
         <img id="logo-mobile2" src="img/logo-dark.svg" alt="Logo">
       </picture>
@@ -77,7 +77,7 @@
         </a>
       </li>
     </ul>
-    <button class="main-nav__toggle burger-button burger-button--inner js-closed--filter" type="button">
+    <button class="main-nav__toggle burger-button burger-button--inner" type="button">
       <span class="visually-hidden">Кнопка меню</span>
     </button>
   </nav>
@@ -831,7 +831,7 @@
             <button class="filter-companion__button filter-companion__button--transport" type="button">Транспорт<span
               class="filter-companion__colon">:</span></button>
             <ul class="filter-companion__transport transport-list">
-              <li class="transport-list__item transport-list__item--plane">
+              <li class="transport-list__item transport-list__item--filter transport-list__item--plane">
                 <input class="visually-hidden transport-list__control" type="checkbox" id="plane" name="on-plane" checked>
                 <label class="transport-list__checkbox" for="plane">
                   <svg width="17" height="16" viewBox="0 0 22 22" class="transport-icon">
@@ -839,7 +839,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-list__item transport-list__item--bus">
+              <li class="transport-list__item transport-list__item--filter transport-list__item--bus">
                 <input class="visually-hidden transport-list__control" type="checkbox" id="bus" name="on-bus" checked>
                 <label class="transport-list__checkbox" for="bus">
                   <svg width="17" height="16" viewBox="0 0 17 19" class="transport-icon">
@@ -847,7 +847,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-list__item transport-list__item--bike">
+              <li class="transport-list__item transport-list__item--filter transport-list__item--bike">
                 <input class="visually-hidden transport-list__control" type="checkbox" id="bicycle" name="on bike">
                 <label class="transport-list__checkbox" for="bicycle">
                   <svg width="17" height="16" viewBox="0 0 23 21" class="transport-icon">
@@ -855,7 +855,7 @@
                   </svg>
                 </label>
               </li>
-              <li class="transport-list__item transport-list__item--run">
+              <li class="transport-list__item transport-list__item--filter transport-list__item--run">
                 <input class="visually-hidden transport-list__control" type="checkbox" id="on-feet" name="on-feet" checked>
                 <label class="transport-list__checkbox" for="on-feet">
                   <svg width="18" height="17" viewBox="0 0 21 21" class="transport-icon">
@@ -871,10 +871,10 @@
             <div class="filter-companion__range-wrapper">
               <fieldset class="filter-companion__range-field">
                 <label class="filter-companion__level filter-companion__level--first">
-                  <input class="filter-companion__number" type="number" value="30" name="min-level">
+                  <input class="filter-companion__number" type="text" value="30" name="min-level">
                 </label>
                 <label class="filter-companion__level filter-companion__level--second">
-                  <input class="filter-companion__number" type="number" value="100" name="max-level">
+                  <input class="filter-companion__number" type="text" value="100" name="max-level">
                 </label>
               </fieldset>
               <div class="filter-companion__range filter-range">
@@ -895,11 +895,15 @@
       <h2 class="visually-hidden">Профили попутчиков</h2>
       <ul class="cards__list">
         <li class="cards__item card-user card-user--offline">
-          <picture class="card-user__avatar">
-            <source media="(min-width: 1440px)" srcset="img/photo-mini-user-firsova--desktop.jpg, img/photo-mini-user-firsova--desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-mini-user-firsova--tablet.jpg, img/photo-mini-user-firsova--tablet@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-firsova.jpg" srcset="img/photo-mini-user-firsova@2x.jpg 2x" alt="Аватар пользователя">
-          </picture>
+          <a class="card-user__avatar" href="#">
+            <div class="card-user__zoom-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/photo-mini-user-firsova--desktop.jpg, img/photo-mini-user-firsova--desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-mini-user-firsova--tablet.jpg, img/photo-mini-user-firsova--tablet@2x.jpg 2x">
+                <img class="cards__avatar" src="img/photo-mini-user-firsova.jpg" srcset="img/photo-mini-user-firsova@2x.jpg 2x" alt="Аватар пользователя">
+              </picture>
+            </div>
+          </a>
           <a class="card-user__title-link" href="#">
             <h3 class="card-user__title">Таня Фирсова</h3>
           </a>
@@ -968,11 +972,15 @@
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user card-user--offline">
-          <picture class="card-user__avatar">
-            <source media="(min-width: 1440px)" srcset="img/photo-mini-user-demin--desktop.jpg, img/photo-mini-user-demin--desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-mini-user-demin--tablet.jpg, img/photo-mini-user-demin--tablet@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-demin.jpg" srcset="img/photo-mini-user-demin@2x.jpg 2x" alt="Аватар пользователя">
-          </picture>
+          <a class="card-user__avatar" href="#">
+            <div class="card-user__zoom-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/photo-mini-user-demin--desktop.jpg, img/photo-mini-user-demin--desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-mini-user-demin--tablet.jpg, img/photo-mini-user-demin--tablet@2x.jpg 2x">
+                <img class="cards__avatar" src="img/photo-mini-user-demin.jpg" srcset="img/photo-mini-user-demin@2x.jpg 2x" alt="Аватар пользователя">
+              </picture>
+            </div>
+          </a>
           <a class="card-user__title-link" href="#">
             <h3 class="card-user__title">Петя Демин</h3>
           </a>
@@ -1039,11 +1047,15 @@
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user card-user--offline">
-          <picture class="card-user__avatar">
-            <source media="(min-width: 1440px)" srcset="img/photo-mini-user-smolov--desktop.jpg, img/photo-mini-user-smolov--desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-mini-user-smolov--tablet.jpg, img/photo-mini-user-smolov--tablet@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-smolov.jpg" srcset="img/photo-mini-user-smolov@2x.jpg 2x" alt="Аватар пользователя">
-          </picture>
+          <a class="card-user__avatar" href="#">
+            <div class="card-user__zoom-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/photo-mini-user-smolov--desktop.jpg, img/photo-mini-user-smolov--desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-mini-user-smolov--tablet.jpg, img/photo-mini-user-smolov--tablet@2x.jpg 2x">
+                <img class="cards__avatar" src="img/photo-mini-user-smolov.jpg" srcset="img/photo-mini-user-smolov@2x.jpg 2x" alt="Аватар пользователя">
+              </picture>
+            </div>
+          </a>
           <a class="card-user__title-link" href="#">
             <h3 class="card-user__title">Марк Смолов</h3>
           </a>
@@ -1111,11 +1123,15 @@
           <a class="card-user__button button" href="#">Позвать!</a>
         </li>
         <li class="cards__item card-user card-user--online">
-          <picture class="card-user__avatar">
-            <source media="(min-width: 1440px)" srcset="img/photo-mini-user-rogovaya--desktop.jpg, img/photo-mini-user-rogovaya--desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-mini-user-rogovaya--tablet.jpg, img/photo-mini-user-rogovaya--tablet@2x.jpg 2x">
-            <img class="cards__avatar" src="img/photo-mini-user-rogovaya.jpg" srcset="img/photo-mini-user-rogovaya@2x.jpg 2x" alt="Аватар пользователя">
-          </picture>
+          <a class="card-user__avatar" href="#">
+            <div class="card-user__zoom-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/photo-mini-user-rogovaya--desktop.jpg, img/photo-mini-user-rogovaya--desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-mini-user-rogovaya--tablet.jpg, img/photo-mini-user-rogovaya--tablet@2x.jpg 2x">
+                <img class="cards__avatar" src="img/photo-mini-user-rogovaya.jpg" srcset="img/photo-mini-user-rogovaya@2x.jpg 2x" alt="Аватар пользователя">
+              </picture>
+            </div>
+          </a>
           <a class="card-user__title-link" href="#">
             <h3 class="card-user__title">Лариса Роговая</h3>
           </a>
@@ -1246,7 +1262,7 @@
         </a>
       </li>
     </ul>
-    <a class="copyright-link" href="#">
+    <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
       <p class="copyright-link__text">Разработано</p>
       <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -1257,7 +1273,7 @@
   </div>
 </footer>
 <script src="js/header-toggle.js"></script>
-<script src="js/scrolling-menu.js"></script>
+<script src="js/scrolling-menu-inner.js"></script>
 <script src="js/filter-country.js"></script>
 <script src="js/filter-companion.js"></script>
 </body>

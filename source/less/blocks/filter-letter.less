@@ -1,10 +1,20 @@
 .filter-letter {
-  border-right: 1px solid #cbced9;
-  border-bottom: 1px solid #cbced9;
+  border-right: 1px solid @light-telegray;
+  border-bottom: 1px solid @light-telegray;
 
   @media (min-width: @tablet-width) {
     text-align: start;
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(16),
+    &:nth-child(17),
+    &:nth-child(18),
+    &:nth-child(19),
+    &:nth-child(20) {
+      margin-top: 38px;
+    }
   }
 }
 
@@ -25,4 +35,9 @@
 .filter-letter__link {
   text-decoration: none;
   color: #444444;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
 }

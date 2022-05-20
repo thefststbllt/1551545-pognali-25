@@ -27,7 +27,7 @@
     content: "";
     height: 100%;
     width: 1px;
-    background-color: #edeff6;
+    background-color: @smoky-white;
     position: absolute;
     left: calc(50% - 1px);
     top: 0;
@@ -38,7 +38,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 25px 35px 25px 28px;
+    padding: 25px 37px 25px 28px;
   }
 }
 
@@ -57,7 +57,7 @@
 }
 
 .cards__button-page {
-  color: #1d2e5b;
+  color: @ocean-blue;
   font-weight: 700;
   font-size: 17px;
   line-height: 1em;
@@ -66,12 +66,12 @@
   border-radius: 50%;
 
   &:hover {
-    color: fade(#1d2e5b, 60%);
+    color: fade(@ocean-blue, 60%);
   }
 
   &:active {
     background-color: @special-yellow;
-    color: fade(#1d2e5b, 100%);
+    color: fade(@ocean-blue, 100%);
   }
 }
 
@@ -80,7 +80,7 @@
   cursor: default;
 
   &:hover {
-    color: fade(#1d2e5b, 100%);
+    color: fade(@ocean-blue, 100%);
   }
 }
 
@@ -91,6 +91,10 @@
 
   @media (min-width: @tablet-width) {
     width: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 7%;
   }
 }
 
@@ -105,14 +109,14 @@
 }
 
 .cards__button-prev {
-  border-right: 9px solid #1d2e5b;
+  border-right: 9px solid @ocean-blue;
 
   &:hover {
-    border-right-color: fade(#1d2e5b, 60%);
+    border-right-color: fade(@ocean-blue, 60%);
   }
 
   &:active {
-    border-right-color: fade(#1d2e5b, 30%);
+    border-right-color: fade(@ocean-blue, 30%);
   }
 
   &::before {
@@ -123,19 +127,19 @@
     bottom: 54px;
     width: 1px;
     position: absolute;
-    border-bottom: 1px solid #edeff6;
+    border-bottom: 1px solid @smoky-white;
   }
 }
 
 .cards__button-next {
-  border-left: 9px solid #1d2e5b;
+  border-left: 9px solid @ocean-blue;
 
   &:hover {
-    border-left-color: fade(#1d2e5b, 60%);
+    border-left-color: fade(@ocean-blue, 60%);
   }
 
   &:active {
-    border-left-color: fade(#1d2e5b, 30%);
+    border-left-color: fade(@ocean-blue, 30%);
   }
 }
 
@@ -168,7 +172,7 @@
     width: 18px;
     height: 2px;
     border-radius: 1px;
-    background-color: #1d2e5b;
+    background-color: @ocean-blue;
     position: absolute;
     top: 12px;
     left: -33px;
@@ -188,6 +192,10 @@
     font-size: 20px;
     line-height: 1em;
     margin: 51px 0 52px 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 70px 22px 72px 0;
   }
 }
 

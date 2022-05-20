@@ -16,7 +16,7 @@
   <nav class="main-nav main-nav--nojs">
     <a class="main-header__logo" href="index.html">
       <picture>
-        <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-light.svg">
+        <source id="logo-desktop2" media="(min-width: 1440px)" srcset="img/logo-desktop-dark.svg">
         <source id="logo-tablet2" media="(min-width: 768px)" srcset="img/logo-tablet-dark.svg">
         <img id="logo-mobile2" src="img/logo-dark.svg" alt="Logo">
       </picture>
@@ -77,7 +77,7 @@
         </a>
       </li>
     </ul>
-    <button class="main-nav__toggle burger-button burger-button--inner js-closed--filter" type="button">
+    <button class="main-nav__toggle burger-button burger-button--inner" type="button">
       <span class="visually-hidden">Кнопка меню</span>
     </button>
   </nav>
@@ -96,7 +96,7 @@
       </svg>
     </div>
     <div class="private-info__photo-wrapper">
-      <picture class="private-info__photo-picture">
+      <picture>
         <source media="(min-width: 1440px)" srcset="img/photo-private--desktop.jpg, img/photo-private--desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/photo-private--tablet.jpg, img/photo-private--tablet@2x.jpg 2x">
         <img class="private-info__photo" src="img/photo-private.jpg" srcset="img/photo-private@2x.jpg 2x" alt="Фото пользователя">
@@ -132,7 +132,7 @@
           </button>
         </li>
         <li class="user-transport__item user-transport__item">
-          <button class="user-transport__item-button user-transport__item-button--bike user-transport__item-button--not-available">
+          <button class="user-transport__item-button user-transport__item-button--bike user-transport__item-button--not-available" disabled>
             <span class="visually-hidden">Велосипед</span>
             <svg class="user-transport__icon" width="18" height="17" viewBox="0 0 24 23">
               <use xlink:href="img/sprite.svg#icon-bicycle"></use>
@@ -179,7 +179,7 @@
       </ul>
     </div>
     <section class="user-plans__addition plans-addition">
-      <div class="plans-addition__wrapper slider">
+      <form class="plans-addition__wrapper slider" action="https://echo.htmlacademy.ru/" method="post">
         <div class="slider__toggle-wrapper">
           <h2 class="slider__title">Добавить план:</h2>
           <p class="plans-addition__toggles slider__toggles">
@@ -213,7 +213,7 @@
                 <span class="quantity-field__unit">чел.</span>
                 <div class="quantity-field__input-wrapper">
                   <button class="quantity-field__button quantity-field__button--minus" type="button"></button>
-                  <input class="step__input" type="number" placeholder="2" id="guys">
+                  <input class="step__input" type="text" value="2" name="quantity-of-persons" id="guys">
                   <button class="quantity-field__button quantity-field__button--plus" type="button"></button>
                 </div>
               </div>
@@ -222,13 +222,13 @@
                 <span class="quantity-field__unit">дн.</span>
                 <div class="quantity-field__input-wrapper">
                   <button class="quantity-field__button quantity-field__button--minus" type="button"></button>
-                  <input class="step__input" type="number" placeholder="3" id="days">
+                  <input class="step__input" type="text" value="3" name="duration-per-days" id="days">
                   <button class="quantity-field__button quantity-field__button--plus" type="button"></button>
                 </div>
               </div>
               <div class="step__quantity-wrapper step__quantity-wrapper--checkbox">
                 <label class="quantity-checkbox">
-                  <input class="visually-hidden quantity-checkbox__input" type="checkbox" checked>
+                  <input class="visually-hidden quantity-checkbox__input" name="child-permission" type="checkbox" checked>
                   <span class="quantity-checkbox__touch-sign"></span>
                   <span class="quantity-checkbox__label">Можно с детьми</span>
                 </label>
@@ -253,97 +253,97 @@
                 </ul>
                 <ul class="calendar__day-list">
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">23</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">23</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">24</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">24</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">25</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">25</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">26</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">26</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">27</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">27</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">28</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">28</a>
                   </li>
                   <li class="calendar__day-item">
                     <a class="calendar__day-link calendar__day-link--first-day calendar__day-link--march" href="#">1</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">2</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">2</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">3</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">3</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">4</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">4</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">5</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">5</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">6</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">6</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">7</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">7</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">8</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">8</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">9</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">9</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">10</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">10</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">11</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">11</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">12</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">12</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">13</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">13</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">14</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">14</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">15</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">15</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">16</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">16</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">17</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">17</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">18</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">18</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">19</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">19</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">20</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">20</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">21</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">21</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">22</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">22</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">23</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">23</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">24</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">24</a>
                   </li>
                   <li class="calendar__day-item">
-                    <a class="calendar__day-link" href="#">25</a>
+                    <a class="calendar__day-link calendar__day-link--disabled" href="#">25</a>
                   </li>
                   <li class="calendar__day-item">
                     <a class="calendar__day-link calendar__day-link--chosen calendar__day-link--trip-start" href="#">
@@ -406,6 +406,9 @@
               <div class="step__selected-item selected-item selected-item--chosen-one">
                 <div class="selected-item__name">
                   <span class="selected-item__name-container">Босния и Герцеговина</span>
+                  <select class="visually-hidden" name="first-country">
+                    <option id="bosnia">Босния и Герцеговина</option>
+                  </select>
                 </div>
                 <div class="selected-item__image .selected-item__image--bosnia-herzegovina">
                   <picture>
@@ -420,6 +423,9 @@
               <div class="step__selected-item selected-item selected-item--chosen-one">
                 <div class="selected-item__name">
                   <span class="selected-item__name-container">Чехия</span>
+                  <select class="visually-hidden" name="second-country">
+                    <option id="czech">Чехия</option>
+                  </select>
                 </div>
                 <div class="selected-item__image .selected-item__image--czech">
                   <picture>
@@ -434,7 +440,7 @@
               <div class="step__selected-item step__item-choosing">
                 <button class="step__select-button step__select-button--choosing" type="button">Выберите страну</button>
                 <div class="step__select-dropdown">
-                  <button class="step__dropdown-button">Выберите страну</button>
+                  <button class="step__dropdown-button" type="button">Выберите страну</button>
                   <div class="step__dropdown-wrapper">
                     <ul class="step__alphabet-list">
                       <li class="step__alphabet-item step__alphabet-item--current">
@@ -580,15 +586,14 @@
                   <span class="step__textfield-name step__textfield-name--bosnia">Босния и Герцеговина</span>
                   <span class="step__textfield-image step__textfield-image--bosnia"></span>
                 </label>
-
-                <textarea class="step__textfield" rows="6" id="plan1" placeholder="План действий"></textarea>
+                <textarea class="step__textfield" rows="6" name="plan-1" id="plan1" placeholder="План действий"></textarea>
               </li>
               <li class="step__textfield-item">
                 <label class="step__textfield-title" for="plan2">
                   <span class="step__textfield-name step__textfield-name--czech">Чехия</span>
                   <span class="step__textfield-image step__textfield-image--czech"></span>
                 </label>
-                <textarea class="step__textfield" rows="6" id="plan2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <textarea class="step__textfield" rows="6" name="plan-2" id="plan2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </li>
             </ul>
             <div class="step__button-wrapper">
@@ -597,7 +602,7 @@
             </div>
           </li>
         </ol>
-      </div>
+      </form>
     </section>
   </section>
 </main>
@@ -636,7 +641,7 @@
         </a>
       </li>
     </ul>
-    <a class="copyright-link" href="#">
+    <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
       <p class="copyright-link__text">Разработано</p>
       <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -647,7 +652,7 @@
   </div>
 </footer>
 <script src="js/header-toggle.js"></script>
-<script src="js/scrolling-menu.js"></script>
+<script src="js/scrolling-menu-inner.js"></script>
 <script src="js/select-dropdown.js"></script>
 </body>
 </html>

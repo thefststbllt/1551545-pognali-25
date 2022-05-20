@@ -1,6 +1,6 @@
 .main-header {
   background-color: #182044;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 30px 30px;
   z-index: 6;
 
   @media (min-width: @tablet-width) {
@@ -80,6 +80,16 @@
   }
 }
 
+.main-header__logo--active-scrolled picture {
+  &:nth-child(1) {
+    display: block;
+  }
+
+  &:nth-child(2) {
+    display: none;
+  }
+}
+
 .main-header__return-button {
   display: none;
   font-weight: 700;
@@ -120,6 +130,11 @@
 
 .main-header .main-nav--scrolled {
   background-color: @basic-white;
+  padding: 27px 25px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 40px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 20px 60px;

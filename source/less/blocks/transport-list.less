@@ -7,6 +7,10 @@
   @media (min-width: @tablet-width) {
     margin-top: 11px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 23px 0 20px;
+  }
 }
 
 .transport-list__checkbox {
@@ -29,7 +33,7 @@
 }
 
 .transport-list__checkbox .transport-icon {
-  fill: #1d2e5b;
+  fill: @ocean-blue;
 }
 
 .transport-list__control ~ .transport-list__checkbox .transport-icon {
@@ -46,7 +50,7 @@
   justify-content: center;
   min-width: 32px;
   height: 32px;
-  background-color: #edeff6;
+  background-color: @smoky-white;
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
@@ -68,9 +72,8 @@
         border-radius: 4px;
         position: absolute;
         bottom: -70px;
-        left: 0;
         z-index: 3;
-        font-family: "Blogger Sans", sans-serif;
+        font-family: @project-font;
         font-size: 20px;
         line-height: 1em;
       }
@@ -88,10 +91,24 @@
   }
 }
 
+.transport-list__item--filter {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      &::before {
+        bottom: -76px;
+      }
+
+      &::after {
+        bottom: -20px;
+      }
+    }
+  }
+}
+
 .transport-list__item--plane {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Авиаперелет";
       }
     }
@@ -101,7 +118,7 @@
 .transport-list__item--bus {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Автотранспорт";
       }
     }
@@ -111,7 +128,7 @@
 .transport-list__item--bike {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Велосипед";
       }
     }
@@ -121,7 +138,7 @@
 .transport-list__item--run {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Пешком";
       }
     }

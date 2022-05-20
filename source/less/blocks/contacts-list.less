@@ -43,7 +43,7 @@
     top: calc(50% - 9px);
     left: calc(100% + 16px);
     position: absolute;
-    color: #192144;
+    color: @background-deep-blue;
 
     @media (min-width: @tablet-width) {
       top: calc(50% - 14px);
@@ -107,11 +107,11 @@
     background: url("../img/icons-mini/icons-dark/icon-envelope-dark.svg") no-repeat center @special-yellow-dark;
 
     &:hover {
-      background-color: #ff8d30;
+      background-color: @special-orange;
     }
 
     &:active {
-      background: url("../img/icons-mini/icons-dark/icon-envelope-dark--active.svg") no-repeat center #ff8d30;
+      background: url("../img/icons-mini/icons-dark/icon-envelope-dark--active.svg") no-repeat center @special-orange;
     }
   }
 }
@@ -124,7 +124,7 @@
 }
 
 .contacts-list__text--dark {
-  color: #192144;
+  color: @background-deep-blue;
 
   @media (min-width: @desktop-width) {
     display: none;

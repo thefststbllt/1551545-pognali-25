@@ -38,7 +38,7 @@ const html = () => {
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -69,12 +69,12 @@ const createWebP = () => {
 
 // SVG
 
-const svg = () =>
+export const svg = () =>
   gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src(['source/img/icons-mini/socials/*.svg', 'source/img/icons-mini/transport/*.svg', 'source/img/icons-mini/icons-dark/*.svg', 'source/img/icons-mini/icons-yellow/*.svg'])
     .pipe(svgo())
     .pipe(svgstore({
