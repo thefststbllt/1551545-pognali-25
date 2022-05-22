@@ -1,6 +1,6 @@
 .trip-plan {
   background-color: @basic-white;
-  padding: 24px 23px 23px;
+  padding: 24px 24px 23px;
   border-radius: 10px;
   position: relative;
   display: grid;
@@ -19,8 +19,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 585px 1fr;
     padding: 40px 45px 34px 43px;
   }
 }
@@ -55,6 +55,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    justify-content: start;
 
     &::before {
       margin-right: 36px;
@@ -65,11 +66,12 @@
 .trip-plan__details {
   display: flex;
   flex-direction: column;
+  margin-left: 2px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: baseline;
-    justify-content: space-between;
+    margin: 0;
 
     &::before {
       display: block;
@@ -86,6 +88,10 @@
       }
     }
   }
+
+  @media (min-width: @desktop-width) {
+    justify-content: end;
+  }
 }
 
 .trip-plan__companions {
@@ -95,10 +101,16 @@
   line-height: 14px;
   text-transform: uppercase;
   margin: 0 0 2px;
+  letter-spacing: 0.06em;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
   }
 }
 
@@ -108,10 +120,21 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+  }
+}
+
+.trip-plan__time--start {
+  @media (min-width: @tablet-width) {
+    margin-right: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 10px 0 0;
   }
 }
 
@@ -122,6 +145,7 @@
   line-height: 14px;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 
   &:hover {
     color: fade(@basic-black, 60%);
@@ -134,10 +158,12 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
+    margin: 0 7px 0 78px;
+    letter-spacing: 0.09em;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 132px;
+    margin: 0 0 0 130px;
     letter-spacing: 0.07em;
   }
 }
@@ -146,7 +172,7 @@
   margin: 0 0 23px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin: 0 0 0 auto;
   }
 
   @media (min-width: @desktop-width) {

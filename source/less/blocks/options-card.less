@@ -13,6 +13,13 @@
 .options-card:last-child {
   margin: 0 0 27px;
 
+  .options-card__wrapper {
+    @media (max-width: 767px) {
+      padding: 26px 24px 0;
+      row-gap: 0;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 0 46px;
   }
@@ -148,12 +155,20 @@
   order: 1;
   line-height: 20px;
   grid-column: 1 / -1;
+  letter-spacing: 0.03em;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1em;
     order: 0;
     margin-bottom: 17px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.options-card__slogan-brake {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -179,5 +194,7 @@
 
   @media (min-width: @tablet-width) {
     justify-content: start;
+    font-size: 20px;
+    line-height: 1em;
   }
 }

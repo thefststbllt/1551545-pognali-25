@@ -49,7 +49,7 @@
   color: @basic-white;
   text-align: center;
   margin: 0;
-  padding: 19px 35px 29px;
+  padding: 19px 30px 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -61,6 +61,16 @@
     padding: 57px 190px 60px;
     line-height: 31px;
   }
+}
+
+.registration__notation-brake {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.registration__notation-brake-extra {
+  display: inline;
 }
 
 .registration__autorization {
@@ -214,6 +224,13 @@
 
   @media (min-width: @desktop-width) {
     padding: 70px 0 43px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.registration__questions-brake {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

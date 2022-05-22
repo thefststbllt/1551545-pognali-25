@@ -4,7 +4,7 @@
   grid-template-columns: 1fr;
   background-color: #182044;
   padding: 19px 25px 27px;
-  position: fixed;
+  position: absolute;
   z-index: 4;
 
   @media (min-width: @tablet-width) {
@@ -78,7 +78,7 @@
     grid-column: 2 / -3;
     flex-direction: row;
     align-items: center;
-    margin: 0 0 0 38px;
+    margin: 7px 0 0 38px;
   }
 }
 
@@ -108,7 +108,7 @@
 
 .main-nav .main-nav__login {
   padding: 12px 0 8px;
-  margin: 52px 0;
+  margin: 56px 0 52px;
   line-height: 30px;
 
   &:hover {
@@ -228,6 +228,6 @@
   position: static;
 
   @media (min-width: @desktop-width) {
-    background-color: #161c36;
+    background-color: inherit;
   }
 }

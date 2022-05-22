@@ -62,13 +62,33 @@
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    width: 48%;
+    width: 50%;
     margin: 0 0 31px;
   }
 
   @media (min-width: @desktop-width) {
     width: 53%;
     margin: 0 0 40px;
+  }
+}
+
+.page-about__description-brake {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-about__description-brake-extra {
+  display: inline;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

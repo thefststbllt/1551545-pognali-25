@@ -1,7 +1,7 @@
 .main-header {
   background-color: #182044;
-  border-radius: 0 0 30px 30px;
-  z-index: 6;
+  border-radius: 0 0 20px 20px;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
     border-radius: 0 0 60px 60px;
@@ -10,6 +10,17 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
+  }
+}
+
+.main-header--main-page {
+  background-color: #161c35;
+  border-radius: 0 0 30px 30px;
+  z-index: 6;
+
+  @media (min-width: @tablet-width) {
+    background-color: #182044;
+    border-radius: 0 0 60px 60px;
   }
 }
 

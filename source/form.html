@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -198,7 +198,7 @@
           <li class="slider__item step step--arrival-date">
             <div class="step__head-wrapper">
               <h3 class="step__title">Даты пребывания</h3>
-              <p class="step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
+              <p class="step__description">Укажите предпочтительное количество попутчиков, которых<br class="step__description-brake">вы хотели бы
                 позвать в
                 поездку, и ее предполагаемую длительность.</p>
               <ol class="step__position-list step-position">
@@ -207,7 +207,7 @@
                 <li class="step-position__item">Развлечения</li>
               </ol>
             </div>
-            <form class="step__form">
+            <div class="step__form">
               <div class="step__quantity-wrapper quantity-field quantity-field--companions">
                 <label class="step__quantity" for="guys">Ищу попутчиков:</label>
                 <span class="quantity-field__unit">чел.</span>
@@ -389,12 +389,12 @@
               <div class="step__button-wrapper">
                 <button class="step__button step__button--next button" type="button">Следующий шаг</button>
               </div>
-            </form>
+            </div>
           </li>
           <li class="slider__item step">
             <div class="step__head-wrapper">
               <h3 class="step__title">Маршрут</h3>
-              <p class="step__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
+              <p class="step__description">Укажите страны, которые вы хотели бы посетить.&nbsp;<br class="step__description-brake-extra">Это может быть одна или сразу
                 несколько.</p>
               <ol class="step__position-list step-position">
                 <li class="step-position__item">Даты</li>
@@ -406,11 +406,12 @@
               <div class="step__selected-item selected-item selected-item--chosen-one">
                 <div class="selected-item__name">
                   <span class="selected-item__name-container">Босния и Герцеговина</span>
-                  <select class="visually-hidden" name="first-country">
+                  <label class="visually-hidden" for="country-1"></label>
+                  <select class="visually-hidden" name="first-country" id="country-1">
                     <option id="bosnia">Босния и Герцеговина</option>
                   </select>
                 </div>
-                <div class="selected-item__image .selected-item__image--bosnia-herzegovina">
+                <div class="selected-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="img/flags/icon-bosnia-and-herzegovina-flag--desktop.png">
                     <img src="img/flags/icon-bosnia-and-herzegovina-flag--tablet.png" alt="Bosnia and herzegovina flag">
@@ -423,11 +424,12 @@
               <div class="step__selected-item selected-item selected-item--chosen-one">
                 <div class="selected-item__name">
                   <span class="selected-item__name-container">Чехия</span>
-                  <select class="visually-hidden" name="second-country">
+                  <label class="visually-hidden" for="country-2"></label>
+                  <select class="visually-hidden" name="second-country" id="country-2">
                     <option id="czech">Чехия</option>
                   </select>
                 </div>
-                <div class="selected-item__image .selected-item__image--czech">
+                <div class="selected-item__image">
                   <picture>
                     <source media="(min-width: 768px)" srcset="img/flags/icon-czech-flag--desktop.png">
                     <img src="img/flags/icon-czech-flag--tablet.png" alt="Czech flag">
@@ -437,7 +439,7 @@
                   </a>
                 </div>
               </div>
-              <div class="step__selected-item step__item-choosing">
+              <div class="step__selected-item selected-item step__item-choosing">
                 <button class="step__select-button step__select-button--choosing" type="button">Выберите страну</button>
                 <div class="step__select-dropdown">
                   <button class="step__dropdown-button" type="button">Выберите страну</button>
@@ -572,7 +574,7 @@
           <li class="slider__item step">
             <div class="step__head-wrapper">
               <h3 class="step__title">Развлечения</h3>
-              <p class="step__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
+              <p class="step__description">Наконец, расскажите о своих планах времяпровождения.&nbsp;<br class="step__description-brake">Можно писать в
                 свободной форме и ставить тэги.</p>
               <ol class="step__position-list step-position">
                 <li class="step-position__item">Даты</li>
@@ -586,14 +588,20 @@
                   <span class="step__textfield-name step__textfield-name--bosnia">Босния и Герцеговина</span>
                   <span class="step__textfield-image step__textfield-image--bosnia"></span>
                 </label>
-                <textarea class="step__textfield" rows="6" name="plan-1" id="plan1" placeholder="План действий"></textarea>
+                <div class="step__textfield-wrapper">
+                  <textarea class="step__textfield" rows="6" name="plan-1" id="plan1" placeholder="План действий" required></textarea>
+                  <div class="step__textfield-validity">Это поле должно быть заполнено</div>
+                </div>
               </li>
               <li class="step__textfield-item">
                 <label class="step__textfield-title" for="plan2">
                   <span class="step__textfield-name step__textfield-name--czech">Чехия</span>
                   <span class="step__textfield-image step__textfield-image--czech"></span>
                 </label>
-                <textarea class="step__textfield" rows="6" name="plan-2" id="plan2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <div class="step__textfield-wrapper">
+                  <textarea class="step__textfield" rows="6" name="plan-2" id="plan2" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <div class="step__textfield-validity">Это поле должно быть заполнено</div>
+                </div>
               </li>
             </ul>
             <div class="step__button-wrapper">
@@ -652,7 +660,6 @@
   </div>
 </footer>
 <script src="js/header-toggle.js"></script>
-<script src="js/scrolling-menu-inner.js"></script>
 <script src="js/select-dropdown.js"></script>
 </body>
 </html>
