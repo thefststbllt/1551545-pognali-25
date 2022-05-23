@@ -4,7 +4,7 @@
   grid-template-columns: 1fr;
   background-color: #182044;
   padding: 19px 25px 27px;
-  position: fixed;
+  position: absolute;
   z-index: 4;
 
   @media (min-width: @tablet-width) {
@@ -26,6 +26,12 @@
 
   @media (min-width: @desktop-width) {
     padding: 47px 60px;
+  }
+}
+
+.main-nav--scrolled {
+  @media (max-width: 1439px) {
+    background-color: @basic-white;
   }
 }
 
@@ -65,28 +71,28 @@
 
   @media (min-width: @tablet-width) {
     grid-column: -1 / 1;
-    margin: 98px 57px 144px;
+    margin: 93px 57px 140px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2 / -3;
     flex-direction: row;
     align-items: center;
-    margin: 0 0 0 38px;
+    margin: 7px 0 0 38px;
   }
 }
 
 .main-nav__list--active {
   @media (min-width: @desktop-width) {
     &::before {
-      background-color: #192144;
+      background-color: @background-deep-blue;
     }
   }
 }
 
 .main-nav__list--active .page-list__link {
   @media (min-width: @desktop-width) {
-    color: #192144;
+    color: @background-deep-blue;
   }
 }
 
@@ -102,11 +108,11 @@
 
 .main-nav .main-nav__login {
   padding: 12px 0 8px;
-  margin: 52px 0;
+  margin: 56px 0 52px;
   line-height: 30px;
 
   &:hover {
-    background-color: #ffbd30;
+    background-color: @special-yellow-dark;
   }
 
   &:active {
@@ -143,7 +149,7 @@
   @media (min-width: @tablet-width) {
     justify-content: start;
     grid-column: -1 / 1;
-    margin: 0 0 122px 57px;
+    margin: 0 0 113px 57px;
   }
 
   @media (min-width: @desktop-width) {
@@ -209,7 +215,7 @@
 .main-nav__socials {
   @media (min-width: @tablet-width) {
     justify-content: start;
-    margin: 0 0 0 65px;
+    margin: 0 0 27px 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -222,6 +228,6 @@
   position: static;
 
   @media (min-width: @desktop-width) {
-    background-color: #161c36;
+    background-color: inherit;
   }
 }

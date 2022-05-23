@@ -13,21 +13,24 @@
 
   @media (min-width: @desktop-width) {
     row-gap: 34px;
-    padding: 46px 46px 48px 48px;
+    padding: 46px 46px 48px 50px;
   }
 }
 
 .filter-companion__title {
-  color: #1d2e5b;
+  color: @ocean-blue;
   font-weight: 700;
   font-size: 22px;
   line-height: 1em;
   margin: 0;
   max-width: 75%;
+  letter-spacing: 0.02em;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     margin: 0 0 14px;
+    max-width: 100%;
+    letter-spacing: 0.01em;
   }
 
   @media (min-width: @desktop-width) {
@@ -77,10 +80,10 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
-    margin-bottom: 19px;
+    margin-bottom: 22px;
 
     &:last-child {
-      margin-bottom: 38px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -99,6 +102,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr;
     margin: 0;
+    padding: 24px 0 11px;
   }
 }
 
@@ -148,7 +152,7 @@
 }
 
 .filter-companion__button {
-  color: #1d2e5b;
+  color: @ocean-blue;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -177,7 +181,7 @@
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #1d2e5b;
+    border-top: 6px solid @ocean-blue;
     transform: rotate(-180deg);
     transition-duration: 0.2s;
   }
@@ -248,7 +252,7 @@
       content: "";
       width: 16px;
       height: 1px;
-      background-color: #cbced9;
+      background-color: @light-telegray;
       position: absolute;
       top: calc(50% - 6px);
       left: calc(50% - 8px);
@@ -260,14 +264,13 @@
 }
 
 .filter-companion__level input {
-  border: 1px solid #cbced9;
+  border: 1px solid @light-telegray;
 
   &::before {
     display: block;
     content: "";
     height: 100%;
     width: 1px;
-    background-color: #800080ff;
     position: absolute;
     left: calc(50% - 1px);
   }
@@ -290,6 +293,11 @@
   padding: 12px 9px 8px;
   width: 82%;
   text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 
   &:hover {
     border-color: #959bb2;
@@ -323,10 +331,11 @@
 
   @media (min-width: @tablet-width) {
     width: 146px;
-    margin: 0;
+    margin: 0 6px 0 0;
   }
 
   @media (min-width: @desktop-width) {
     width: auto;
+    margin: 0;
   }
 }

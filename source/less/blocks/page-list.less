@@ -26,22 +26,22 @@
 }
 
 .page-list__item {
-  @media (min-width: @tablet-width) {
-    &:not(:last-child) {
-      margin-right: 33px;
-    }
-  }
+  &:not(:last-child) {
+    margin-bottom: 5px;
 
-  @media (min-width: @desktop-width) {
-    &:not(:last-child) {
-      margin-right: 24px;
+    @media (min-width: @tablet-width) {
+      margin: 0 33px 11px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 24px 0 0;
     }
   }
 }
 
 .page-list__link {
   display: block;
-  color: #192144;
+  color: @background-deep-blue;
   font-size: 30px;
   line-height: 35px;
   font-weight: 500;
@@ -58,7 +58,7 @@
     outline: none;
 
     @media (min-width: @desktop-width) {
-      color: #ffd74b;
+      color: @special-yellow;
     }
   }
 

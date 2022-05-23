@@ -52,7 +52,7 @@
 }
 
 .companions__title {
-  color: #ff8d30;
+  color: @special-orange;
   margin: 0 0 0 24px;
   font-weight: 700;
   font-size: 24px;
@@ -79,6 +79,14 @@
 
   @media (min-width: @desktop-width) {
     padding: 12px 150px 0 0;
+  }
+}
+
+.companions__about-brake {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
 
@@ -110,7 +118,7 @@
   padding: 22px 23px 21px;
 
   &:hover {
-    background-color: #ffbd30;
+    background-color: @special-yellow-dark;
   }
 
   &:active {
@@ -127,7 +135,7 @@
     width: 0;
     height: 0;
     border-top: 7px solid transparent;
-    border-left: 11px solid #1d2e5b;
+    border-left: 11px solid @ocean-blue;
     border-bottom: 7px solid transparent;
   }
 

@@ -16,12 +16,21 @@
       background-position: center;
       background-color: #e2e5f1;
       border-color: #e2e5f1;
+
+      @media (min-width: @tablet-width) {
+        background-size: 11px 12px;
+      }
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    width: max-content;
   }
 }
 
 .quantity-checkbox__label {
-  color: #1d2e5b;
+  color: @ocean-blue;
   font-size: 15px;
   line-height: 1em;
 
@@ -43,7 +52,7 @@
   content: "";
   width: 24px;
   height: 24px;
-  border: 1px solid #cbced9;
+  border: 1px solid @light-telegray;
   border-radius: 4px;
   margin-right: 13px;
 

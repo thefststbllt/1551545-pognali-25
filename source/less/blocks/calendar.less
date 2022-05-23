@@ -22,11 +22,11 @@
   padding: 9px 0 11px;
 
   &::placeholder {
-    font-family: "Blogger Sans", sans-serif;
+    font-family: @project-font;
     font-weight: 700;
     font-size: 20px;
     line-height: 1em;
-    color: #1d2e5b;
+    color: @ocean-blue;
 
     @media (min-width: @tablet-width) {
       font-size: 36px;
@@ -88,13 +88,14 @@
     top: 16px;
 
     @media (min-width: @tablet-width) {
-      top: 33px;
-      left: 7px;
+      top: 35px;
+      left: 15px;
       transform: rotate(-45deg);
     }
 
     @media (min-width: @desktop-width) {
       top: 36px;
+      left: 7px;
     }
   }
 
@@ -103,12 +104,12 @@
     bottom: 16px;
 
     @media (min-width: @tablet-width) {
-      bottom: 33px;
-      left: 14px;
+      bottom: 31px;
+      left: 15px;
       transform: rotate(45deg);
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       left: 7px;
     }
   }
@@ -158,7 +159,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 18px;
+    margin: 0 0 18px 25px;
   }
 }
 
@@ -221,10 +222,32 @@
   align-items: center;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    min-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: start;
+    align-items: start;
+    padding: 14px 13px;
+    min-height: 41px;
+  }
+}
+
+.calendar__day-link--disabled {
+  cursor: default;
+}
+
+.calendar__day-link--chosen {
+  background-color: @ocean-blue;
+  color: @basic-white;
+  opacity: 1;
+
   &:hover {
     flex-direction: column;
     opacity: 1;
-    background-color: #1d2e5b;
+    background-color: @ocean-blue;
     color: @basic-white;
 
     @media (min-width: @desktop-width) {
@@ -248,24 +271,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 18px;
-    min-height: 68px;
-  }
-
-  @media (min-width: @desktop-width) {
-    justify-content: start;
-    align-items: start;
-    padding: 14px 13px;
-    min-height: 41px;
-  }
-}
-
-.calendar__day-link--chosen {
-  background-color: #1d2e5b;
-  color: #ffffff;
-  opacity: 1;
-
-  @media (min-width: @tablet-width) {
     border: 1px solid #d6d9e6;
   }
 
@@ -280,9 +285,35 @@
 }
 
 .calendar__day-link--available {
-  background-color: #edeff6;
-  color: #1d2e5b;
+  background-color: @smoky-white;
+  color: @ocean-blue;
   opacity: 1;
+
+  &:hover {
+    flex-direction: column;
+    opacity: 1;
+    background-color: @ocean-blue;
+    color: @basic-white;
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        display: block;
+        content: "";
+        border: 4px solid #ff5c23;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+      }
+
+      &::after {
+        content: "Заезд";
+        margin-top: auto;
+      }
+    }
+  }
 }
 
 .calendar__day-link--trip-start {

@@ -7,7 +7,7 @@
   background-color: @special-yellow;
   border-radius: 25px;
   padding: 6px 12px;
-  color: #1d2e5b;
+  color: @ocean-blue;
   font-weight: 700;
   font-size: 17px;
   line-height: 17px;
@@ -23,7 +23,7 @@
   line-height: 20px;
   border: none;
   background-color: #d6daed;
-  color: #192144;
+  color: @background-deep-blue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@
   }
 
   &:active .button__inner-wrapper {
-    color: fade(#192144, 30%);
+    color: fade(@background-deep-blue, 30%);
 
     &::before,
     &::after {
@@ -47,7 +47,12 @@
     font-size: 20px;
     line-height: 1em;
     padding: 37px;
-    margin: 0;
+    margin: 8px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 76px;
+    padding: 39px;
   }
 }
 
@@ -88,7 +93,7 @@
 }
 
 .button--companion {
-  background-color: #ffffff;
+  background-color: @basic-white;
   color: #161c35;
   border: none;
   padding: 0;
@@ -116,5 +121,6 @@
 
   @media (min-width: @desktop-width) {
     height: 49px;
+    margin: 0;
   }
 }

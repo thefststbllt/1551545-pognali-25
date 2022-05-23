@@ -28,9 +28,9 @@
         border-radius: 4px;
         position: absolute;
         bottom: -68px;
-        left: 0;
+        transform: translateX(calc(-50% + 14px));
         z-index: 3;
-        font-family: "Blogger Sans", sans-serif;
+        font-family: @project-font;
         font-size: 20px;
         line-height: 1em;
       }
@@ -55,6 +55,20 @@
     }
   }
 
+  &:disabled .user-transport__icon {
+    fill: #d9d9d9;
+  }
+
+  &:disabled:hover .user-transport__icon {
+    fill: #b2b2b2;
+    opacity: 1;
+  }
+
+  &:disabled:active .user-transport__icon {
+    fill: #1d2e5b;
+    opacity: 0.1;
+  }
+
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 43px;
@@ -64,7 +78,7 @@
 .user-transport__item-button--plane {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Авиаперелет";
       }
     }
@@ -74,7 +88,7 @@
 .user-transport__item-button--bus {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Автотранспорт";
       }
     }
@@ -84,7 +98,7 @@
 .user-transport__item-button--bike {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Велосипед";
       }
     }
@@ -94,7 +108,7 @@
 .user-transport__item-button--run {
   @media (min-width: @desktop-width) {
     &:hover {
-      &:before {
+      &::before {
         content: "Пешком";
       }
     }
@@ -111,22 +125,6 @@
   }
 }
 
-.user-transport__item-button--available .user-transport__icon {
-  fill: #1d2e5b;
-}
-
-.user-transport__item-button--not-available {
-  &:hover {
-    .user-transport__icon {
-      fill: #b2b2b2;
-    }
-  }
-}
-
-.user-transport__item-button--not-available .user-transport__icon {
-  fill: #d9d9d9;
-}
-
 .user-transport__list {
   margin: 16px 0 21px 7px;
 
@@ -137,11 +135,13 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 
 .user-transport__list .transport-list__icon {
+  fill: @ocean-blue;
+
   @media (min-width: @tablet-width) {
     width: 26px;
     height: 25px;

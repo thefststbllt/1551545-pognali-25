@@ -1,5 +1,5 @@
 .companion-card {
-  background-color: #ffffff;
+  background-color: @basic-white;
   border-radius: 10px;
   position: relative;
   width: min-content;
@@ -8,6 +8,11 @@
     @media (min-width: @desktop-width) {
       filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
       transition-duration: 0.5s;
+
+      .companion-card__picture-wrapper {
+        transform: scale(1.05) translateY(-7px);
+        transition-duration: 0.5s;
+      }
     }
   }
 
@@ -39,12 +44,18 @@
   height: 60px;
   border-radius: 50%;
   position: absolute;
-  top: 20px;
-  left: 23px;
+  top: 17px;
+  left: 17px;
   color: @basic-white;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 22px;
+  }
 }
 
 .companion-card__level--user-1 .companion-card__level-meter {
@@ -88,6 +99,26 @@
   }
 }
 
+.companion-card__zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.companion-card__picture-wrapper {
+  @media (min-width: @tablet-width) {
+    max-height: 285px;
+
+    &:hover {
+      transition: all 1s ease;
+    }
+  }
+}
+
 .companion-card__photo {
   border-radius: 10px 10px 0 0;
 
@@ -110,15 +141,16 @@
 
 .companion-card__link {
   text-decoration: none;
+  margin: 0 14px 0 0;
 
   @media (min-width: @tablet-width) {
     align-self: start;
-    margin-left: 26px;
+    margin: 0 0 0 26px;
   }
 }
 
 .companion-card__name {
-  color: #1d2e5b;
+  color: @ocean-blue;
   margin: 0;
   font-weight: 700;
   font-size: 21px;

@@ -35,7 +35,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: #ff8d30;
+  color: @special-orange;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -49,7 +49,7 @@
   color: @basic-white;
   text-align: center;
   margin: 0;
-  padding: 19px 35px 29px;
+  padding: 19px 30px 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -63,15 +63,25 @@
   }
 }
 
+.registration__notation-brake {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.registration__notation-brake-extra {
+  display: inline;
+}
+
 .registration__autorization {
-  color: #ffd74b;
+  color: @special-yellow;
 
   &:hover {
-    color: #ff8d30;
+    color: @special-orange;
   }
 
   &:active {
-    color: fade(#ff8d30, 30%);
+    color: fade(@special-orange, 30%);
   }
 }
 
@@ -102,17 +112,18 @@
   border: 4px solid @basic-white;
   border-radius: 10px;
   display: block;
-  font-family: "Blogger Sans", sans-serif;
+  font-family: @project-font;
   font-weight: 700;
   font-size: 18px;
   line-height: 1em;
+  margin: 0;
 
   &:hover {
-    background-color: #edeff6;
+    background-color: @smoky-white;
   }
 
   &:valid {
-    background-color: #1d2e5b;
+    background-color: @ocean-blue;
     color: @basic-white;
   }
 
@@ -121,7 +132,7 @@
   }
 
   &::placeholder {
-    font-family: "Blogger Sans", sans-serif;
+    font-family: @project-font;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -143,12 +154,13 @@
 .registration__confirm {
   width: 22%;
   min-height: 100%;
-  background: #ffd74b;
+  background: @special-yellow;
   border: none;
   border-radius: 10px;
   position: absolute;
   right: 0;
   cursor: pointer;
+  margin: 0;
 
   &::after {
     display: block;
@@ -159,7 +171,7 @@
     top: calc(50% - 7px);
     left: calc(50% - 7px);
     border-top: 7px solid transparent;
-    border-left: 14px solid #1d2e5b;
+    border-left: 14px solid @ocean-blue;
     border-bottom: 7px solid transparent;
 
     @media (min-width: @desktop-width) {
@@ -171,6 +183,7 @@
     border-radius: 0 20px 20px 0;
     padding: 34px 39px 32px 41px;
     position: relative;
+    min-height: unset;
   }
 
   @media (min-width: @desktop-width) {
@@ -187,16 +200,16 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    font-family: "Blogger Sans", sans-serif;
+    font-family: @project-font;
     font-weight: 700;
     font-size: 24px;
     line-height: 1em;
-    color: #1d2e5b;
+    color: @ocean-blue;
   }
 }
 
 .registration__questions {
-  color: #ffffff;
+  color: @basic-white;
   font-weight: 300;
   line-height: 22px;
   text-align: center;
@@ -211,6 +224,13 @@
 
   @media (min-width: @desktop-width) {
     padding: 70px 0 43px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.registration__questions-brake {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

@@ -1,8 +1,8 @@
 .quantity-field {
-  color: #1d2e5b;
+  color: @ocean-blue;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  row-gap: 7px;
+  row-gap: 9px;
 
   @media (min-width: @tablet-width) {
     row-gap: 24px;
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   padding: 13px 8px 12px;
-  border: 1px solid #cbced9;
+  border: 1px solid @light-telegray;
   border-radius: 4px;
 
   &:hover {
@@ -41,12 +41,13 @@
 }
 
 .quantity-field__unit {
-  color: #1d2e5b;
+  color: @ocean-blue;
   opacity: 0.3;
   text-align: end;
   line-height: 1em;
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -55,6 +56,13 @@
 
   @media (min-width: @desktop-width) {
     grid-column: -1 / -2;
+    opacity: 1;
+  }
+}
+
+.quantity-field--companions {
+  @media (min-width: @tablet-width) {
+    order: -2;
   }
 }
 
@@ -86,7 +94,7 @@
     content: "";
     height: 2px;
     width: 14px;
-    background-color: #cccccc;
+    background-color: @ford-silver;
 
     @media (min-width: @tablet-width) {
       width: 20px;

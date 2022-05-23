@@ -1,6 +1,6 @@
 .profile-addition {
   display: grid;
-  row-gap: 31px;
+  row-gap: 28px;
   background-color: #e6e8f1;
   padding: 53px 25px 38px 49px;
   border-radius: 0 0 30px 30px;
@@ -13,7 +13,7 @@
     width: 100%;
     height: 30px;
     position: absolute;
-    background-color: #192144;
+    background-color: @background-deep-blue;
     border-radius: 0 0 30px 30px;
     top: -30px;
     left: 0;
@@ -28,6 +28,8 @@
   @media (min-width: @tablet-width) {
     padding: 74px 40px 63px;
     border-radius: 0 0 60px 60px;
+    row-gap: 32px;
+    background-color: #edeff6;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,7 +39,7 @@
 }
 
 .profile-addition__title {
-  color: #ff8d30;
+  color: @special-orange;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -123,11 +125,11 @@
 }
 
 .profile-addition__business-button {
-  padding: 0;
+  padding: 4px 0 0;
   background-color: inherit;
   border: none;
   color: #132576;
-  font-family: "Blogger Sans", sans-serif;
+  font-family: @project-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 1em;
@@ -149,6 +151,7 @@
     font-size: 20px;
     line-height: 1em;
     width: max-content;
+    padding: 6px 0 0;
 
     &::before {
       display: block;
@@ -178,12 +181,12 @@
 }
 
 .profile-addition__button {
-  font-family: "Blogger Sans", sans-serif;
+  font-family: @project-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5em;
   text-transform: uppercase;
-  color: #1d2e5b;
+  color: @ocean-blue;
   background-color: @button-gray;
   border: none;
   margin: 0;
@@ -193,7 +196,7 @@
   border-bottom-right-radius: inherit;
 
   &:hover {
-    background-color: #edeff6;
+    background-color: @smoky-white;
   }
 
   &:active {
